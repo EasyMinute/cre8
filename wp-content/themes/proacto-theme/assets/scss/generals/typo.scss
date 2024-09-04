@@ -1,99 +1,81 @@
 //Headlines
-.headline {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  color: $primary-50;
+* {
+  font-family: 'BarlowCondensed', sans-serif;
+}
 
-  &.bold {
-    font-weight: 700;
-  }
-  &.heavy {
-    font-weight: 800;
+.heading {
+  font-family: 'BarlowCondensed', sans-serif;
+
+  em {
+    color: $orange;
   }
 
   &-h1 {
-    font-size: 48px;
-    line-height: 56px;
+   font-weight: 700;
+   font-size: 84px;
+   line-height: 84px;
     @media screen and (max-width: 980px) {
-      font-size: 40px;
-      line-height: 48px;
+      font-size: 38px;
+      line-height: 38px;
     }
+  }
 
-  }
   &-h2 {
-    font-size: 44px;
-    line-height: 52px;
-    @media screen and (max-width: 980px){
-      font-size: 36px;
-      line-height: 40px;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 42px;
+    @media screen and (max-width: 980px) {
+      font-size: 32px;
+      line-height: 32px;
     }
   }
+
   &-h3 {
-    font-size: 40px;
-    line-height: 48px;
-  }
-  &-h4 {
-    font-size: 36px;
-    line-height: 44px;
-  }
-  &-h5 {
-    font-size: 32px;
-    line-height: 40px;
-  }
-  &-h6 {
+    font-weight: 700;
     font-size: 28px;
-    line-height: 36px;
+    line-height: 28px;
+    @media screen and (max-width: 980px) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  &-h4 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    @media screen and (max-width: 980px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &-h5 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  &-h6 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 
-//Bodies
+
 .body {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  color: $primary-50;
+  font-family: 'BarlowCondensed', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
 
-  &.light {
-    font-weight: 300;
-  }
-  &.regular {
-    font-weight: 400;
-  }
-  &.medium {
-    font-weight: 500;
-  }
-  &.semibold {
-    font-weight: 600;
-  }
-  &.bold {
-    font-weight: 700;
-  }
-
-  &-xxl{
-    font-size: 24px;
-    line-height: 32px;
-  }
-  &-xl{
-    font-size: 22px;
-    line-height: 30px;
-  }
-  &-l{
-    font-size: 20px;
-    line-height: 28px;
-  }
-  &-m{
-    font-size: 18px;
-    line-height: 28px;
-  }
-  &-s{
+  @media screen and (max-width: 980px) {
     font-size: 16px;
-    line-height: 24px;
-  }
-  &-xs{
-    font-size: 14px;
     line-height: 20px;
   }
-  &-xxs{
-    font-size: 12px;
-    line-height: 16px;
+
+  &.bold {
+    font-weight: 600;
   }
 }

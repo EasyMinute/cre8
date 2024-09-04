@@ -66,70 +66,10 @@ class Acf_Config {
 				'icon' => 'cover-image'
 			),
 		    array(
-			    'name' => 'services_grid',
-			    'title' => __('Services grid', 'proacto'),
-			    'description' => __('Main services grid', 'proacto'),
-			    'icon' => 'admin-tools'
-		    ),
-		    array(
-			    'name' => 'cta_image',
-			    'title' => __('CTA Image', 'proacto'),
-			    'description' => __('Image on bg, text and cta', 'proacto'),
-			    'icon' => 'welcome-view-site'
-		    ),
-		    array(
-			    'name' => 'image_text',
-			    'title' => __('Text & image', 'proacto'),
-			    'description' => __('Image with text and button', 'proacto'),
-			    'icon' => 'align-pull-left'
-		    ),
-		    array(
-			    'name' => 'latest_news',
-			    'title' => __('Latest news', 'proacto'),
-			    'description' => __('Block with latest news', 'proacto'),
-			    'icon' => 'sticky'
-		    ),
-		    array(
-			    'name' => 'map_section',
-			    'title' => __('Map Section', 'proacto'),
-			    'description' => __('Block with map and service centers', 'proacto'),
-			    'icon' => 'location'
-		    ),
-		    array(
-			    'name' => 'links_slider',
-			    'title' => __('Links Slider', 'proacto'),
-			    'description' => __('Slider with images with links on different pages', 'proacto'),
-			    'icon' => 'slides'
-		    ),
-		    array(
-			    'name' => 'seo_text',
-			    'title' => __('SEO text', 'proacto'),
-			    'description' => __('Block with more text', 'proacto'),
-			    'icon' => 'text'
-		    ),
-		    array(
-			    'name' => 'price_table',
-			    'title' => __('Price table', 'proacto'),
-			    'description' => __('Price table', 'proacto'),
-			    'icon' => 'editor-table'
-		    ),
-		    array(
-			    'name' => 'gallery',
-			    'title' => __('Gallery', 'proacto'),
-			    'description' => __('Slider gallery', 'proacto'),
-			    'icon' => 'format-gallery'
-		    ),
-		    array(
-			    'name' => 'contact_form',
-			    'title' => __('Contact form', 'proacto'),
-			    'description' => __('Contact form', 'proacto'),
-			    'icon' => 'format-chat'
-		    ),
-		    array(
-			    'name' => 'products_grid',
-			    'title' => __('Products grid', 'proacto'),
-			    'description' => __('Products grid', 'proacto'),
-			    'icon' => 'products'
+			    'name' => 'services_projects',
+			    'title' => __('Services & Projects', 'proacto'),
+			    'description' => __('Main page services & projects', 'proacto'),
+			    'icon' => 'cover-image'
 		    ),
 	    );
         $block_names = array(

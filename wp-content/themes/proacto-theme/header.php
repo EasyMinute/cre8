@@ -28,23 +28,32 @@
 <header id="header" class="header">
 	<div class="container">
         <div class="header__wrap">
-            <a href="<?= get_home_url()?>" class="header__logo">
-                <img src="<?= esc_url( $header['logo']['url'] ) ?>"
-                 alt="<?= esc_attr( $header['logo']['alt'] ) ?>" class="header__logo">
-            </a>
-            <?php wp_nav_menu([
-                'menu' => 'Header',
-                'menu_class' => 'header_menu',
-                'container' => 'div',
-                'container_class' => 'header_nav'
-            ]) ?>
-            <div class="header_service">
-                <div class="header_buttons">
-                    <a href="<?= $header['shop_button']['url'] ?>" class="button button-m primary">
-	                    <?= $header['shop_button']['title'] ?>
+            <div class="header__logo">
+                <?php if (is_front_page()) : ?>
+                    <img src="<?= esc_url($header['logo']['url']) ?>" alt="<?= esc_attr($header['logo']['alt']) ?>">
+                <?php else : ?>
+                    <a href="<?= get_home_url() ?>">
+                        <img src="<?= esc_url($header['logo']['url']) ?>" alt="<?= esc_attr($header['logo']['alt']) ?>">
                     </a>
-                </div>
+                <?php endif; ?>
             </div>
+            <?php wp_nav_menu([
+                'menu' => 'header_menu',
+                'menu_class' => 'header__menu',
+                'container' => 'div',
+                'container_class' => 'header__nav',
+                'container_id' => 'header_nav',
+            ]) ?>
+            <?php if(!empty($header['button'])): ?>
+                <a href="<?= $header['button']['url'] ?>" class="header__button button secondary arrowed">
+                    <?= $header['button']['title'] ?>
+                </a>
+            <?php endif; ?>
+            <button class="burger mobile button-opener" data-target="header_nav" data-action="toggle" data-self="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
 	</div>
 </header><!-- #masthead -->

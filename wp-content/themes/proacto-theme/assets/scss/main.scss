@@ -1,4 +1,3 @@
-
 @import "generals/fonts";
 @import "generals/colors";
 @import "generals/containers";
@@ -7,25 +6,8 @@
 @import "generals/buttons";
 @import "generals/forms";
 
-@import "blocks/baner";
-@import "blocks/services_grid";
-@import "blocks/cta_image";
-@import "blocks/image_text";
-@import "blocks/latest_news";
-@import "blocks/map_section";
-@import "blocks/links_slider";
-@import "blocks/seo_text";
-@import "blocks/price_table";
-@import "blocks/gallery";
-@import "blocks/contact_form";
-
-@import "static/services-menu";
-@import "static/news-loop";
-@import "static/single-post";
-@import "static/service_centers_info";
-
-@import "woo/archive";
-@import "woo/single";
-
 @import "layout/header";
+@import "layout/footer";
 
+@import "blocks/baner";
+@import "blocks/services_projects";

@@ -1,0 +1,119 @@
+@import "../generals/colors";
+
+.site-footer {
+  width: 100%;
+  background-color: $white;
+  padding: 42px 0;
+  @media screen and (max-width: 980px) {
+    padding: 16px 0;
+  }
+
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__main {
+      width: 100%;
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @media screen and (max-width: 980px) {
+        max-width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        order: -1;
+        margin-bottom: 20px;
+      }
+
+      .footer_logo {
+        margin-bottom: 20px;
+        @media screen and (max-width: 980px) {
+          margin-bottom: 0;
+        }
+      }
+
+      .footer_email {
+        color: $dark-green;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__nav {
+      width: 100%;
+      max-width: 50%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      @media screen and (max-width: 980px) {
+        max-width: 100%;
+
+      }
+
+      .footer_menu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        list-style-type: none;
+        width: fit-content;
+        column-gap: 80px;
+        row-gap: 20px;
+        @media screen and (max-width: 980px) {
+          grid-template-columns: repeat(1, 1fr);
+          column-gap: 0;
+          row-gap: 20px;
+          width: 100%;
+        }
+
+        li {
+          @media screen and (max-width: 980px) {
+            padding: 16px;
+            border-bottom: 1px solid $light-grey;
+          }
+
+          a {
+            color: $dark-green;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            @media screen and (max-width: 980px) {
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+
+    &__divider {
+      margin: 24px 0;
+      height: 1px;
+      width: 100%;
+      background-color: $light-grey;
+    }
+
+    &__copyright {
+      @media screen and (max-width: 980px) {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
+
+    &__socials {
+      display: flex;
+      @media screen and (max-width: 980px) {
+        order: -1;
+        margin-bottom: 20px;
+      }
+
+      a {
+        display: inline-block;
+        margin-right: 14px;
+      }
+    }
+  }
+}

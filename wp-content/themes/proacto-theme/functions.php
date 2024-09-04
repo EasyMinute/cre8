@@ -35,11 +35,6 @@ require get_template_directory() . '/functions-parts/acf-settings.php';
  */
 require get_template_directory() . '/functions-parts/stuff.php';
 
-/**
- * Підключення woo-stuff
- */
-require get_template_directory() . '/functions-parts/woo-stuff.php';
-
 
 
 /**

@@ -1,76 +1,108 @@
 @font-face {
-    font-family: 'Roboto';
+    font-family: 'BarlowCondensed';
     font-weight: 100;
     font-style: normal;
-    src: url(../fonts/Roboto/Roboto-Thin.ttf);
+    src: url(../fonts/Barlow_Condensed/BarlowCondensed-Thin.ttf);
 }
 @font-face {
-    font-family: 'Roboto';
+    font-family: 'BarlowCondensed';
     font-weight: 100;
     font-style: italic;
-    src: url(../fonts/Roboto/Roboto-ThinItalic.ttf);
-}
-
-@font-face {
-    font-family: 'Roboto';
-    font-weight: 300;
-    font-style: normal;
-    src: url(../fonts/Roboto/Roboto-Light.ttf);
+    src: url(../fonts/Barlow_Condensed/BarlowCondensed-ThinItalic.ttf);
 }
 @font-face {
-    font-family: 'Roboto';
-    font-weight: 300;
-    font-style: italic;
-    src: url(../fonts/Roboto/Roboto-LightItalic.ttf);
-}
-
-@font-face {
-    font-family: 'Roboto';
-    font-weight: 400;
-    font-style: normal;
-    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+  font-family: 'BarlowCondensed';
+  font-weight: 200;
+  font-style: normal;
+  src: url(../fonts/Barlow_Condensed/BarlowCondensed-ExtraLight.ttf);
 }
 @font-face {
-    font-family: 'Roboto';
-    font-weight: 400;
-    font-style: italic;
-    src: url(../fonts/Roboto/Roboto-Italic.ttf);
+  font-family: 'BarlowCondensed';
+  font-weight: 200;
+  font-style: italic;
+  src: url(../fonts/Barlow_Condensed/BarlowCondensed-ExtraLightItalic.ttf);
 }
 @font-face {
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-style: normal;
-    src: url(../fonts/Roboto/Roboto-Medium.ttf);
+  font-family: 'BarlowCondensed';
+  font-weight: 300;
+  font-style: normal;
+  src: url(../fonts/Barlow_Condensed/BarlowCondensed-Light.ttf);
 }
 @font-face {
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-style: italic;
-    src: url(../fonts/Roboto/Roboto-MediumItalic.ttf);
-}
-
-@font-face {
-    font-family: 'Roboto';
-    font-weight: 700;
-    font-style: normal;
-    src: url(../fonts/Roboto/Roboto-Bold.ttf);
+  font-family: 'BarlowCondensed';
+  font-weight: 300;
+  font-style: italic;
+  src: url(../fonts/Barlow_Condensed/BarlowCondensed-LightItalic.ttf);
 }
 @font-face {
-    font-family: 'Roboto';
-    font-weight: 700;
-    font-style: italic;
-    src: url(../fonts/Roboto/Roboto-ThinItalic.ttf);
-}
-
-@font-face {
-    font-family: 'Roboto';
-    font-weight: 900;
-    font-style: normal;
-    src: url(../fonts/Roboto/Roboto-Black.ttf);
+  font-family: 'BarlowCondensed';
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf);
 }
 @font-face {
-    font-family: 'Roboto';
-    font-weight: 900;
-    font-style: italic;
-    src: url(../fonts/Roboto/Roboto-BlackItalic.ttf);
+  font-family: 'BarlowCondensed';
+  font-weight: 400;
+  font-style: italic;
+  src: url(../fonts/Barlow_Condensed/BarlowCondensed-Italic.ttf);
+}
+@font-face {
+  font-family: 'BarlowCondensed';
+  font-weight: 500;
+  font-style: normal;
+  src: url(../fonts/Barlow_Condensed/BarlowCondensed-Medium.ttf);
+}
+@font-face {
+  font-family: 'BarlowCondensed';
+  font-weight: 500;
+  font-style: italic;
+  src: url(../fonts/Barlow_Condensed/BarlowCondensed-MediumItalic.ttf);
+}
+@font-face {
+  font-family: 'BarlowCondensed';
+  font-weight: 600;
+  font-style: normal;
+  src: url(../fonts/Barlow_Condensed/BarlowCondensed-SemiBold.ttf);
+}
+@font-face {
+  font-family: 'BarlowCondensed';
+  font-weight: 600;
+  font-style: italic;
+  src: url(../fonts/Barlow_Condensed/BarlowCondensed-SemiBoldItalic.ttf);
+}
+@font-face {
+  font-family: 'BarlowCondensed';
+  font-weight: 700;
+  font-style: normal;
+  src: url(../fonts/Barlow_Condensed/BarlowCondensed-Bold.ttf);
+}
+@font-face {
+  font-family: 'BarlowCondensed';
+  font-weight: 700;
+  font-style: italic;
+  src: url(../fonts/Barlow_Condensed/BarlowCondensed-BoldItalic.ttf);
+}
+@font-face {
+  font-family: 'BarlowCondensed';
+  font-weight: 800;
+  font-style: normal;
+  src: url(../fonts/Barlow_Condensed/BarlowCondensed-ExtraBold.ttf);
+}
+@font-face {
+  font-family: 'BarlowCondensed';
+  font-weight: 800;
+  font-style: italic;
+  src: url(../fonts/Barlow_Condensed/BarlowCondensed-ExtraBoldItalic.ttf);
+}
+@font-face {
+  font-family: 'BarlowCondensed';
+  font-weight: 900;
+  font-style: normal;
+  src: url(../fonts/Barlow_Condensed/BarlowCondensed-Black.ttf);
+}
+@font-face {
+  font-family: 'BarlowCondensed';
+  font-weight: 900;
+  font-style: italic;
+  src: url(../fonts/Barlow_Condensed/BarlowCondensed-BlackItalic.ttf);
 }

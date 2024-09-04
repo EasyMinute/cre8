@@ -1,49 +1,164 @@
-.header {
-  background-color: $primary-50;
-  padding: 16px 0;
+@import "../generals/colors";
 
-  .header__wrap {
+.header {
+  background-color: $dark-green;
+
+  &__wrap {
     display: flex;
+    padding: 12px;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+  }
 
-    .header__logo {
-      max-width: 200px;
+  &__logo {
+    img{
+      width: 76px;
+    }
+  }
+
+  &__button {
+    @media screen and (max-width: 980px){
+      margin: 0 18px 0 auto;
+    }
+  }
+
+  &__nav {
+    padding: 0 12px;
+    @media screen and (max-width: 980px){
+      position: absolute;
+      width: 100vw;
+      height: calc(100vh - 73px);
+      left: 50%;
+      top: 100%;
+      background-color: $dark-green;
+      transform: translateX(-50%);
+      max-height: 0;
+      overflow: hidden;
+      transition: all .5s;
     }
 
-    .header_nav {
-      .header_menu {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    &.opened {
+      max-height: 100vh;
+    }
 
-        li {
-          margin: 0 4px;
+    .header__menu {
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: 980px){
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px 0;
+      }
 
+      li {
+        padding: 0 21px;
+        @media screen and (max-width: 1220px){
+          width: 100%;
+          padding: 16px 21px;
+          border-bottom: 1px solid $transparent;
+        }
+
+        a {
+          font-size: 20px;
+          line-height: 20px;
+          color: $white;
+          transition: all .5s;
+          @media screen and (max-width: 980px){
+            text-transform: uppercase;
+          }
+
+
+          &:hover {
+            color: $orange;
+          }
+        }
+
+        &.current-menu-item {
           a {
-            font-family: 'Roboto', sans-serif;
-            padding: 6px 16px;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
-            color: $white;
-            border-radius: 32px;
-            transition: all .3s;
+            opacity: .6;
+          }
+        }
 
-            &:hover {
-              background-color: $primary-70;
+        &.menu-item-has-children {
+          display: flex;
+          align-items: center;
+          position: relative;
+          padding-right: 40px;
+          @media screen and (max-width: 980px){
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          &:after {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-bottom: 2px solid $white;
+            border-right:  2px solid $white;
+            border-radius: 0 0 3px 0;
+            left: 100%;
+            top: 50%;
+            transform: translate(12px, 0) rotate(-45deg);
+            transition: all .5s;
+
+            @media screen and (max-width: 980px){
+              position: absolute;
+              top: 0;
+              left: unset;
+              right: 0;
+              transform: translate(-12px, 18px) rotate(45deg);
+            }
+          }
+
+          .sub-menu {
+            display: flex;
+            align-items: center;
+            max-width: 0;
+            overflow: hidden;
+            transition: all .3s;
+            @media screen and (max-width: 980px){
+              margin-top: 12px;
+              flex-direction: column;
+              max-width: 100%;
+              max-height: 0;
+              align-items: flex-start;
+            }
+
+            li {
+              @media screen and (max-width: 980px){
+                border-bottom: none;
+                padding: 0;
+              }
+
+              a {
+                @media screen and (max-width: 980px){
+                  display: block;
+                  text-transform: unset;
+                  margin-top: 12px;
+                }
+              }
+            }
+          }
+
+          &:hover,
+          &.current-menu-ancestor {
+            .sub-menu {
+              max-width: 100%;
+              @media screen and (max-width: 980px){
+                max-height: 400px;
+              }
+            }
+
+            &:after {
+              transform: translate(12px, 0) rotate(135deg);
+              @media screen and (max-width: 980px){
+                transform: translate(-12px, 18px) rotate(-135deg);
+              }
             }
           }
         }
-      }
-    }
-
-    .header_service {
-
-      .header_buttons {
-        padding: 12px;
-        background-color: $primary-70;
-        border-radius: 32px;
       }
     }
   }

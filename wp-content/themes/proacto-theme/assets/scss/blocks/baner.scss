@@ -1,72 +1,47 @@
 @import "../generals/colors";
 
 .baner {
-  width: 100%;
-  background-size: cover;
-  background-position: center;
+  padding: 141px 0;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-color: $dark-green;
+  @media screen and (max-width: 980px) {
+    padding-top: 100vw;
+    padding-bottom: 52px;
+    background-size: 126vh 60%;
+    background-position: 90% 0;
+  }
 
   &__wrap {
-    height: calc(100vh - 96px);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-bottom: 64px;
-
-    @media screen and (max-width: 980px) {
-      height: auto;
-      padding: 64px 0;
-    }
-
-    * {
-      color: $white;
-    }
-  }
-
-  &__texts {
-    max-width: 621px;
-    margin: auto 0;
-    @media screen and (max-width: 980px) {
-      margin-bottom: 80px;
-    }
-    .title {
-      margin-bottom: 16px;
-    }
-    .text {
-      margin-bottom: 24px;
-    }
-  }
-
-  &__offices {
-    margin: auto 0 0 0;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    @media screen and (max-width: 980px) {
-      flex-direction: column;
-    }
 
-    li {
-      width: 30%;
-      @media screen and (max-width: 980px) {
-        width: 100%;
-        margin-bottom: 24px;
+    .baner__texts {
+      width: 100%;
+      max-width: 523px;
+
+      .title {
+        margin-bottom: 32px;
+        color: $white;
+        @media screen and (max-width: 980px) {
+          margin-bottom: 28px;
+        }
       }
 
-      p {
-        width: 100%;
-        display: flex;
-        align-items: center;
-
-        &:first-child {
-          margin-bottom: 6px;
+      .text {
+        margin-bottom: 32px;
+        color: $white;
+        @media screen and (max-width: 980px) {
+          margin-bottom: 28px;
         }
+      }
 
-        svg {
-          margin-right: 4px;
+      .button {
+        @media screen and (max-width: 980px) {
+          width: 100%;
         }
       }
     }
   }
-
 }

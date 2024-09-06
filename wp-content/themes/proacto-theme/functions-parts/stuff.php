@@ -100,4 +100,20 @@
         acf_update_setting('google_api_key', 'AIzaSyDxjKA06MGliuBRnfRJhBgsb6IF-v50iPM');
     }
     add_action('acf/init', 'my_acf_init');
+
+    if (!function_exists('add_em_words')) {
+	    function add_em_words( $title, $orders ) {
+		    $words = explode( ' ', $title );
+		    // Check if the array has more than one word
+            foreach ($orders as $number) {
+	            if ( isset( $words[$number] ) ) {
+		            // Wrap the second word with the <em> tag
+		            $words[$number] = '<em>' . $words[$number] . '</em>';
+	            }
+            }
+		    // Join the words back into a string
+		    $title = implode( ' ', $words );
+            return $title;
+	    }
+    }
 ?>

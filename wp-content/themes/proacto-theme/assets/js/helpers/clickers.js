@@ -29,3 +29,33 @@ if (buttonOpeners) {
     })
 }
 
+const tabbers = document.querySelectorAll('.tabber')
+if (tabbers) {
+    tabbers.forEach(tabber => {
+        tabber.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            let on = this.dataset.on
+            let all = this.dataset.all
+
+            const allElems = document.querySelectorAll('.' + all)
+            const onElem = document.getElementById(on)
+
+            if (allElems) {
+                allElems.forEach(elem => {
+                    elem.classList.remove('active')
+                })
+            }
+
+            if (onElem) {
+                onElem.classList.add('active')
+            }
+
+            tabbers.forEach(tabber => {
+                tabber.classList.remove('active')
+            })
+
+            this.classList.add('active')
+        })
+    })
+}

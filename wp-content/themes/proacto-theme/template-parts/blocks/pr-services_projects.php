@@ -1,6 +1,6 @@
 <?php
 //main class name for block
-$className = 'baner';
+$className = 'services_projects';
 if ( ! empty( $block['className'] ) ) {
 	$className .= ' ' . $block['className'];
 }

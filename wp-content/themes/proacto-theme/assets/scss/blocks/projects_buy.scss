@@ -1,0 +1,145 @@
+@import "../generals/colors";
+
+.projects_buy {
+  padding: 80px 0;
+  @media screen and (max-width: 980px){
+    padding: 40px 0;
+  }
+
+  &__head {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 42px;
+    @media screen and (max-width: 980px){
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    button {
+      &:first-of-type {
+        margin: auto 24px 0 auto;
+        @media screen and (max-width: 980px){
+          margin: 0 12px 0 0;
+        }
+      }
+    }
+  }
+
+  &__texts {
+    max-width: 630px;
+    @media screen and (max-width: 980px){
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 24px;
+    }
+    .title {
+      margin-bottom: 32px;
+      color: $dark-green;
+    }
+  }
+
+  &__main {
+    width: 100%;
+
+    .projects_buy__grid {
+      display: none;
+      opacity: 0;
+      transition: opacity .5s .5s;
+
+      &.active {
+        display: grid;
+        opacity: 1;
+      }
+    }
+
+    .show-more {
+      margin: 40px auto auto;
+    }
+  }
+
+}
+
+.projects_buy__grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 9px;
+  row-gap: 9px;
+  @media screen and (max-width: 980px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .projects_buy-card {
+    width: 100%;
+  }
+}
+
+.projects_buy-card {
+  border: 1px solid $grey;
+  border-radius: 24px;
+  padding: 24px;
+  transition: all .5s;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  &:hover {
+    -webkit-box-shadow: 2px 3px 15px 3px rgba(9,50,56,0.38);
+    -moz-box-shadow: 2px 3px 15px 3px rgba(9,50,56,0.38);
+    box-shadow: 2px 3px 15px 3px rgba(9,50,56,0.38);
+  }
+
+  &__img {
+    position: relative;
+    padding-top: 58%;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    background-color: $dark-green;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+
+    span {
+      display: block;
+      padding: 12px 24px;
+      text-transform: uppercase;
+      color: $white;
+      background-color: $transparent;
+      border-radius: 8px;
+      position: absolute;
+      left: 8px;
+      bottom: 8px;
+      z-index: 1;
+    }
+  }
+
+  &__texts {
+    max-width: calc(100% - 82px);
+    .title {
+      color: $dark-green;
+    }
+  }
+
+  .button-pay {
+    margin: auto 10px auto auto;
+  }
+
+  &.sold {
+    .projects_buy-card__img {
+      img {
+        opacity: .3;
+      }
+    }
+  }
+}

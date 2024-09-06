@@ -69,7 +69,13 @@ class Acf_Config {
 			    'name' => 'services_projects',
 			    'title' => __('Services & Projects', 'proacto'),
 			    'description' => __('Main page services & projects', 'proacto'),
-			    'icon' => 'cover-image'
+			    'icon' => 'excerpt-view'
+		    ),
+		    array(
+			    'name' => 'projects_buy',
+			    'title' => __('Projects to buy', 'proacto'),
+			    'description' => __('Grid of buyable projects', 'proacto'),
+			    'icon' => 'screenoptions'
 		    ),
 	    );
         $block_names = array(

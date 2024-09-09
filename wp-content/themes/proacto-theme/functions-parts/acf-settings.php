@@ -77,6 +77,25 @@ class Acf_Config {
 			    'description' => __('Grid of buyable projects', 'proacto'),
 			    'icon' => 'screenoptions'
 		    ),
+		    array(
+			    'name' => 'info_numbers',
+			    'title' => __('Info numbers', 'proacto'),
+			    'description' => __('Text with info numbers', 'proacto'),
+			    'icon' => 'editor-ol'
+		    ),
+		    array(
+			    'name' => 'icons_slider',
+			    'title' => __('Icons slider', 'proacto'),
+			    'description' => __('Icons slider with links', 'proacto'),
+			    'icon' => 'ellipsis'
+		    ),
+		    array(
+			    'name' => 'portfolio',
+			    'title' => __('Portfolio', 'proacto'),
+			    'description' => __('Portfolio', 'proacto'),
+			    'icon' => 'portfolio'
+		    ),
+
 	    );
         $block_names = array(
             'default',

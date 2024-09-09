@@ -1,0 +1,108 @@
+@import "../generals/colors";
+
+.portfolio {
+  padding: 80px 0;
+  @media screen and (max-width: 980px){
+    padding: 32px 0;
+  }
+
+  .container {
+    @media screen and (max-width: 980px) {
+      overflow: visible;
+    }
+  }
+
+  .title {
+    color: $dark-green;
+    margin-bottom: 32px;
+  }
+
+  .text {
+    color: $dark-green;
+    margin-bottom: 42px;
+    max-width: 629px;
+  }
+
+  .portfolio_swiper {
+    @media screen and (max-width: 980px) {
+      overflow: visible;
+    }
+    .swiper-wrapper {
+      @media screen and (min-width: 980px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 28px;
+        row-gap: 28px;
+      }
+    }
+
+    .portfolio-card {
+      &:first-child {
+        grid-area: 1 / 1 / 2 / 3;
+      }
+    }
+  }
+}
+
+.portfolio-card {
+  position: relative;
+  border-radius: 24px;
+  padding: 95px 32px;
+  overflow: hidden;
+  @media screen and (max-width: 980px) {
+    height: auto !important;
+    display: flex !important;
+    align-items: flex-end;
+    padding: 220px 0 0 0;
+  }
+  
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-position: right;
+    @media screen and (max-width: 980px) {
+      object-position: top;
+    }
+  }
+
+  &__texts {
+    max-width: 355px;
+    @media screen and (max-width: 980px) {
+      max-width: 100%;
+      padding: 32px 24px;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      color: $white;
+      margin-bottom: 32px;
+      @media screen and (min-width: 980px) {
+        margin-bottom: 28px;
+      }
+    }
+
+    p {
+      color: $white;
+    }
+  }
+
+  &.main {
+    @media screen and (min-width: 980px) {
+      padding: 140px 110px;
+
+      img {
+        object-position: left;
+      }
+
+      .portfolio-card__texts {
+        max-width: 50%;
+        margin: auto 0 auto auto;
+      }
+    }
+  }
+}

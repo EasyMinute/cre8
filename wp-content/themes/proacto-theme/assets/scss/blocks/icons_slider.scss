@@ -1,0 +1,24 @@
+.icons_slider {
+  padding: 40px 0;
+  @media screen and (max-width: 980px){
+    padding: 24px 0;
+  }
+
+  .container {
+    @media screen and (max-width: 980px){
+      max-width: 100%;
+    }
+  }
+
+  .title {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  &__swiper {
+    .swiper-slide {
+      position: relative;
+      width: fit-content;
+    }
+  }
+}

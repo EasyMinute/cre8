@@ -6,9 +6,7 @@ import "./templates/header";
 
 // include helpers
 import "./helpers/clickers";
+import "./helpers/sliders";
 
 // Import blocks
-import "./blocks/sliders";
-import "./blocks/seo_text";
-import "./blocks/map";
 

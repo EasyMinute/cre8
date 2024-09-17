@@ -1,0 +1,46 @@
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./scss/blocks/text_block.scss ***!
+  \********************************************************************************************************************************************************************************************/
+.text_block {
+  padding: 80px 0;
+}
+.text_block h2, .text_block h3 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  margin-bottom: 42px;
+  color: #F97A58;
+  margin-top: 44px;
+}
+.text_block h2:first-child, .text_block h3:first-child {
+  margin-top: 0px;
+}
+.text_block h4 {
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #093238;
+}
+.text_block p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #093238;
+  margin-bottom: 12px;
+}
+.text_block p b, .text_block p strong {
+  font-weight: 600;
+}
+.text_block ul {
+  list-style-type: disc;
+}
+.text_block ul li {
+  margin-bottom: 12px;
+}

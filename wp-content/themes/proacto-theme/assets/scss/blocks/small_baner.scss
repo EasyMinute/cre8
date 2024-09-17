@@ -1,0 +1,37 @@
+@import "../generals/colors";
+
+.small_baner {
+  padding: 105px;
+  position: relative;
+  -webkit-background-size: cover;
+  background-size: cover;
+  @media screen and (max-width: 980px){
+    padding: 344px 0 48px;
+    background-repeat: no-repeat;
+    background-position: 85% top;
+    background-size: auto;
+  }
+
+  .gradient-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__wrap {
+    position: relative;
+    max-width: 523px;
+
+    .heading {
+      color: $white !important;
+      margin-bottom: 32px;
+    }
+
+    .body {
+      color: $light-grey !important;
+      margin-bottom: 32px;
+    }
+  }
+}

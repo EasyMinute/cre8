@@ -1,0 +1,35 @@
+/*!*********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./scss/blocks/small_baner.scss ***!
+  \*********************************************************************************************************************************************************************************************/
+.small_baner {
+  padding: 105px;
+  position: relative;
+  background-size: cover;
+}
+@media screen and (max-width: 980px) {
+  .small_baner {
+    padding: 344px 0 48px;
+    background-repeat: no-repeat;
+    background-position: 85% top;
+    background-size: auto;
+  }
+}
+.small_baner .gradient-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.small_baner__wrap {
+  position: relative;
+  max-width: 523px;
+}
+.small_baner__wrap .heading {
+  color: #FFFFFF !important;
+  margin-bottom: 32px;
+}
+.small_baner__wrap .body {
+  color: #D4DDDE !important;
+  margin-bottom: 32px;
+}

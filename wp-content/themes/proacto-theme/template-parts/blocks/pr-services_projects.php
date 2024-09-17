@@ -102,36 +102,13 @@ $footer = get_field('footer_options', 'options');
                 <?php endif; ?>
             </div>
             <div class="projects_grid">
-                <?php foreach($posts as $post): ?>
-                    <?php
+                <?php
+                foreach($posts as $post):
                     setup_postdata($post);
-                    $title = get_the_title($post);
-                    $img_url = get_the_post_thumbnail_url($post);
-                    $img_alt = get_the_post_thumbnail_caption($post);
-                    $link = get_the_permalink($post);
-                    $terms = get_the_terms($post->ID, 'technology');
-                    if ($terms) {
-                        $term_name = $terms[0]->name;
-                    } else {
-                        $term_name = __('Project', 'proacto');
-                    }
-                    ?>
-                    <div class="project_card">
-                        <img src="<?= $img_url ?>" alt="<?= $img_alt ?>" class="project_card__img">
-                        <a class="project_card__link" href="<?= $link ?>">
-                            <span class="project_card__texts">
-                                <h3 class="heading heading-h3 title">
-                                    <?= $title ?>
-                                </h3>
-                                <span class="body technology">
-                                    <?= $term_name ?>
-                                </span>
-                            </span>
-                            <button class="arrow-button secondary"></button>
-                        </a>
-                    </div>
-                <?php endforeach; ?>
-                <?php wp_reset_postdata(); ?>
+                    get_project_card_template($post);
+                endforeach;
+                wp_reset_postdata();
+                ?>
             </div>
             <?php if(!empty($projects['button'])): ?>
                 <a href="<?= $projects['button']['url'] ?>" class="show-more">

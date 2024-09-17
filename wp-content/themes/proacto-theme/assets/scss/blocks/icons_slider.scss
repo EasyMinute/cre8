@@ -13,12 +13,20 @@
   .title {
     margin-bottom: 32px;
     text-align: center;
+    text-transform: uppercase;
   }
 
   &__swiper {
-    .swiper-slide {
-      position: relative;
-      width: fit-content;
+
+    .swiper-wrapper {
+      @media screen and (min-width: 980px) {
+        justify-content: center;
+      }
+
+      .swiper-slide {
+        position: relative;
+        width: fit-content;
+      }
     }
   }
 }

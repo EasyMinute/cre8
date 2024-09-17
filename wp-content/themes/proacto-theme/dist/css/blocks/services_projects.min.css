@@ -200,9 +200,9 @@
   max-width: calc(100% - 40px);
 }
 .project_card__texts .title {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   margin-bottom: 4px;
 }
 .project_card__texts .technology {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }

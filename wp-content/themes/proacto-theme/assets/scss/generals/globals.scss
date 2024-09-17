@@ -49,3 +49,29 @@ img {
     }
   }
 }
+
+.wp-block-group.is-style-image {
+  background-image: url(../img/static/dark-bg.png);
+  background-size: cover;
+  background-position: bottom;
+
+  section {
+    .container {
+      .heading,
+      .body {
+        color: $white;
+      }
+    }
+  }
+}
+
+section {
+  overflow: hidden;
+
+  .container {
+    .heading,
+    .body {
+      color: $dark-green;
+    }
+  }
+}

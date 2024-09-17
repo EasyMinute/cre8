@@ -40,6 +40,7 @@
 
     &.opened {
       max-height: 100vh;
+      z-index: 2323;
     }
 
     .header__menu {

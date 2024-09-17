@@ -47,7 +47,7 @@ $cards = $portfolio['cards'];
 					<?php endforeach ?>
 				</div>
 			</div>
-            <div class="swiper-pagination"></div>
+            <div class="portfolio_pagination swiper-pagination"></div>
 		<?php endif; ?>
 	</div>
 </section>

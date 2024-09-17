@@ -1,0 +1,122 @@
+@import "../generals/colors";
+
+.steps {
+  padding: 40px 0;
+  @media screen and (max-width: 980px){
+    padding: 32px 0;
+  }
+
+  .section-title {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 68px;
+    @media screen and (max-width: 980px){
+      text-align: left;
+      margin-bottom: 42px;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+
+    @media screen and (max-width: 980px){
+      flex-direction: column;
+    }
+
+    &:after,
+    &:before {
+      content: '';
+      display: block;
+      width: calc(100% - 200px);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      @media screen and (max-width: 980px){
+        width: unset;
+        height: 100%;
+        transform: none;
+        left: 31px;
+        top: 0;
+      }
+    }
+
+    &:after {
+      top: 34px;
+      border-bottom: 3px dashed $orange;
+      height: 0;
+        @media screen and (max-width: 980px){
+        height: 100%;
+        width: 0;
+        border-right: 3px dashed $orange;
+        border-bottom: none;
+      }
+    }
+
+    &:before {
+      top: 34px;
+      height: 3px;
+      background: linear-gradient(to right, rgba(46, 81, 86, 1), rgba(11, 53, 53, 0.09411764705882353) 48.32%, rgba(28, 66, 71, 1));
+      z-index: 2;
+      @media screen and (max-width: 980px){
+        height: 100%;
+        width: 3px;
+        background: linear-gradient(360deg, rgb(31, 68, 73) 18.49%, rgba(11, 53, 53, 0.0941176471) 48.32%, rgba(30, 69, 74, 1));
+      }
+
+    }
+
+    .step_card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 3;
+      @media screen and (max-width: 980px){
+        margin-bottom: 58px;
+        flex-direction: row;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &__number {
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        background-color: $orange;
+        margin-bottom: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 38px;
+        font-weight: 600;
+        color: $white;
+        @media screen and (max-width: 980px){
+          width: 62px;
+          height: 62px;
+          margin-right: 36px;
+          margin-bottom: 0;
+        }
+      }
+
+      &__texts {
+        text-align: center;
+        @media screen and (max-width: 980px){
+          width: calc(100% - 98px);
+          text-align: left;
+        }
+
+        .block-title {
+          color: $orange !important;
+          margin-bottom: 14px;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

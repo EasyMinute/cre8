@@ -1,0 +1,13 @@
+.pay_projects_grid {
+  padding: 64px 0;
+  @media screen and (max-width: 980px) {
+    padding: 32px 0;
+  }
+
+  .section_title {
+    margin-bottom: 42px;
+    @media screen and (max-width: 980px) {
+      margin-bottom: 32px;
+    }
+  }
+}

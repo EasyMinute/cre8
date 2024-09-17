@@ -1,0 +1,31 @@
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./scss/blocks/projects_grid_section.scss ***!
+  \*******************************************************************************************************************************************************************************************************/
+.projects_grid_section {
+  padding: 42px 0 80px;
+}
+@media screen and (max-width: 980px) {
+  .projects_grid_section {
+    padding: 32px 0 100px;
+  }
+}
+.projects_grid_section .heading-h2 {
+  margin-bottom: 32px;
+  text-align: center;
+}
+.projects_grid_section .projects_grid.simplified .project_card__link {
+  max-height: 100%;
+  background: none;
+}
+.projects_grid_section .projects_grid.simplified .project_card__link * {
+  display: none;
+}
+.projects_grid_section .show-more {
+  margin: 42px auto 0;
+  border: none;
+  background: none;
+  color: #093238;
+}
+.projects_grid_section .show-more:after {
+  border-color: #093238 transparent transparent transparent;
+}

@@ -171,12 +171,12 @@
   &__texts {
     max-width: calc(100% - 40px);
     .title {
-      color: $white;
+      color: $white !important;
       margin-bottom: 4px;
     }
 
     .technology {
-      color: $white
+      color: $white !important;
     }
   }
 }

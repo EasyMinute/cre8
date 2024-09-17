@@ -1,0 +1,169 @@
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./scss/blocks/contact_form.scss ***!
+  \**********************************************************************************************************************************************************************************************/
+.contact_form {
+  padding: 70px 0;
+  background-image: url(../../images/pr-optimized-contact-bg.png);
+  background-size: cover;
+  background-position: top;
+}
+@media screen and (max-width: 980px) {
+  .contact_form {
+    padding: 40px 0;
+  }
+}
+.contact_form__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 980px) {
+  .contact_form__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.contact_form__wrap-image {
+  width: 100%;
+  max-width: 40%;
+  margin-right: 40px;
+}
+@media screen and (max-width: 980px) {
+  .contact_form__wrap-image {
+    padding: 0 10%;
+    max-width: 400px;
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
+}
+.contact_form__wrap_texts {
+  width: 100%;
+  max-width: 629px;
+}
+@media screen and (max-width: 980px) {
+  .contact_form__wrap_texts {
+    max-width: 100%;
+  }
+}
+.contact_form__wrap_texts .heading.title {
+  color: #FFFFFF !important;
+  max-width: 330px;
+  margin-bottom: 24px;
+}
+.contact_form__wrap_texts .body.text {
+  color: #6B8488 !important;
+  margin-bottom: 32px;
+  max-width: 463px;
+}
+.contact_form__wrap_texts form .form-row textarea {
+  max-height: 112px;
+  resize: none;
+}
+
+form .form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 12px;
+}
+form .form-row .form-half {
+  width: 100%;
+}
+form .form-row .form-half:first-child {
+  margin-right: 20px;
+}
+form .form-row .wpcf7-form-control-wrap {
+  width: 100%;
+  display: block;
+}
+form input:not([type=submit]), form textarea {
+  width: 100%;
+  display: block;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #6B8488;
+  padding: 20px 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.select2-container {
+  width: 100% !important;
+}
+.select2-container .select2-selection {
+  background: none !important;
+  border: none !important;
+  border-bottom: 2px solid #6B8488 !important;
+  padding: 12px 0 !important;
+  border-radius: 0 !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  line-height: 24px !important;
+  letter-spacing: -0.02em !important;
+  text-align: left !important;
+  color: #FFFFFF !important;
+}
+.select2-container .select2-selection__choice {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border: none !important;
+}
+.select2-container .select2-selection__choice__remove {
+  -webkit-transform: scale(1.2) !important;
+      -ms-transform: scale(1.2) !important;
+          transform: scale(1.2) !important;
+  margin-right: 8px !important;
+  color: #FFFFFF !important;
+}
+
+.select2-dropdown {
+  background: #093238 !important;
+}
+.select2-dropdown .select2-results__option {
+  font-family: "BarlowCondensed", sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  line-height: 26px !important;
+  color: #6B8488;
+}
+.select2-dropdown .select2-results__option:hover, .select2-dropdown .select2-results__option--highlighted {
+  color: #FFFFFF;
+  background: #093238 !important;
+}
+
+.wpcf7-not-valid-tip {
+  margin-top: 8px;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+  border-radius: 8px;
+  border-color: #F97A58;
+  color: #FFFFFF;
+  padding: 8px 12px;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  border-radius: 8px;
+  border-color: #6B8488;
+  color: #FFFFFF;
+  padding: 8px 12px;
+}

@@ -34,6 +34,14 @@ require get_template_directory() . '/functions-parts/acf-settings.php';
  * Підключення stuff
  */
 require get_template_directory() . '/functions-parts/stuff.php';
+/**
+ * Підключення template-getters.php
+ */
+require get_template_directory() . '/functions-parts/template-getters.php';
+/**
+ * Підключення template-getters.php
+ */
+require get_template_directory() . '/functions-parts/load-more.php';
 
 
 

@@ -10,11 +10,12 @@ $title = !empty($info_numbers['title']) ? $info_numbers['title'] : __('Title', '
 $title = add_em_words($title, array(1));
 $text = !empty($info_numbers['text']) ? $info_numbers['text'] : __('Text', 'proacto');
 $numbers = $info_numbers['numbers'];
+$class = $info_numbers['reverse'] ? 'reverse' : '';
 ?>
 
-<section class="<?php echo  esc_attr($className)?>" >
+<section class="<?php echo  esc_attr($className)?>">
 	<div class="container">
-		<div class="info_numbers__wrap">
+		<div class="info_numbers__wrap <?= $class ?>">
 			<?php if (!empty($numbers)): ?>
 				<ul class="info_numbers__numbers">
 					<?php foreach ($numbers as $item): ?>

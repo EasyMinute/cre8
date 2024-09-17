@@ -95,11 +95,92 @@ class Acf_Config {
 			    'description' => __('Portfolio', 'proacto'),
 			    'icon' => 'portfolio'
 		    ),
+		    array(
+			    'name' => 'benefits_grid',
+			    'title' => __('Benefits grid', 'proacto'),
+			    'description' => __('Benefits grid', 'proacto'),
+			    'icon' => 'screenoptions'
+		    ),
+		    array(
+			    'name' => 'testimonials_slider',
+			    'title' => __('Testimonials slider', 'proacto'),
+			    'description' => __('Slider with testimonials', 'proacto'),
+			    'icon' => 'slides'
+		    ),
+		    array(
+			    'name' => 'recent_posts',
+			    'title' => __('Recent posts', 'proacto'),
+			    'description' => __('3 posts', 'proacto'),
+			    'icon' => 'sticky'
+		    ),
+		    array(
+			    'name' => 'contact_form',
+			    'title' => __('Contact form', 'proacto'),
+			    'description' => __('Block with form', 'proacto'),
+			    'icon' => 'email-alt'
+		    ),
+		    array(
+			    'name' => 'text_block',
+			    'title' => __('Text block', 'proacto'),
+			    'description' => __('Block with text', 'proacto'),
+			    'icon' => 'text-page'
+		    ),
+		    array(
+			    'name' => 'small_baner',
+			    'title' => __('Small baner', 'proacto'),
+			    'description' => __('Block with text', 'proacto'),
+			    'icon' => 'nametag'
+		    ),
+		    array(
+			    'name' => 'projects_grid',
+			    'title' => __('Projects grid', 'proacto'),
+			    'description' => __('Grid with all projects', 'proacto'),
+			    'icon' => 'grid-view'
+		    ),
+		    array(
+			    'name' => 'image_values',
+			    'title' => __('Image & values', 'proacto'),
+			    'description' => __('Grid with all projects', 'proacto'),
+			    'icon' => 'align-pull-left'
+		    ),
+		    array(
+			    'name' => 'pay_projects_grid',
+			    'title' => __('Pay projects grid', 'proacto'),
+			    'description' => __('Grid with all choose paying projects', 'proacto'),
+			    'icon' => 'grid-view'
+		    ),
+		    array(
+			    'name' => 'steps',
+			    'title' => __('Steps', 'proacto'),
+			    'description' => __('1,2,3 and so on', 'proacto'),
+			    'icon' => 'ellipsis'
+		    ),
+		    array(
+			    'name' => 'projects_masonry',
+			    'title' => __('Projects masonry', 'proacto'),
+			    'description' => __('Masonry of projects with filter and show more', 'proacto'),
+			    'icon' => 'tagcloud'
+		    ),
+		    array(
+			    'name' => 'photo_gallery',
+			    'title' => __('Photo gallery', 'proacto'),
+			    'description' => __('Gallery of photos', 'proacto'),
+			    'icon' => 'tagcloud'
+		    ),
+		    array(
+			    'name' => 'list_cards',
+			    'title' => __('List cards', 'proacto'),
+			    'description' => __('Fancy cards with lists', 'proacto'),
+			    'icon' => 'index-card'
+		    ),
 
 	    );
-        $block_names = array(
-            'default',
-        );
+	    $acf_style_names = array(
+		    array(
+			    'name' => 'darked',
+			    'label' => __("Dark background", 'proacto')
+		    ),
+	    );
 
         if ( function_exists( 'acf_register_block_type' ) ) {
 
@@ -120,6 +201,14 @@ class Acf_Config {
                 );
             }
         }
+
+	    register_block_style(
+		    'core/group',
+		    array(
+			    'name'  => 'image',
+			    'label' => __('Image on bg')
+		    )
+	    );
     }
 
     /**

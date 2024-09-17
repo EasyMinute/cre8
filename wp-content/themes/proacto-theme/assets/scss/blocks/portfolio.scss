@@ -77,17 +77,17 @@
       padding: 32px 24px;
     }
 
-    h3 {
+    .heading {
       text-transform: uppercase;
-      color: $white;
+      color: $white !important;
       margin-bottom: 32px;
       @media screen and (min-width: 980px) {
         margin-bottom: 28px;
       }
     }
 
-    p {
-      color: $white;
+    .body {
+      color: $white !important;
     }
   }
 

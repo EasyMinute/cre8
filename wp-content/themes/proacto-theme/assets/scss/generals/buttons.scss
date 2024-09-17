@@ -28,6 +28,7 @@
   &.primary {
     color: $white;
     background-color: $orange;
+    border: none;
 
     &:hover {
       background-color: $transparent;
@@ -187,6 +188,8 @@
   line-height: 18px;
   text-decoration: underline;
   width: fit-content;
+  border: none;
+  background: none;
 
   &:hover {
     text-decoration: none;
@@ -221,4 +224,77 @@
   height: 100%;
   top: 0;
   left: 0;
+}
+
+.swiper-button {
+  display: block !important;
+  width: 32px !important;
+  height: 32px !important;
+
+  &:after {
+    content: url('data:image/svg+xml;utf8,<svg width="32" height="32" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M22 0.0625C26.3388 0.0625 30.5802 1.34911 34.1878 3.75964C37.7954 6.17016 40.6072 9.59633 42.2676 13.6049C43.928 17.6134 44.3624 22.0243 43.516 26.2798C42.6695 30.5353 40.5802 34.4441 37.5121 37.5122C34.4441 40.5802 30.5352 42.6695 26.2798 43.516C22.0243 44.3624 17.6134 43.928 13.6049 42.2676C9.59632 40.6072 6.17015 37.7954 3.75962 34.1878C1.3491 30.5802 0.0624886 26.3388 0.0624886 22C0.0686302 16.1837 2.38187 10.6074 6.49462 6.49463C10.6074 2.38188 16.1837 0.0686421 22 0.0625ZM17.4311 29.2436C17.2743 29.4004 17.1499 29.5865 17.0651 29.7914C16.9802 29.9962 16.9365 30.2158 16.9365 30.4375C16.9365 30.6592 16.9802 30.8788 17.0651 31.0836C17.1499 31.2885 17.2743 31.4746 17.4311 31.6314C17.5879 31.7882 17.774 31.9126 17.9789 31.9974C18.1837 32.0823 18.4033 32.1259 18.625 32.1259C18.8467 32.1259 19.0663 32.0823 19.2711 31.9974C19.476 31.9126 19.6621 31.7882 19.8189 31.6314L28.2564 23.1939C28.4133 23.0372 28.5378 22.8511 28.6227 22.6462C28.7076 22.4414 28.7513 22.2218 28.7513 22C28.7513 21.7782 28.7076 21.5586 28.6227 21.3538C28.5378 21.1489 28.4133 20.9628 28.2564 20.8061L19.8189 12.3686C19.6621 12.2118 19.476 12.0874 19.2711 12.0026C19.0663 11.9177 18.8467 11.8741 18.625 11.8741C18.4033 11.8741 18.1837 11.9177 17.9789 12.0026C17.774 12.0874 17.5879 12.2118 17.4311 12.3686C17.2743 12.5254 17.1499 12.7115 17.0651 12.9164C16.9802 13.1212 16.9365 13.3408 16.9365 13.5625C16.9365 13.7842 16.9802 14.0038 17.0651 14.2086C17.1499 14.4135 17.2743 14.5996 17.4311 14.7564L24.6768 22L17.4311 29.2436Z" fill="white"/> </svg>') !important;
+    display: block;
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  &-prev {
+    &:after {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.swiper-pagination {
+  position: relative !important;
+  top: 0 !important;
+  margin-top: 16px !important;
+
+  .swiper-pagination-bullet {
+    max-width: 8px;
+    width: 32px !important;
+    border-radius: 8px !important;
+    transition: all .5s;
+  }
+  .swiper-pagination-bullet-active {
+    max-width: 32px;
+    background-color: $dark-green;
+  }
+}
+
+.wp-block-group.is-style-image {
+  .swiper-pagination {
+    .swiper-pagination-bullet{
+      background-color: $white !important;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: $white;
+    }
+  }
+}
+
+.filter-button {
+  display: flex;
+  align-items: center;
+  padding: 12px 14px;
+  border: 1px solid $transparent-green;
+  border-radius: 6px;
+  transition: all .5s;
+  color: $light-green;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  width: max-content;
+
+  img {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+
+  &.active,
+  &:hover {
+    background-color: $dark-green;
+    color: $white;
+  }
 }

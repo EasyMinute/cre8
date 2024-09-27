@@ -12,12 +12,26 @@
   }
 
   &__logo {
+    @media screen and (min-width: 980px) {
+      width: 20%;
+    }
     img{
       width: 76px;
     }
   }
 
+  &__button__wrap {
+    @media screen and (min-width: 980px) {
+      width: 20%;
+      display: flex;
+      justify-content: flex-end;
+    }
+    @media screen and (max-width: 980px){
+      margin: 0 18px 0 auto;
+    }
+  }
   &__button {
+    width: max-content;
     @media screen and (max-width: 980px){
       margin: 0 18px 0 auto;
     }
@@ -65,6 +79,7 @@
           line-height: 20px;
           color: $white;
           transition: all .5s;
+          text-transform: capitalize;
           @media screen and (max-width: 980px){
             text-transform: uppercase;
           }

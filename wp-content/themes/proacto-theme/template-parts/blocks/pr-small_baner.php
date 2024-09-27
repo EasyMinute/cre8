@@ -13,6 +13,18 @@ $color = $small_baner['color'];
 
 $footer = get_field('footer_options', 'options');
 
+$class = '';
+if (is_singular('projects')) {
+	$className .= ' project-banner';
+    $technologies = get_the_terms(get_the_ID(), 'technology');
+    $term = !empty($technologies) ? $technologies['0'] : false;
+    if($term) {
+	    $options = get_field( 'technology_options', 'technology_' . $term->term_id );
+	    $icon_url = esc_url($options['icon']['url']);
+	    $icon_alt = esc_attr($options['icon']['alt']);
+    }
+}
+
 ?>
 
 <section class="<?= $className ?>" style="background-image: url(<?= $bg_url ?>); background-color: <?= $color ?>">
@@ -20,6 +32,14 @@ $footer = get_field('footer_options', 'options');
     <div class="gradient-overlay mobile" style="background: linear-gradient(360deg, <?= $color ?> 30.82%, <?= $color ?>00 80%);"></div>
 	<div class="container">
 		<div class="small_baner__wrap">
+            <?php if(isset($term) && $term): ?>
+                <p class="body project-term">
+                    <?php if(isset($icon_url)): ?>
+                        <img src="<?= $icon_url ?>" alt="<?= $icon_alt ?>">
+                        <?= $term->name ?>
+                    <?php endif; ?>
+                </p>
+            <?php endif; ?>
 			<h1 class="heading heading-h2">
 				<?= $title ?>
 			</h1>

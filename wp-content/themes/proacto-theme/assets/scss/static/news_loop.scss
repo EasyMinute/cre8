@@ -1,0 +1,228 @@
+@import "../generals/colors";
+
+.news_loop {
+  background-image: url(/img/static/grid_layer.svg);
+  padding: 62px 0 120px;
+  @media screen and (max-width: 980px){
+    padding: 48px 0;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: flex-start;
+    //flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+    @media screen and (max-width: 980px){
+      flex-direction: column-reverse;
+    }
+
+    &__main {
+      width: 100%;
+      max-width: calc(100% - 325px);
+      margin-right: 5%;
+      @media screen and (max-width: 980px){
+        margin-right: 0;
+        max-width: 100%;
+      }
+
+      .section-title {
+        text-transform: uppercase;
+        margin-bottom: 32px;
+      }
+
+      .article-card {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__side {
+      width: 100%;
+      max-width: 325px;
+      @media screen and (max-width: 980px) {
+        max-width: 100%;
+        overflow: auto;
+      }
+
+      .block-title {
+        margin-bottom: 24px;
+        color: $dark-green;
+        @media screen and (max-width: 980px){
+          display: none;
+        }
+      }
+
+      .cats-list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 24px;
+        @media screen and (max-width: 980px){
+          width: fit-content;
+          flex-wrap: nowrap;
+        }
+
+        &__item {
+          margin-right: 10px;
+          margin-bottom: 10px;
+
+          a {
+            display:flex;
+            align-items: center;
+            border-radius: 6px;
+            padding: 12px 18px 12px 14px;
+            background-color: #F5F7F7;
+            color: $dark-green;
+            @media screen and (max-width: 980px){
+              width: max-content;
+            }
+
+            &.active,
+            &:hover {
+              background-color: $orange;
+              color: $white;
+
+              img {
+                filter: brightness(22);
+              }
+            }
+
+            img {
+              margin-right: 8px;
+              width: 24px;
+              height: 24px;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+      
+      .footer__socials {
+        display: flex;
+        @media screen and (max-width: 980px){
+          display: none;
+        }
+
+        a {
+          margin-right: 6px;
+          opacity: .8;
+        }
+      }
+    }
+  }
+}
+
+.article-card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  @media screen and (max-width: 980px){
+    flex-direction: column;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 365px;
+    margin-right: 24px;
+    border-radius: 8px;
+    overflow: hidden;
+    @media screen and (max-width: 980px){
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
+  }
+  
+  &__texts {
+    width: 100%;
+    
+    .post-categories {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+      
+      li {
+        padding: 8px 16px;
+        border-radius: 8px;
+        background-color: $greyer;
+        color: $dark-green;
+        margin-right: 8px;
+        font-size: 14px;
+        line-height: 14px;
+
+        &:first-child {
+          background-color: $orange;
+          color: $white;
+        }
+      }
+    }
+
+    .block-title {
+      margin-bottom: 16px;
+      color: $dark-green;
+    }
+
+    .block-text {
+      margin-bottom: 16px;
+      color: $grey;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; /* number of lines to show */
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+
+    .post-meta {
+      display: flex;
+      align-items: center;
+
+      .author-img {
+        display: block;
+        margin-right: 8px;
+        width: 24px;
+        height: 24px;
+        border-radius: 24px;
+      }
+
+      .author-name {
+        color: $dark-green !important;
+        font-weight: 500;
+        font-size: 14px;
+      }
+
+      .date {
+        display: block;
+        margin-left: 8px;
+        color: #96969E !important;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  .page-numbers {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+    color: $grey;
+    border-radius: 4px;
+
+    &.current {
+      background-color: $dark-green;
+      color: $white;
+      
+    }
+  }
+}

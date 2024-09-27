@@ -15,24 +15,16 @@
 get_header();
 ?>
 
-    <main class="single-post">
-        <div class="container">
-            <div class="single-post__wrap">
-                <div class="single-post__content">
-                    <p class="single-post_date body body-s medium">
-                        <?= get_the_date() ?>
-                    </p>
-                    <h2 class="single-post_title headline headline-h2 bold">
-                        <?= get_the_title() ?>
-                    </h2>
-		            <?php the_content(); ?>
-                </div>
-                <div class="single-post__related">
-                    <?php get_template_part('template-parts/static/related-posts') ?>
-                </div>
-            </div>
-        </div>
-    </main>
+<main class="single-post">
+    <?php
+    $post_id = get_the_ID(); // Get the current post ID or set it manually
+    set_query_var('post_id', $post_id); // Set the post_id as a query variable
+    get_template_part('template-parts/static/post-highlight'); // Load the template part
+    get_template_part('template-parts/static/post_content');
+    get_template_part('template-parts/blocks/pr-recent_posts');
+    get_template_part('template-parts/blocks/pr-contact_form');
+    ?>
+</main>
 
 
 <?php

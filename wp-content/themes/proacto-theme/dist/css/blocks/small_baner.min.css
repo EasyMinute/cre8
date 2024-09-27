@@ -6,6 +6,12 @@
   position: relative;
   background-size: cover;
 }
+@media screen and (min-width: 980px) {
+  .small_baner.project-banner {
+    padding: 158px 0;
+    background-position: bottom right;
+  }
+}
 @media screen and (max-width: 980px) {
   .small_baner {
     padding: 344px 0 48px;
@@ -24,6 +30,17 @@
 .small_baner__wrap {
   position: relative;
   max-width: 523px;
+}
+.small_baner__wrap .project-term {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #FFFFFF;
+}
+.small_baner__wrap .project-term img {
+  -webkit-filter: brightness(22);
+          filter: brightness(22);
+  margin-right: 8px;
 }
 .small_baner__wrap .heading {
   color: #FFFFFF !important;

@@ -11,19 +11,6 @@
     text-align: center;
   }
 
-  .projects_grid.simplified {
-    .project_card {
-      &__link {
-        max-height: 100%;
-        background: none;
-
-        * {
-          display: none;
-        }
-      }
-    }
-  }
-
   .show-more {
     margin: 42px auto 0;
     border: none;
@@ -32,6 +19,19 @@
 
     &:after {
       border-color: $dark-green transparent transparent transparent;
+    }
+  }
+}
+
+.projects_grid.simplified {
+  .project_card {
+    &__link {
+      max-height: 100%;
+      background: none;
+
+      * {
+        display: none;
+      }
     }
   }
 }

@@ -86,7 +86,7 @@ if (!empty($projects_buy['sold_projects'])) {
                                 <?= $term_name ?>
                             </span>
                         </div>
-                        <a href="#" class="button-pay"></a>
+                        <a href="<?= $link ?>" class="link-overlay"></a>
                         <a href="<?= $link ?>" class="arrow-button tertiary"></a>
                     </div>
                 <?php endforeach ?>
@@ -120,6 +120,7 @@ if (!empty($projects_buy['sold_projects'])) {
                                 <?= $term_name ?>
                             </span>
                         </div>
+                        <a href="<?= $link ?>" class="link-overlay"></a>
                         <a href="<?= $link ?>" class="arrow-button tertiary"></a>
                     </div>
 		        <?php endforeach ?>

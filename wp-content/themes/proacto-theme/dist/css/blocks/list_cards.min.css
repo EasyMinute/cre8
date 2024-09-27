@@ -1,0 +1,104 @@
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./scss/blocks/list_cards.scss ***!
+  \********************************************************************************************************************************************************************************************/
+.list_cards {
+  padding: 80px 0;
+}
+@media screen and (max-width: 980px) {
+  .list_cards {
+    padding: 40px 0;
+  }
+}
+.list_cards .section-title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 42px;
+}
+@media screen and (max-width: 980px) {
+  .list_cards .section-title {
+    margin-bottom: 32px;
+  }
+}
+.list_cards__wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+@media screen and (max-width: 980px) {
+  .list_cards__wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.list_cards__wrap .list_card {
+  position: relative;
+  padding: 45px 32px 128px;
+  border-radius: 24px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (max-width: 980px) {
+  .list_cards__wrap .list_card {
+    padding: 214px 16px 32px;
+  }
+}
+.list_cards__wrap .list_card__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right center;
+     object-position: right center;
+}
+@media screen and (max-width: 980px) {
+  .list_cards__wrap .list_card__image {
+    -o-object-position: center top;
+       object-position: center top;
+  }
+}
+.list_cards__wrap .list_card .block-title {
+  margin-bottom: 32px;
+  max-width: 320px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 980px) {
+  .list_cards__wrap .list_card .block-title {
+    margin-bottom: 28px;
+    max-width: 100%;
+  }
+}
+.list_cards__wrap .list_card__list {
+  max-width: 320px;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 980px) {
+  .list_cards__wrap .list_card__list {
+    max-width: 100%;
+  }
+}
+.list_cards__wrap .list_card__list li {
+  font-size: 16px;
+  line-height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+.list_cards__wrap .list_card__list li svg {
+  width: 24px;
+  margin-right: 12px;
+}

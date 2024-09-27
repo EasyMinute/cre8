@@ -82,7 +82,7 @@ $initial_query = new WP_Query($args);
 			<?php wp_reset_postdata();?>
 		</div>
 
-        <?php if ($initial_query->max_num_comment_pages > 12) : ?>
+        <?php if ($initial_query->max_num_pages > 1) : ?>
             <button id="load-more-masonry" class="show-more dark" data-current-page="1" data-term="<?php echo esc_attr($technology_filter); ?>">
                 <?= __('Show more', 'proacto') ?>
             </button>

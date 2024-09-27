@@ -107,10 +107,16 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
 }
 .projects_buy-card:hover {
   -webkit-box-shadow: 2px 3px 15px 3px rgba(9, 50, 56, 0.38);
   box-shadow: 2px 3px 15px 3px rgba(9, 50, 56, 0.38);
+}
+.projects_buy-card:hover .projects_buy-card__img img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .projects_buy-card__img {
   position: relative;
@@ -129,6 +135,9 @@
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .projects_buy-card__img span {
   display: block;

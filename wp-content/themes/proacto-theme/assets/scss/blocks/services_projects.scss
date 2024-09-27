@@ -137,6 +137,15 @@
   padding-top: 70%;
   overflow: hidden;
 
+  &:hover {
+    .project_card__img {
+      transform: scale(1.1);
+    }
+    .project_card__link {
+      max-height: 0;
+    }
+  }
+
   &__img {
     position: absolute;
     width: 100%;
@@ -144,6 +153,7 @@
     top: 0;
     left: 0;
     object-fit: cover;
+    transition: all .5s;
   }
 
   &__link {
@@ -163,9 +173,9 @@
       padding: 16px;
     }
 
-    &:hover {
-      max-height: 100%;
-    }
+    //&:hover {
+    //  opacity: 0;
+    //}
   }
 
   &__texts {

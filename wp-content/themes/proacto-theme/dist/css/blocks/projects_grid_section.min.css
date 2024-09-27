@@ -13,13 +13,6 @@
   margin-bottom: 32px;
   text-align: center;
 }
-.projects_grid_section .projects_grid.simplified .project_card__link {
-  max-height: 100%;
-  background: none;
-}
-.projects_grid_section .projects_grid.simplified .project_card__link * {
-  display: none;
-}
 .projects_grid_section .show-more {
   margin: 42px auto 0;
   border: none;
@@ -28,4 +21,12 @@
 }
 .projects_grid_section .show-more:after {
   border-color: #093238 transparent transparent transparent;
+}
+
+.projects_grid.simplified .project_card__link {
+  max-height: 100%;
+  background: none;
+}
+.projects_grid.simplified .project_card__link * {
+  display: none;
 }

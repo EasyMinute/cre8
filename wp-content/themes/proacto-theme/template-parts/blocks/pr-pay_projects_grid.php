@@ -72,7 +72,7 @@ $projects_query = new WP_Query($args);
 		                                <?= $term_name ?>
 		                            </span>
 							</div>
-							<a href="#" class="button-pay"></a>
+                            <a href="<?= $link ?>" class="link-overlay"></a>
 							<a href="<?= $link ?>" class="arrow-button tertiary"></a>
 						</div>
 					<?php elseif ($availibility->slug == 'sold'): ?>
@@ -89,6 +89,7 @@ $projects_query = new WP_Query($args);
                                 <?= $term_name ?>
                             </span>
 							</div>
+                            <a href="<?= $link ?>" class="link-overlay"></a>
 							<a href="<?= $link ?>" class="arrow-button tertiary"></a>
 						</div>
 					<?php endif; ?>

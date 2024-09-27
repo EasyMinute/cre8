@@ -1,0 +1,52 @@
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./scss/blocks/full_image.scss ***!
+  \********************************************************************************************************************************************************************************************/
+.full_image {
+  width: 100%;
+  position: relative;
+}
+.full_image img {
+  width: 100%;
+}
+.full_image .full_image__overlay {
+  position: absolute;
+  padding: 48px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 160px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 0;
+  left: 0;
+}
+@media screen and (max-width: 980px) {
+  .full_image .full_image__overlay {
+    position: static;
+    padding: 32px 12px 4px;
+    height: auto;
+  }
+}
+.full_image .full_image__overlay .bg {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.full_image .full_image__overlay .project-play {
+  padding: 12px 80px;
+  background-color: #FFFFFF;
+  color: #093238;
+}
+@media screen and (max-width: 980px) {
+  .full_image .full_image__overlay .project-play {
+    width: 100%;
+  }
+}
+.full_image .full_image__overlay .project-play svg {
+  margin-right: 12px;
+}

@@ -5,12 +5,22 @@
   position: relative;
   -webkit-background-size: cover;
   background-size: cover;
+
+  &.project-banner {
+    @media screen and (min-width: 980px) {
+      padding: 158px 0;
+      background-position: bottom right;
+    }
+  }
+
   @media screen and (max-width: 980px){
     padding: 344px 0 48px;
     background-repeat: no-repeat;
     background-position: 85% top;
     background-size: auto;
   }
+
+
 
   .gradient-overlay {
     position: absolute;
@@ -23,6 +33,16 @@
   &__wrap {
     position: relative;
     max-width: 523px;
+
+    .project-term {
+      display: flex;
+      color: $white;
+
+      img {
+        filter: brightness(22);
+        margin-right: 8px;
+      }
+    }
 
     .heading {
       color: $white !important;

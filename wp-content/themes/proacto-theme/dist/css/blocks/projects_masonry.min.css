@@ -1,0 +1,152 @@
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./scss/blocks/projects_masonry.scss ***!
+  \**************************************************************************************************************************************************************************************************/
+.projects_masonry {
+  padding: 64px 0 120px;
+}
+@media screen and (max-width: 980px) {
+  .projects_masonry {
+    padding: 24px 0 48px;
+  }
+}
+.projects_masonry__filter {
+  overflow: auto;
+}
+@media screen and (max-width: 980px) {
+  .projects_masonry__filter {
+    width: calc(100% + 16px);
+  }
+}
+.projects_masonry__filter__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 42px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media screen and (max-width: 980px) {
+  .projects_masonry__filter__wrap {
+    margin-bottom: 24px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+.projects_masonry__filter .filter-button {
+  margin-right: 10px;
+}
+.projects_masonry__filter .filter-button:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 980px) {
+  .projects_masonry__filter .filter-button:last-child {
+    margin-right: 16px;
+  }
+}
+.projects_masonry__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 8px;
+}
+@media screen and (max-width: 980px) {
+  .projects_masonry__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (min-width: 980px) {
+  .projects_masonry__grid .projects_masonry__card {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .projects_masonry__grid .projects_masonry__card img {
+    width: 100%;
+    height: 294px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .projects_masonry__grid .projects_masonry__card:nth-child(12n+1) {
+    grid-column: span 3/span 3;
+  }
+  .projects_masonry__grid .projects_masonry__card:nth-child(12n+2) {
+    grid-column: span 3/span 3;
+    grid-column-start: 4;
+  }
+  .projects_masonry__grid .projects_masonry__card:nth-child(12n+3) {
+    grid-column: span 6/span 6;
+    grid-column-start: 7;
+  }
+  .projects_masonry__grid .projects_masonry__card:nth-child(12n+4) {
+    grid-column: span 4/span 4;
+    grid-row-start: span 2;
+  }
+  .projects_masonry__grid .projects_masonry__card:nth-child(12n+5) {
+    grid-column: span 4/span 4;
+    grid-column-start: 5;
+    grid-row-start: span 2;
+  }
+  .projects_masonry__grid .projects_masonry__card:nth-child(12n+6) {
+    grid-column: span 4/span 4;
+    grid-column-start: 9;
+    grid-row-start: span 2;
+  }
+  .projects_masonry__grid .projects_masonry__card:nth-child(12n+7) {
+    grid-column: span 6/span 6;
+    grid-row-start: span 3;
+  }
+  .projects_masonry__grid .projects_masonry__card:nth-child(12n+8) {
+    grid-column: span 3/span 3;
+    grid-column-start: 7;
+    grid-row-start: span 3;
+  }
+  .projects_masonry__grid .projects_masonry__card:nth-child(12n+9) {
+    grid-column: span 3/span 3;
+    grid-column-start: 10;
+    grid-row-start: span 3;
+  }
+  .projects_masonry__grid .projects_masonry__card:nth-child(12n+10) {
+    grid-column: span 4/span 4;
+    grid-row-start: span 4;
+  }
+  .projects_masonry__grid .projects_masonry__card:nth-child(12n+11) {
+    grid-column: span 4/span 4;
+    grid-column-start: 5;
+    grid-row-start: span 4;
+  }
+  .projects_masonry__grid .projects_masonry__card:nth-child(12n+12) {
+    grid-column: span 4/span 4;
+    grid-column-start: 9;
+    grid-row-start: span 4;
+  }
+}
+.projects_masonry__grid .projects_masonry__card {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.projects_masonry__grid .projects_masonry__card img {
+  width: 100%;
+}
+.projects_masonry .show-more {
+  margin: auto;
+  margin-top: 42px;
+}
+@media screen and (max-width: 980px) {
+  .projects_masonry .show-more {
+    margin-top: 32px;
+  }
+}
+
+.projects_masonry__card {
+  position: relative;
+}

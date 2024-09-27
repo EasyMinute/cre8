@@ -44,11 +44,13 @@
                 'container_class' => 'header__nav',
                 'container_id' => 'header_nav',
             ]) ?>
-            <?php if(!empty($header['button'])): ?>
-                <a href="<?= $header['button']['url'] ?>" class="header__button button secondary arrowed">
-                    <?= $header['button']['title'] ?>
-                </a>
-            <?php endif; ?>
+            <div class="header__button__wrap">
+                <?php if(!empty($header['button'])): ?>
+                    <a href="<?= $header['button']['url'] ?>" class="header__button button secondary arrowed">
+                        <?= $header['button']['title'] ?>
+                    </a>
+                <?php endif; ?>
+            </div>
             <button class="burger mobile button-opener" data-target="header_nav" data-action="toggle" data-self="true">
                 <span></span>
                 <span></span>

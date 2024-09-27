@@ -173,6 +173,18 @@ class Acf_Config {
 			    'description' => __('Fancy cards with lists', 'proacto'),
 			    'icon' => 'index-card'
 		    ),
+		    array(
+			    'name' => 'full_image',
+			    'title' => __('Full image', 'proacto'),
+			    'description' => __('Image on full width', 'proacto'),
+			    'icon' => 'format-image'
+		    ),
+		    array(
+			    'name' => 'project_foot',
+			    'title' => __('Project foot', 'proacto'),
+			    'description' => __('Form and recent projects', 'proacto'),
+			    'icon' => 'block-default'
+		    ),
 
 	    );
 	    $acf_style_names = array(

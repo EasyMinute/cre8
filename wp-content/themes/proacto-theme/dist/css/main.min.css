@@ -680,7 +680,7 @@ section .container .body {
   }
 }
 .header__nav .header__menu li {
-  padding: 0 21px;
+  padding: 8px 21px;
 }
 @media screen and (max-width: 1220px) {
   .header__nav .header__menu li {
@@ -788,7 +788,22 @@ section .container .body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 8px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-height: 0;
+  background-color: #093238;
   overflow: hidden;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -808,6 +823,11 @@ section .container .body {
             align-items: flex-start;
   }
 }
+@media screen and (min-width: 980px) {
+  .header__nav .header__menu li.menu-item-has-children .sub-menu li {
+    padding: 4px 12px;
+  }
+}
 @media screen and (max-width: 980px) {
   .header__nav .header__menu li.menu-item-has-children .sub-menu li {
     border-bottom: none;
@@ -822,7 +842,9 @@ section .container .body {
   }
 }
 .header__nav .header__menu li.menu-item-has-children:hover .sub-menu, .header__nav .header__menu li.menu-item-has-children.current-menu-ancestor .sub-menu {
-  max-width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #F97A58;
+  max-height: 200px;
 }
 @media screen and (max-width: 980px) {
   .header__nav .header__menu li.menu-item-has-children:hover .sub-menu, .header__nav .header__menu li.menu-item-has-children.current-menu-ancestor .sub-menu {
@@ -2920,6 +2942,14 @@ section .container .value_card .block-text {
   width: 100%;
   position: relative;
 }
+.full_image .container {
+  position: relative;
+}
+@media screen and (max-width: 1440px) {
+  .full_image .container {
+    padding: 0;
+  }
+}
 .full_image img {
   width: 100%;
 }
@@ -2964,6 +2994,15 @@ section .container .value_card .block-text {
 }
 .full_image .full_image__overlay .project-play svg {
   margin-right: 12px;
+}
+
+@media screen and (min-width: 1440px) {
+  .single-project .project-banner {
+    margin-bottom: 64px;
+  }
+  .single-project .project_foot {
+    margin-top: 64px;
+  }
 }
 
 .project_foot {

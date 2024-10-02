@@ -5,6 +5,14 @@
   width: 100%;
   position: relative;
 }
+.full_image .container {
+  position: relative;
+}
+@media screen and (max-width: 1440px) {
+  .full_image .container {
+    padding: 0;
+  }
+}
 .full_image img {
   width: 100%;
 }
@@ -49,4 +57,13 @@
 }
 .full_image .full_image__overlay .project-play svg {
   margin-right: 12px;
+}
+
+@media screen and (min-width: 1440px) {
+  .single-project .project-banner {
+    margin-bottom: 64px;
+  }
+  .single-project .project_foot {
+    margin-top: 64px;
+  }
 }

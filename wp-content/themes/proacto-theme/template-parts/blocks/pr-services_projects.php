@@ -40,6 +40,7 @@ if ($projects['choose']) {
 
 
 $footer = get_field('footer_options', 'options');
+$socials = $projects['socials'];
 
 ?>
 
@@ -91,9 +92,9 @@ $footer = get_field('footer_options', 'options');
                 <h2 class="title heading heading-h2">
                     <?= $projects['title'] ?>
                 </h2>
-                <?php if(!empty($footer['socials'])): ?>
+                <?php if(!empty($projects['socials'])): ?>
                     <div class="socials_wrap">
-                        <?php foreach ($footer['socials'] as $social): ?>
+                        <?php foreach ($projects['socials'] as $social): ?>
                             <a href="<?= $social['url'] ?>">
                                 <img src="<?= esc_url( $social['icon']['url'] ) ?>" alt="<?= esc_attr( $social['icon']['alt'] ) ?>">
                             </a>

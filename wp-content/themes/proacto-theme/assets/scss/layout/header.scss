@@ -67,7 +67,7 @@
       }
 
       li {
-        padding: 0 21px;
+        padding: 8px 21px;
         @media screen and (max-width: 1220px){
           width: 100%;
           padding: 16px 21px;
@@ -150,7 +150,16 @@
           .sub-menu {
             display: flex;
             align-items: center;
-            max-width: 0;
+            //max-width: 0;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 8px;
+            width: max-content;
+            max-height: 0;
+            background-color: $dark-green;
             overflow: hidden;
             transition: all .3s;
             @media screen and (max-width: 980px){
@@ -162,6 +171,9 @@
             }
 
             li {
+              @media screen and (min-width: 980px){
+                padding: 4px 12px;
+              }
               @media screen and (max-width: 980px){
                 border-bottom: none;
                 padding: 0;
@@ -180,7 +192,10 @@
           &:hover,
           &.current-menu-ancestor {
             .sub-menu {
-              max-width: 100%;
+              //max-width: 100%;
+              padding: 8px 12px;
+              border: 1px solid $orange;
+              max-height: 200px;
               @media screen and (max-width: 980px){
                 max-height: 400px;
               }

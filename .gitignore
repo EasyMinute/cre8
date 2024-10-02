@@ -17,6 +17,9 @@
 /wp-*.php
 /xmlrpc.php
 
+# Node modules
+/wp-content/themes/proacto-theme/assets/node_modules
+
 # Configuration
 wp-config.php
 

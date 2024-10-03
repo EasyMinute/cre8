@@ -2,6 +2,8 @@
 
 .header {
   background-color: $dark-green;
+  position: relative;
+  z-index: 100;
 
   &__wrap {
     display: flex;

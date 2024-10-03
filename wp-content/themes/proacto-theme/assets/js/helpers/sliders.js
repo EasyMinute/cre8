@@ -105,3 +105,15 @@ const testimonials_swiper = new Swiper('.testimonials_swiper', {
     },
 
 });
+
+const baner_swiper = new Swiper('.baner-slider', {
+    modules: [Navigation, Pagination],
+    slidesPerView: 1,
+    spaceBetween: 0,
+    grabCursor: true,
+    loop: false,
+    pagination: {
+        el: '.baner_pagination',
+        clickable: true,
+    },
+});

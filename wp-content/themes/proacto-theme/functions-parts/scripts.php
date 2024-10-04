@@ -24,7 +24,6 @@
 
 	}
 	function proacto_scripts() {
-		wp_enqueue_script( 'proacto-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDxjKA06MGliuBRnfRJhBgsb6IF-v50iPM&callback=Function.prototype', '', 1.0, true );
 		wp_enqueue_script( 'proacto-main', get_template_directory_uri() . '/dist/js/main.min.js', '', 1.0, true );
 		wp_localize_script('proacto-main', 'proacto_ajax', array(
 			'ajax_url' => admin_url('admin-ajax.php')

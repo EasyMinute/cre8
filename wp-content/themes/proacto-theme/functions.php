@@ -39,9 +39,13 @@ require get_template_directory() . '/functions-parts/stuff.php';
  */
 require get_template_directory() . '/functions-parts/template-getters.php';
 /**
- * Підключення template-getters.php
+ * Підключення load-more.php
  */
 require get_template_directory() . '/functions-parts/load-more.php';
+/**
+ * Підключення filter-projects.php
+ */
+require get_template_directory() . '/functions-parts/projects-filter.php';
 /**
  * Підключення acf-fields.php
  */

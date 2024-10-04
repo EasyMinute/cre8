@@ -12,6 +12,7 @@ $terms = get_terms(['taxonomy' => 'technology', 'hide_empty' => true]);
 
 
 $technology_filter = isset($_GET['technology']) ? sanitize_text_field($_GET['technology']) : '';
+
 // Initial query to load the first 12 projects
 $args = [
 	'post_type'      => 'projects',
@@ -21,15 +22,15 @@ $args = [
 	'orderby'        => 'date'
 ];
 // If a filter is applied, modify the query to filter by the selected term
-if ($technology_filter) {
-	$args['tax_query'] = [
-		[
-			'taxonomy' => 'technology',
-			'field'    => 'slug',
-			'terms'    => $technology_filter,
-		]
-	];
-}
+//if ($technology_filter) {
+//	$args['tax_query'] = [
+//		[
+//			'taxonomy' => 'technology',
+//			'field'    => 'slug',
+//			'terms'    => $technology_filter,
+//		]
+//	];
+//}
 $initial_query = new WP_Query($args);
 
 ?>
@@ -40,7 +41,7 @@ $initial_query = new WP_Query($args);
 
             <div class="projects_masonry__filter__wrap">
 
-                <a href="." class="filter-button <?= isset($_GET['technology']) ? '' : 'active' ?>" >
+                <a href="#all" class="filter-button <?= isset($_GET['technology']) ? '' : 'active' ?>" >
                     <?=  __('All projects', 'proacto') ?>
                 </a>
 
@@ -53,7 +54,7 @@ $initial_query = new WP_Query($args);
                     $term_icon_alt = esc_attr($term_options['icon']['alt']);
                     ?>
 
-                    <a href="?technology=<?= esc_attr($term->slug)?>" class="filter-button <?= esc_attr($active_class) ?>">
+                    <a href="#<?= esc_attr($term->slug)?>" class="filter-button <?= esc_attr($active_class) ?>">
                         <img src="<?= $term_icon_url ?>" alt="<?= $term_icon_alt ?>">
                         <span><?= esc_html($term->name) ?></span>
                     </a>
@@ -63,7 +64,7 @@ $initial_query = new WP_Query($args);
             </div>
 		</div>
 
-		<div class="projects_masonry__grid">
+		<div class="projects_masonry__grid" id="projects_masonry__grid">
 			<?php if ($initial_query->have_posts()) : ?>
 				<?php while ($initial_query->have_posts()) : $initial_query->the_post(); ?>
 					<?php
@@ -72,10 +73,9 @@ $initial_query = new WP_Query($args);
 					$link = get_the_permalink();
 					?>
 
-					<div class="projects_masonry__card">
+					<a class="projects_masonry__card" href="<?= esc_url($thumb_url) ?>">
 						<img src="<?= esc_url($thumb_url) ?>" alt="<?= esc_attr($thumb_alt) ?>">
-						<a href="<?= $link ?>" class="link-overlay"></a>
-					</div>
+					</a>
 
 				<?php endwhile; ?>
 			<?php endif; ?>

@@ -5,7 +5,7 @@ $block_files = [
 	'projects_buy',
 	'info_numbers',
 	'icons_slider',
-//	'portfolio',
+	'portfolio',
 	'benefits_grid',
 	'testimonials_slider',
 	'recent_posts',

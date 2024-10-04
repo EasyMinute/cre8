@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
             };
 
             // Define the data to be sent in the request
-            var params = "action=load_more_projects&page=" + page + "&posts_per_page=" + perPage;
+            var params = "action=load_more_projects&page=" + page + "&posts_per_page=" + perPage + "&term=" + term;
 
             // Send the AJAX request
             xhr.send(params);
@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (loadMoreMasonryButton) {
         loadMoreMasonryButton.addEventListener('click', function () {
+
             let paged = parseInt(loadMoreMasonryButton.getAttribute('data-current-page')) + 1;
             let term = loadMoreMasonryButton.getAttribute('data-term');
 
@@ -59,15 +60,22 @@ document.addEventListener("DOMContentLoaded", function() {
             xhr.onload = function () {
                 if (xhr.status >= 200 && xhr.status < 400) {
                     let response = xhr.responseText;
+                    // let response = JSON.parse(xhr.responseText);
+                    let jsonStartIndex = response.lastIndexOf('{');
+                    let front = response.substring(0, jsonStartIndex).trim(); // The HTML part
+                    let jsonString = response.substring(jsonStartIndex).trim(); // The JSON part
+
+                    // Parse the JSON part
+                    let resp = JSON.parse(jsonString);
 
                     // Append the new projects to the grid
-                    document.querySelector('.projects_masonry__grid').insertAdjacentHTML('beforeend', response);
+                    document.querySelector('.projects_masonry__grid').insertAdjacentHTML('beforeend', front);
 
                     // Update the current page number
                     loadMoreMasonryButton.setAttribute('data-current-page', paged);
 
                     // Check if no more projects are returned
-                    if (response.indexOf('No more projects found.') !== -1) {
+                    if (resp.status === 'no_more') {
                         loadMoreMasonryButton.style.display = 'none'; // Hide button if no more posts
                     }
                 }

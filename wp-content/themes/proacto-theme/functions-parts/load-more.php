@@ -1,29 +1,29 @@
 <?php
 function proacto_load_more_projects() {
-$paged = isset($_POST['page']) ? sanitize_text_field($_POST['page']) : 1;
-$posts_per_page = isset($_POST['posts_per_page']) ? sanitize_text_field($_POST['posts_per_page']) : 12;
+    $paged = isset($_POST['page']) ? sanitize_text_field($_POST['page']) : 1;
+    $posts_per_page = isset($_POST['posts_per_page']) ? sanitize_text_field($_POST['posts_per_page']) : 12;
 
-$args = array(
-'post_type'      => 'projects',       // Replace with your CPT slug
-'posts_per_page' => $posts_per_page,
-'paged'          => $paged,
-'orderby'        => 'date',
-'order'          => 'DESC',
-'post_status'    => 'publish',
-);
+    $args = array(
+        'post_type'      => 'projects',       // Replace with your CPT slug
+        'posts_per_page' => $posts_per_page,
+        'paged'          => $paged,
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+        'post_status'    => 'publish',
+    );
 
-$projects_query = new WP_Query($args);
+    $projects_query = new WP_Query($args);
 
 
-if ($projects_query->have_posts()) :
-	while ($projects_query->have_posts()) : $projects_query->the_post();
+    if ($projects_query->have_posts()) :
+        while ($projects_query->have_posts()) : $projects_query->the_post();
 
-		get_project_card_template(get_post()); // Use the same template for the card
-	endwhile;
-endif;
+            get_project_card_template(get_post()); // Use the same template for the card
+        endwhile;
+    endif;
 
-wp_reset_postdata();
-die(); // End the AJAX request
+    wp_reset_postdata();
+    die(); // End the AJAX request
 }
 
 add_action('wp_ajax_load_more_projects', 'proacto_load_more_projects'); // For logged in users
@@ -64,9 +64,17 @@ function load_more_projects() {
 				<a href="<?= $link ?>" class="link-overlay"></a>
 			</div>
 		<?php endwhile;
+		// Check if there are more pages
+		if ($paged >= $query->max_num_pages) {
+			$response['status'] = 'no_more';
+		}
+
+	} else {
+		$response['status'] = 'no_more';
 	}
 
 	wp_reset_postdata();
+	wp_send_json($response);
 	die();
 }
 

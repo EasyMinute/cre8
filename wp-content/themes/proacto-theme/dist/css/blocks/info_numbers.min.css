@@ -94,7 +94,7 @@
   transition: all 0.5s;
 }
 .infonumber_card .title {
-  color: #093238;
+  color: #F97A58 !important;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
@@ -110,5 +110,5 @@
 }
 .infonumber_card:hover .title,
 .infonumber_card:hover .text {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }

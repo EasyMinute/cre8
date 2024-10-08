@@ -1,36 +1,10 @@
 // core version + navigation, pagination modules:
 // import Swiper from 'swiper';
 // Import Swiper core and required modules
-import Swiper, { Autoplay, FreeMode, Navigation, Pagination } from 'swiper';
+import Swiper, {Autoplay, EffectFade, FreeMode, Navigation, Pagination} from 'swiper';
 
 // Import Swiper styles (you can do this in your CSS file or via JS)
 import 'swiper/swiper-bundle.min.css';
-
-// init Swiper:
-const icons_swiper = new Swiper('.icons_slider__swiper', {
-    // configure Swiper to use modules
-    modules: [Autoplay, FreeMode],
-    slidesPerView: "auto", // Allows dynamic width
-    spaceBetween: 48,      // Space between slides
-    // autoplay: {
-    //     delay: 1000,         // Delay between transitions (in ms)
-    //     disableOnInteraction: false, // Continue autoplay after user interaction
-    // },
-    grabCursor: true,       // Changes cursor to drag icon
-    // freeMode: true,         // Allows free drag
-    loop: true,
-    watchOverflow: true,
-
-    breakpoints: {
-        0: { // Apply centered mode from small screens (mobile)
-            centeredSlides: true,
-        },
-        768: { // Disable centered mode for larger screens (e.g. tablets and desktops)
-            centeredSlides: false,
-        },
-    },
-});
-
 
 
 let portfolio_swiper = null;
@@ -107,13 +81,46 @@ const testimonials_swiper = new Swiper('.testimonials_swiper', {
 });
 
 const baner_swiper = new Swiper('.baner-slider', {
-    modules: [Navigation, Pagination],
+    modules: [Navigation, Pagination, Autoplay, EffectFade],
+    effect: 'fade',
     slidesPerView: 1,
     spaceBetween: 0,
-    grabCursor: true,
-    loop: false,
+    loop: true,
+    fadeEffect: {
+        crossFade: true,
+    },
+    autoplay: {
+        delay: 3000,  // Adjust the delay between transitions (5000ms = 5 seconds)
+        disableOnInteraction: false, // Keeps autoplay running after user interaction
+    },
+    speed: 2000,
     pagination: {
         el: '.baner_pagination',
         clickable: true,
     },
+});
+
+// Import Splide CSS and JS
+import Splide from '@splidejs/splide';
+import '@splidejs/splide/css';
+
+document.addEventListener('DOMContentLoaded', function() {
+    var splides = document.querySelectorAll('.splide'); // Select all Splide sliders
+
+    splides.forEach(function(splideElement) {
+        new Splide(splideElement, {
+            easing: "linear",
+            type      : 'loop',        // Enable looping
+            padding: 48,
+            autoWidth: true,
+            perPage   : 9,             // Number of slides to show
+            perMove   : 1,             // Number of slides to move per scroll
+            autoplay  : true,          // Enable autoplay
+            interval  : 0,             // Time between transitions
+            pauseOnHover: false,       // Disable pause on hover
+            speed     : 17000,         // Transition speed
+            arrows    : false,         // Hide arrows
+            pagination: false,         // Hide pagination
+        }).mount();
+    });
 });

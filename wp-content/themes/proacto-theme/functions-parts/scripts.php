@@ -24,6 +24,9 @@
 
 	}
 	function proacto_scripts() {
+//		wp_enqueue_script('jquery');
+
+
 		wp_enqueue_script( 'proacto-main', get_template_directory_uri() . '/dist/js/main.min.js', '', 1.0, true );
 		wp_localize_script('proacto-main', 'proacto_ajax', array(
 			'ajax_url' => admin_url('admin-ajax.php')

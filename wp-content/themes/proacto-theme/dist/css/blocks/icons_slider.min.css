@@ -9,8 +9,12 @@
     padding: 24px 0;
   }
 }
+.icons_slider .container {
+  max-width: 100%;
+}
 @media screen and (max-width: 980px) {
   .icons_slider .container {
+    padding: 0;
     max-width: 100%;
   }
 }
@@ -19,16 +23,6 @@
   text-align: center;
   text-transform: uppercase;
 }
-@media screen and (min-width: 980px) {
-  .icons_slider__swiper .swiper-wrapper {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-.icons_slider__swiper .swiper-wrapper .swiper-slide {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+.icons_slider .splide__slide {
+  padding: 0 24px;
 }

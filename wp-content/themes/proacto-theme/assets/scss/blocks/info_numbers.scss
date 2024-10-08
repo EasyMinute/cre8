@@ -69,7 +69,7 @@
   transition: all .5s;
 
   .title {
-    color: $dark-green;
+    color: $orange !important;
     transition: all .5s;
   }
 
@@ -82,8 +82,8 @@
     background-color: $dark-green;
 
     .title,
-    .text{
-      color: $white;
+    .text {
+      color: $white !important;
     }
   }
 }

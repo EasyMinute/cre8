@@ -20,7 +20,7 @@ $class = $info_numbers['reverse'] ? 'reverse' : '';
 				<ul class="info_numbers__numbers">
 					<?php foreach ($numbers as $item): ?>
 						<li class="infonumber_card">
-							<p class="title heading heading-h2">
+							<p class="title heading heading-h1">
 								<?= $item['number'] ?>
 							</p>
 							<p class="text body">

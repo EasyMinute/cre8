@@ -1,60 +1,29 @@
 @import "../generals/colors";
 
 .baner {
+  background-color: $dark-green;
   position: relative;
 
-  .swiper-slide {
-    display: flex !important;
-    height: initial !important;
-  }
-  &__wrap {
-    padding: 141px 0;
-    display: flex;
-    width: 100%;
+  .container {
     position: relative;
-    @media screen and (max-width: 980px) {
-      padding: 0 0 16px 0;
-      flex-direction: column;
-    }
-
-    .gradient-overlay {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
-
-    .banner_bg {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      right: 0;
-      top: 0;
-      @media screen and (max-width: 980px) {
-        position: static;
-        height: auto;
-        width: 100%;
-      }
-    }
+    z-index: 5;
 
     .baner__texts {
       width: 100%;
       max-width: 523px;
       position: relative;
-      z-index: 1;
+      z-index: 5;
+      padding: 141px 0;
       margin-left: calc(20% - 523px / 2);
-      @media screen and (max-width: 1500px) {
-        margin-left: 32px;
-      }
+      //@media screen and (max-width: 1500px) {
+      //  margin-left: 32px;
+      //}
       @media screen and (max-width: 980px) {
-        padding: 0 16px 64px 16px;
+        padding: 320px 16px 48px 16px;
         margin: 0;
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        //position: absolute;
+        //bottom: 0;
+        //left: 0;
         max-width: 100%;
       }
 
@@ -80,6 +49,51 @@
         @media screen and (max-width: 980px) {
           width: 100%;
         }
+      }
+    }
+  }
+
+  .swiper-slide {
+    display: flex !important;
+    height: initial !important;
+  }
+
+  .baner-slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  &__wrap {
+    display: flex;
+    width: 100%;
+    position: relative;
+    @media screen and (max-width: 980px) {
+
+    }
+
+    .gradient-overlay {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .banner_bg {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      right: 0;
+      top: 0;
+      @media screen and (max-width: 980px) {
+        position: static;
+        height: auto;
+        width: 100%;
       }
     }
   }

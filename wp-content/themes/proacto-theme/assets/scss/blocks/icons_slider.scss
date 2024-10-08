@@ -4,8 +4,12 @@
     padding: 24px 0;
   }
 
+
+
   .container {
+    max-width: 100%;
     @media screen and (max-width: 980px){
+      padding: 0;
       max-width: 100%;
     }
   }
@@ -16,17 +20,8 @@
     text-transform: uppercase;
   }
 
-  &__swiper {
-
-    .swiper-wrapper {
-      @media screen and (min-width: 980px) {
-        justify-content: center;
-      }
-
-      .swiper-slide {
-        position: relative;
-        width: fit-content;
-      }
-    }
+  .splide__slide {
+    padding: 0 24px;
   }
+
 }

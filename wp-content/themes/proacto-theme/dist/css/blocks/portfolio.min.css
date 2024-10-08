@@ -38,6 +38,20 @@
     row-gap: 28px;
   }
 }
+.portfolio .portfolio_swiper .portfolio-card {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+@media screen and (min-width: 980px) {
+  .portfolio .portfolio_swiper .portfolio-card:hover {
+    -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0px 0px 14px 4px rgb(10, 51, 57);
+    box-shadow: 0px 0px 14px 4px rgb(10, 51, 57);
+  }
+}
 .portfolio .portfolio_swiper .portfolio-card:first-child {
   grid-area: 1/1/2/3;
 }

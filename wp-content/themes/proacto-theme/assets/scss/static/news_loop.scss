@@ -121,12 +121,25 @@
     flex-direction: column;
   }
 
+  &:hover {
+    .article-card__img {
+      transform: scale(1.03);
+    }
+
+    .article-card__texts {
+      .block-title {
+        color: $orange;
+      }
+    }
+  }
+
   &__img {
     width: 100%;
     max-width: 365px;
     margin-right: 24px;
     border-radius: 8px;
     overflow: hidden;
+    transition: all .5s;
     @media screen and (max-width: 980px){
       max-width: 100%;
       margin-right: 0;
@@ -162,6 +175,7 @@
     .block-title {
       margin-bottom: 16px;
       color: $dark-green;
+      transition: all .5s;
     }
 
     .block-text {

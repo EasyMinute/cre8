@@ -12,4 +12,4 @@ import "./helpers/load-more";
 import "./helpers/projects-filter";
 
 // Import blocks
-
+import "./blocks/info_numbers";

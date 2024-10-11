@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
             };
 
             // Define the data to be sent in the request
-            var params = "action=load_more_projects&page=" + page + "&posts_per_page=" + perPage + "&term=" + term;
+            var params = "action=load_more_projects&page=" + page + "&posts_per_page=" + perPage ;
 
             // Send the AJAX request
             xhr.send(params);

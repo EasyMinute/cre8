@@ -99,6 +99,11 @@
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
+@media screen and (min-width: 980px) {
+  .infonumber_card .title {
+    font-size: 84px !important;
+  }
+}
 .infonumber_card .text {
   color: #48455D;
   -webkit-transition: all 0.5s;

@@ -77,9 +77,15 @@ section .container .value_card {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
+@media screen and (min-width: 980px) {
+  section .container .value_card {
+    border-color: #FFFFFF;
+  }
+}
 section .container .value_card:hover {
-  -webkit-box-shadow: 0 0 50px 4px rgba(68, 68, 68, 0.51);
-          box-shadow: 0 0 50px 4px rgba(68, 68, 68, 0.51);
+  border-color: #6B8488;
+  -webkit-box-shadow: 2px 3px 15px 3px rgba(9, 50, 56, 0.38);
+          box-shadow: 2px 3px 15px 3px rgba(9, 50, 56, 0.38);
 }
 section .container .value_card__head {
   display: -webkit-box;

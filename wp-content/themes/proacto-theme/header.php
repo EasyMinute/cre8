@@ -20,7 +20,10 @@
 	<?php wp_head(); ?>
 </head>
 
-<?php $header = get_field('header_options', 'options') ?>
+<?php
+$header = get_field('header_options', 'options');
+$footer = get_field('footer_options', 'options');
+?>
 
 <body <?php  body_class(); ?> >
 <?php wp_body_open(); ?>
@@ -44,12 +47,12 @@
                 'container_class' => 'header__nav',
                 'container_id' => 'header_nav',
             ]) ?>
-            <div class="header__button__wrap">
-                <?php if(!empty($header['button'])): ?>
-                    <a href="<?= $header['button']['url'] ?>" class="header__button button secondary arrowed">
-                        <?= $header['button']['title'] ?>
+            <div class="header__socials">
+		        <?php foreach ($footer['socials'] as $social) : ?>
+                    <a href="<?= $social['url'] ?>">
+                        <img src="<?= esc_url( $social['icon']['url'] ) ?>" alt="<?= esc_attr( $social['icon']['alt'] ) ?>">
                     </a>
-                <?php endif; ?>
+		        <?php endforeach; ?>
             </div>
             <button class="burger mobile button-opener" data-target="header_nav" data-action="toggle" data-self="true">
                 <span></span>

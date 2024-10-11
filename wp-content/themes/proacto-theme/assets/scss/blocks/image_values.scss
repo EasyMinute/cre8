@@ -56,9 +56,13 @@ section {
       display: flex;
       flex-direction: column;
       transition: all .5s;
+      @media screen and (min-width: 980px) {
+        border-color: $white;
+      }
 
       &:hover {
-        box-shadow: 0 0 50px 4px rgba(68, 68, 68, 0.51);
+        border-color: $grey;
+        box-shadow: 2px 3px 15px 3px rgba(9,50,56,0.38);
       }
 
       &__head {

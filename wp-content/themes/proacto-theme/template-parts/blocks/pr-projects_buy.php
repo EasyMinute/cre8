@@ -59,6 +59,14 @@ if (!empty($projects_buy['sold_projects'])) {
             </button>
         </div>
         <div class="projects_buy__main">
+            <div class="projects_buy__main__decor left">
+                <div class="card-empty"></div>
+                <div class="card-empty"></div>
+                <div class="card-empty"></div>
+                <div class="card-empty"></div>
+                <div class="card-empty"></div>
+                <div class="card-empty"></div>
+            </div>
             <div class="projects_buy__grid active" id="available-projects">
                 <?php foreach ($available_projects as $post) : ?>
 	                <?php
@@ -131,6 +139,14 @@ if (!empty($projects_buy['sold_projects'])) {
 			        <?= $projects_buy['button']['title'] ?>
                 </a>
 	        <?php endif; ?>
+            <div class="projects_buy__main__decor right">
+                <div class="card-empty"></div>
+                <div class="card-empty"></div>
+                <div class="card-empty"></div>
+                <div class="card-empty"></div>
+                <div class="card-empty"></div>
+                <div class="card-empty"></div>
+            </div>
         </div>
 	</div>
 </section>

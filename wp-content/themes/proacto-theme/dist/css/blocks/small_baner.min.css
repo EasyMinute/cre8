@@ -7,6 +7,12 @@
   background-size: cover;
 }
 @media screen and (min-width: 980px) {
+  .small_baner {
+    background-size: auto 100%;
+    background-position: right;
+  }
+}
+@media screen and (min-width: 980px) {
   .small_baner.project-banner {
     padding: 158px 0;
     background-position: bottom right;

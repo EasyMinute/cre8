@@ -5,6 +5,10 @@
   position: relative;
   -webkit-background-size: cover;
   background-size: cover;
+  @media screen and (min-width: 980px){
+    background-size: auto 100%;
+    background-position: right;
+  }
 
   &.project-banner {
     @media screen and (min-width: 980px) {

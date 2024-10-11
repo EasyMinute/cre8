@@ -42,6 +42,7 @@
 
   &__main {
     width: 100%;
+    position: relative;
 
     .projects_buy__grid {
       display: none;
@@ -56,6 +57,30 @@
 
     .show-more {
       margin: 40px auto auto;
+    }
+
+    &__decor {
+      position: absolute;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 9px;
+      row-gap: 9px;
+      width: 100%;
+      height: calc(100% - 58px);
+      top: 0;
+
+      &.left {
+        right: calc(100% + 9px);
+      }
+
+      &.right {
+        left: calc(100% + 9px);
+      }
+
+      .card-empty {
+        border: 1px solid $grey;
+        border-radius: 24px;
+      }
     }
   }
 
@@ -77,17 +102,21 @@
 }
 
 .projects_buy-card {
-  border: 1px solid $grey;
+  border: 1px solid $white;
   border-radius: 24px;
-  padding: 24px;
+  padding: 0 0 24px 0;
   transition: all .5s;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   position: relative;
+  @media screen and (max-width: 980px) {
+    display: none;
+  }
 
   &:hover {
+    border-color: $grey;
     -webkit-box-shadow: 2px 3px 15px 3px rgba(9,50,56,0.38);
     -moz-box-shadow: 2px 3px 15px 3px rgba(9,50,56,0.38);
     box-shadow: 2px 3px 15px 3px rgba(9,50,56,0.38);
@@ -101,7 +130,7 @@
     position: relative;
     padding-top: 58%;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 24px 24px 0 0;
     overflow: hidden;
     margin-bottom: 24px;
     background-color: $dark-green;
@@ -132,6 +161,7 @@
 
   &__texts {
     max-width: calc(100% - 82px);
+    margin-left: 24px;
     .title {
       color: $dark-green;
     }
@@ -139,6 +169,10 @@
 
   .button-pay {
     margin: auto 10px auto auto;
+  }
+
+  .arrow-button {
+    margin-right: 24px;
   }
 
   &.sold {

@@ -113,12 +113,13 @@ document.addEventListener('DOMContentLoaded', function() {
             type      : 'loop',        // Enable looping
             padding: 48,
             autoWidth: true,
-            perPage   : 9,             // Number of slides to show
+            clones    : 6,
+            perPage   : 6,             // Number of slides to show
             perMove   : 1,             // Number of slides to move per scroll
             autoplay  : true,          // Enable autoplay
             interval  : 0,             // Time between transitions
             pauseOnHover: false,       // Disable pause on hover
-            speed     : 17000,         // Transition speed
+            speed     : 13000,         // Transition speed
             arrows    : false,         // Hide arrows
             pagination: false,         // Hide pagination
         }).mount();

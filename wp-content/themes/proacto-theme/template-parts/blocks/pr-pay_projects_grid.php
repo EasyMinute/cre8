@@ -73,7 +73,7 @@ $projects_query = new WP_Query($args);
 		                            </span>
 							</div>
                             <a href="<?= $link ?>" class="link-overlay"></a>
-							<a href="<?= $link ?>" class="arrow-button tertiary"></a>
+							<a href="<?= $link ?>" class="arrow-button primary"></a>
 						</div>
 					<?php elseif ($availibility->slug == 'sold'): ?>
 						<div class="projects_buy-card sold">

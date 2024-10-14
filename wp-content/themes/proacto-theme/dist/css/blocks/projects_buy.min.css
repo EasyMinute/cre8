@@ -113,7 +113,7 @@
 }
 
 .projects_buy-card {
-  border: 1px solid #FFFFFF;
+  border: 1px solid #6B8488;
   border-radius: 24px;
   padding: 0 0 24px 0;
   -webkit-transition: all 0.5s;
@@ -138,7 +138,6 @@
   }
 }
 .projects_buy-card:hover {
-  border-color: #6B8488;
   -webkit-box-shadow: 2px 3px 15px 3px rgba(9, 50, 56, 0.38);
   box-shadow: 2px 3px 15px 3px rgba(9, 50, 56, 0.38);
 }

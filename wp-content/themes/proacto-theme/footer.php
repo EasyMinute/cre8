@@ -39,7 +39,7 @@ $footer = get_field('footer_options', 'options')
                 <?php if (!empty($footer['socials'])): ?>
                     <div class="footer__socials">
                         <?php foreach ($footer['socials'] as $social) : ?>
-                            <a href="<?= $social['url'] ?>">
+                            <a  target="_blank" href="<?= $social['url'] ?>">
                                 <img src="<?= esc_url( $social['icon']['url'] ) ?>" alt="<?= esc_attr( $social['icon']['alt'] ) ?>">
                             </a>
                         <?php endforeach; ?>

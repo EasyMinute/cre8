@@ -51,7 +51,7 @@ if (is_singular('projects')) {
 			<?php if(!empty($footer['socials']) && !$small_baner['hide_socials']): ?>
                 <div class="socials_wrap">
 					<?php foreach ($footer['socials'] as $social): ?>
-                        <a href="<?= $social['url'] ?>">
+                        <a  target="_blank" href="<?= $social['url'] ?>">
                             <img src="<?= esc_url( $social['icon']['url'] ) ?>" alt="<?= esc_attr( $social['icon']['alt'] ) ?>">
                         </a>
 					<?php endforeach; ?>

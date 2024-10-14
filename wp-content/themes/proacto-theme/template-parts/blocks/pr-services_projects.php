@@ -95,7 +95,7 @@ $socials = $projects['socials'];
                 <?php if(!empty($projects['socials'])): ?>
                     <div class="socials_wrap">
                         <?php foreach ($projects['socials'] as $social): ?>
-                            <a href="<?= $social['url'] ?>">
+                            <a target="_blank" href="<?= $social['url'] ?>">
                                 <img src="<?= esc_url( $social['icon']['url'] ) ?>" alt="<?= esc_attr( $social['icon']['alt'] ) ?>">
                             </a>
                         <?php endforeach; ?>

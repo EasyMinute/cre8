@@ -126,7 +126,7 @@ if (!empty($projects_buy['sold_projects'])) {
                             </span>
                         </div>
                         <a href="<?= $link ?>" class="link-overlay"></a>
-                        <a href="<?= $link ?>" class="arrow-button tertiary"></a>
+                        <a href="<?= $link ?>" class="arrow-button primary"></a>
                     </div>
 		        <?php endforeach ?>
 		        <?php wp_reset_postdata(); ?>

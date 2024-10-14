@@ -2,10 +2,10 @@
 $post_id = get_query_var('post_id'); // Retrieve the passed post_id
 
 $post_options = get_field('post_options', $post_id);
-$baner_desktop_url = esc_url($post_options['baner_desktop']['url']);
-$baner_desktop_alt = esc_attr($post_options['baner_desktop']['alt']);
-$baner_mobile_url = esc_url($post_options['baner_mobile']['url']);
-$baner_mobile_alt = esc_attr($post_options['baner_mobile']['alt']);
+$baner_desktop_url = !empty($post_options['baner_desktop']) ? esc_url($post_options['baner_desktop']['url']) : '';
+$baner_desktop_alt = !empty($post_options['baner_desktop']) ? esc_attr($post_options['baner_desktop']['alt']) : '';
+$baner_mobile_url = !empty($post_options['baner_mobile']) ? esc_url($post_options['baner_mobile']['url']) : '';
+$baner_mobile_alt = !empty($post_options['baner_mobile']) ? esc_attr($post_options['baner_mobile']['alt']) : '';
 $author = $post_options['author'];
 $title = get_the_title($post_id);
 $date = get_the_date('d M Y', $post_id);

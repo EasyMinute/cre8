@@ -1,7 +1,18 @@
+@import "../generals/globals";
+
 .projects_masonry {
   padding: 64px 0 120px;
   @media screen and (max-width: 980px){
     padding: 24px 0 48px;
+  }
+  &__head {
+    .section_title,
+    .section_text {
+      text-align: center;
+      width: 100%;
+      max-width: 665px;
+      margin: auto auto 32px auto;
+    }
   }
 
   &__filter {
@@ -28,6 +39,8 @@
 
     .filter-button {
       margin-right: 10px;
+      //background-color: $orange;
+      //border: none;
 
       &:last-child {
         margin-right: 0;
@@ -40,7 +53,7 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     @media screen and (max-width: 980px){
       grid-template-columns: repeat(1, 1fr);
@@ -58,76 +71,79 @@
         }
 
 
-        &:nth-child(12n+1) {
-          grid-column: span 3 / span 3;
-        }
-
-        &:nth-child(12n+2) {
-          grid-column: span 3 / span 3;
-          grid-column-start: 4;
-        }
-
-        &:nth-child(12n+3) {
-          grid-column: span 6 / span 6;
-          grid-column-start: 7;
-        }
-
-        &:nth-child(12n+4) {
-          grid-column: span 4 / span 4;
-          grid-row-start: span 2;
-        }
-
-        &:nth-child(12n+5) {
-          grid-column: span 4 / span 4;
-          grid-column-start: 5;
-          grid-row-start: span 2;
-        }
-
-        &:nth-child(12n+6) {
-          grid-column: span 4 / span 4;
-          grid-column-start: 9;
-          grid-row-start: span 2;
-        }
-
-        &:nth-child(12n+7) {
-          grid-column: span 6 / span 6;
-          grid-row-start: span 3;
-        }
-
-        &:nth-child(12n+8) {
-          grid-column: span 3 / span 3;
-          grid-column-start: 7;
-          grid-row-start: span 3;
-        }
-
-        &:nth-child(12n+9) {
-          grid-column: span 3 / span 3;
-          grid-column-start: 10;
-          grid-row-start: span 3;
-        }
-
-        &:nth-child(12n+10) {
-          grid-column: span 4 / span 4;
-          grid-row-start: span 4;
-        }
-
-        &:nth-child(12n+11) {
-          grid-column: span 4 / span 4;
-          grid-column-start: 5;
-          grid-row-start: span 4;
-        }
-
-        &:nth-child(12n+12) {
-          grid-column: span 4 / span 4;
-          grid-column-start: 9;
-          grid-row-start: span 4;
-        }
+        //&:nth-child(12n+1) {
+        //  grid-column: span 3 / span 3;
+        //}
+        //
+        //&:nth-child(12n+2) {
+        //  grid-column: span 3 / span 3;
+        //  grid-column-start: 4;
+        //}
+        //
+        //&:nth-child(12n+3) {
+        //  grid-column: span 6 / span 6;
+        //  grid-column-start: 7;
+        //}
+        //
+        //&:nth-child(12n+4) {
+        //  grid-column: span 4 / span 4;
+        //  grid-row-start: span 2;
+        //}
+        //
+        //&:nth-child(12n+5) {
+        //  grid-column: span 4 / span 4;
+        //  grid-column-start: 5;
+        //  grid-row-start: span 2;
+        //}
+        //
+        //&:nth-child(12n+6) {
+        //  grid-column: span 4 / span 4;
+        //  grid-column-start: 9;
+        //  grid-row-start: span 2;
+        //}
+        //
+        //&:nth-child(12n+7) {
+        //  grid-column: span 6 / span 6;
+        //  grid-row-start: span 3;
+        //}
+        //
+        //&:nth-child(12n+8) {
+        //  grid-column: span 3 / span 3;
+        //  grid-column-start: 7;
+        //  grid-row-start: span 3;
+        //}
+        //
+        //&:nth-child(12n+9) {
+        //  grid-column: span 3 / span 3;
+        //  grid-column-start: 10;
+        //  grid-row-start: span 3;
+        //}
+        //
+        //&:nth-child(12n+10) {
+        //  grid-column: span 4 / span 4;
+        //  grid-row-start: span 4;
+        //}
+        //
+        //&:nth-child(12n+11) {
+        //  grid-column: span 4 / span 4;
+        //  grid-column-start: 5;
+        //  grid-row-start: span 4;
+        //}
+        //
+        //&:nth-child(12n+12) {
+        //  grid-column: span 4 / span 4;
+        //  grid-column-start: 9;
+        //  grid-row-start: span 4;
+        //}
       }
     }
 
     .projects_masonry__card {
       border-radius: 8px;
       overflow: hidden;
+      @media screen and (max-width: 980px){
+        max-height: 220px;
+      }
 
       img {
         width: 100%;

@@ -2,11 +2,11 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./scss/blocks/info_numbers.scss ***!
   \**********************************************************************************************************************************************************************************************/
 .info_numbers {
-  padding: 120px 0;
+  padding: 68px 0;
 }
 @media screen and (max-width: 980px) {
   .info_numbers {
-    padding: 64px 0;
+    padding: 34px 0;
   }
 }
 .info_numbers__wrap {
@@ -101,19 +101,17 @@
 }
 @media screen and (min-width: 980px) {
   .infonumber_card .title {
-    font-size: 84px !important;
+    font-size: 62px !important;
+  }
+}
+@media screen and (max-width: 980px) {
+  .infonumber_card .title {
+    font-size: 48px;
   }
 }
 .infonumber_card .text {
-  color: #48455D;
+  color: #29545B;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
-}
-.infonumber_card:hover {
-  background-color: #093238;
-}
-.infonumber_card:hover .title,
-.infonumber_card:hover .text {
-  color: #FFFFFF !important;
 }

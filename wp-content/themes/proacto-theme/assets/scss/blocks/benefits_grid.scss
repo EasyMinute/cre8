@@ -1,9 +1,9 @@
 @import "../generals/colors";
 
 .benefits_grid {
-  padding: 80px 0;
+  padding: 68px 0;
   @media screen and (max-width: 980px) {
-    padding: 40px 0;
+    padding: 34px 0;
   }
 
   .heading-h2 {
@@ -17,6 +17,16 @@
     row-gap: 20px;
     @media screen and (max-width: 980px) {
       grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  &.light {
+    .benefits-card {
+      border: none !important;
+      &:after {
+        background-color: #F0F3F3;
+      }
+
     }
   }
 }
@@ -38,7 +48,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: $dark-green;
+    background-color: #133C42;
   }
 
   img {

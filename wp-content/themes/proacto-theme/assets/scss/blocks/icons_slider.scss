@@ -24,4 +24,23 @@
     padding: 0 24px;
   }
 
+  .icons_slick {
+    padding: 28px 0;
+
+    .slick-slide {
+      max-height: 40px;
+      margin-right: 58px;
+
+      img {
+        max-height: 40px;
+      }
+    }
+  }
+
+}
+
+.wp-block-group.is-style-image {
+  .icons_slick {
+    background-color: #002E33;
+  }
 }

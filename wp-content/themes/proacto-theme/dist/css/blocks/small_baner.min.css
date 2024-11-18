@@ -2,25 +2,46 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./scss/blocks/small_baner.scss ***!
   \*********************************************************************************************************************************************************************************************/
 .small_baner {
-  padding: 105px;
   position: relative;
-  background-size: cover;
 }
 @media screen and (min-width: 980px) {
   .small_baner {
+    height: 480px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-size: auto 100%;
     background-position: right;
   }
 }
+.small_baner-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right top;
+     object-position: right top;
+  z-index: 0;
+}
+@media screen and (min-width: 980px) {
+  .small_baner-bg {
+    width: auto;
+  }
+}
 @media screen and (min-width: 980px) {
   .small_baner.project-banner {
-    padding: 158px 0;
     background-position: bottom right;
   }
 }
 @media screen and (max-width: 980px) {
   .small_baner {
-    padding: 344px 0 48px;
+    padding: 248px 0 42px;
     background-repeat: no-repeat;
     background-position: 85% top;
     background-size: auto;
@@ -38,10 +59,14 @@
   max-width: 523px;
 }
 .small_baner__wrap .project-term {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  background-color: rgba(255, 255, 255, 0.1215686275);
+  padding: 8px 16px;
   color: #FFFFFF;
+  margin-bottom: 14px !important;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 4px;
 }
 .small_baner__wrap .project-term img {
   -webkit-filter: brightness(22);
@@ -55,4 +80,20 @@
 .small_baner__wrap .body {
   color: #D4DDDE !important;
   margin-bottom: 32px;
+}
+@media screen and (max-width: 980px) {
+  .small_baner__wrap .body {
+    margin-bottom: 0;
+  }
+}
+.small_baner__wrap .socials_wrap {
+  margin-top: 32px;
+}
+@media screen and (max-width: 980px) {
+  .small_baner__wrap .socials_wrap {
+    margin-top: 20px;
+  }
+}
+.small_baner__wrap .socials_wrap a:first-child {
+  margin-left: 0;
 }

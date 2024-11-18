@@ -1,24 +1,38 @@
 @import "../generals/colors";
 
 .small_baner {
-  padding: 105px;
   position: relative;
-  -webkit-background-size: cover;
-  background-size: cover;
+
   @media screen and (min-width: 980px){
+    height: 480px;
+    display: flex;
+    align-items: center;
     background-size: auto 100%;
     background-position: right;
   }
 
+  &-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+    object-position: right top;
+    z-index: 0;
+    @media screen and (min-width: 980px) {
+      width: auto;
+    }
+  }
+
   &.project-banner {
     @media screen and (min-width: 980px) {
-      padding: 158px 0;
       background-position: bottom right;
     }
   }
 
   @media screen and (max-width: 980px){
-    padding: 344px 0 48px;
+    padding: 248px 0 42px;
     background-repeat: no-repeat;
     background-position: 85% top;
     background-size: auto;
@@ -39,8 +53,12 @@
     max-width: 523px;
 
     .project-term {
-      display: flex;
+      background-color: #FFFFFF1F;
+      padding: 8px 16px;
       color: $white;
+      margin-bottom: 14px !important;
+      width: fit-content;
+      border-radius: 4px;
 
       img {
         filter: brightness(22);
@@ -56,6 +74,20 @@
     .body {
       color: $light-grey !important;
       margin-bottom: 32px;
+      @media screen and (max-width: 980px){
+        margin-bottom: 0;
+      }
+    }
+
+    .socials_wrap {
+      margin-top: 32px;
+      @media screen and (max-width: 980px){
+        margin-top: 20px;
+      }
+
+      a:first-child {
+        margin-left: 0;
+      }
     }
   }
 }

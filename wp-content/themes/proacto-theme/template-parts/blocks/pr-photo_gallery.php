@@ -8,9 +8,11 @@ if ( ! empty( $block['className'] ) ) {
 $photo_gallery = get_field('photo_gallery');
 $title = !empty($photo_gallery['title']) ? $photo_gallery['title'] : __('Title', 'proacto');
 $title = add_em_words($title, array(1));
+$block_options = get_field('block_options');
 ?>
 
 <section class="<?= esc_attr($className)?>" >
+    <?php add_decorative_line($block_options) ?>
 	<div class="container">
 		<h2 class="heading heading-h2 section-title">
 			<?= $title ?>

@@ -11,9 +11,11 @@ $title = add_em_words($title, array(1));
 $text = !empty($info_numbers['text']) ? $info_numbers['text'] : __('Text', 'proacto');
 $numbers = $info_numbers['numbers'];
 $class = $info_numbers['reverse'] ? 'reverse' : '';
+$block_options = get_field('block_options');
 ?>
 
 <section class="<?php echo  esc_attr($className)?>">
+    <?php add_decorative_line($block_options) ?>
 	<div class="container">
 		<div class="info_numbers__wrap <?= $class ?>">
 			<?php if (!empty($numbers)): ?>

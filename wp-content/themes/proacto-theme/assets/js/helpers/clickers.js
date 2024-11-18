@@ -59,3 +59,27 @@ if (tabbers) {
         })
     })
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Select all block-title elements
+    const blockTitles = document.querySelectorAll('.faq__wrap__list .block-title');
+
+    blockTitles.forEach((title) => {
+        title.addEventListener('click', () => {
+            // Find the parent <li> of the clicked title
+            const parentLi = title.closest('.faq_item');
+
+            if (parentLi) {
+                // Remove 'opened' class from all <li> elements
+                document.querySelectorAll('.faq_item').forEach((li) => {
+                    li.classList.remove('opened');
+                });
+
+                // Add 'opened' class to the clicked parent <li>
+                window.setTimeout(function() {
+                    parentLi.classList.add('opened');
+                }, 500)
+            }
+        });
+    });
+});

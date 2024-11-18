@@ -6,17 +6,19 @@ function filter_projects_ajax() {
 
 	// Prepare the query arguments
 	$args = [
-		'post_type'      => 'projects',
+		'post_type'      => 'attachment',
+		'post_status'    => 'inherit',    // Attachments typically have 'inherit' status
+		'post_mime_type' => 'image',      // Fetch only image files
 		'posts_per_page' => 12,
 		'paged'          => $paged,
 		'order'          => 'DESC',
 		'orderby'        => 'date'
 	];
 
-	if ($technology && $technology != 'all') {
+	if ($technology) {
 		$args['tax_query'] = [
 			[
-				'taxonomy' => 'technology',
+				'taxonomy' => 'media_category',
 				'field'    => 'slug',
 				'terms'    => $technology,
 			]
@@ -28,9 +30,12 @@ function filter_projects_ajax() {
 	if ($filtered_query->have_posts()) {
 		while ($filtered_query->have_posts()) {
 			$filtered_query->the_post();
-			$thumb_url = get_the_post_thumbnail_url();
-			$thumb_alt = get_the_post_thumbnail_caption();
-			$link = get_the_permalink();
+			$thumb_url = wp_get_attachment_url(get_the_ID());
+			// Get the attachment title
+			$thumb_alt = get_the_title();
+//			$thumb_url = get_the_post_thumbnail_url();
+//			$thumb_alt = get_the_post_thumbnail_caption();
+//			$link = get_the_permalink();
 			?>
 			<a class="projects_masonry__card" href="<?= esc_url($thumb_url) ?>">
 				<img src="<?= esc_url($thumb_url) ?>" alt="<?= esc_attr($thumb_alt) ?>">

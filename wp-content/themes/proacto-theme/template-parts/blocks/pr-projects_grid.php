@@ -34,9 +34,12 @@ if ($category) {
 }
 
 $projects_query = new WP_Query($args);
+
+$block_options = get_field('block_options');
 ?>
 
 <section class="<?= $className ?>">
+    <?php add_decorative_line($block_options) ?>
 	<div class="container">
 		<?php if(!empty($title)): ?>
 			<h2 class="heading heading-h2">

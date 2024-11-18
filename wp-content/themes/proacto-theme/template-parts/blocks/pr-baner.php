@@ -6,13 +6,15 @@ if ( ! empty( $block['className'] ) ) {
 }
 
 $baner = get_field('baner');
-
+$block_options = get_field('block_options');
 
 ?>
 
 <section class="<?php echo  esc_attr($className)?>">
+    <?php add_decorative_line($block_options) ?>
     <div class="container">
         <div class="baner__texts">
+            <div class="baner_pagination"></div>
             <h1 class="title heading heading-h1 bold">
 				<?= add_em_words($baner['title'], array(1)) ?>
             </h1>
@@ -35,8 +37,7 @@ $baner = get_field('baner');
                 ?>
                 <div class="swiper-slide" style="background-color: <?= $slide['color'] ?>;">
                     <div class="baner__wrap">
-                        <div class="gradient-overlay desktop" style="background: linear-gradient(90deg, <?= $slide['color'] ?> 15.07%, <?= $slide['color'] ?>00 83.41%);"></div>
-                        <div class="gradient-overlay mobile" style="background: linear-gradient(360deg, <?= $slide['color'] ?> 30.82%, <?= $slide['color'] ?>00 80%);"></div>
+                        <div class="gradient-overlay desktop" style="background:linear-gradient(0deg,  <?= $slide['color'] ?>  15.07%, rgba(9, 50, 56, 0) 83.41%);"></div>
                         <?php if($img_desk): ?>
                             <img src="<?= esc_url($img_desk['url']) ?>" alt="<?= esc_attr($img_desk['alt']) ?>" class="banner_bg desktop">
                         <?php endif ?>
@@ -49,5 +50,5 @@ $baner = get_field('baner');
             <?php endforeach; ?>
         </div>
     </div>
-    <div class="baner_pagination"></div>
+
 </section>

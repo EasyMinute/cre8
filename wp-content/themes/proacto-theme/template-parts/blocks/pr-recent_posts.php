@@ -18,9 +18,12 @@ if($recent_posts['chose_posts'] && !empty($recent_posts['posts'])) {
 		'post_type' => 'post',
 	));
 }
+
+$block_options = get_field('block_options');
 ?>
 
 <section class="<?php echo  esc_attr($className)?>" >
+    <?php add_decorative_line($block_options) ?>
 	<div class="container">
 		<h2 class="heading heading-h2">
 			<?= $title ?>

@@ -10,9 +10,11 @@ $title = !empty($portfolio['title']) ? $portfolio['title'] : __('Title', 'proact
 $title = add_em_words($title, array(1));
 $text = !empty($portfolio['text']) ? $portfolio['text'] : __('Text', 'proacto');
 $cards = $portfolio['cards'];
+$block_options = get_field('block_options');
 ?>
 
 <section class="<?= $className ?>">
+    <?php add_decorative_line($block_options) ?>
 	<div class="container">
 		<h2 class="title heading heading-h2">
 			<?= $title ?>

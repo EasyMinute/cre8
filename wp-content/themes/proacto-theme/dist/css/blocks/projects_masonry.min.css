@@ -1,6 +1,94 @@
 /*!**************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./scss/blocks/projects_masonry.scss ***!
   \**************************************************************************************************************************************************************************************************/
+a {
+  text-decoration: none;
+  font-family: BarlowCondensed, sans-serif;
+}
+
+img {
+  display: block;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (min-width: 980px) {
+  .mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .desktop {
+    display: none !important;
+  }
+}
+
+.gradient-border {
+  border: 1px solid transparent;
+  background-image: -o-linear-gradient(147deg, #F97A58, transparent), -o-linear-gradient(316deg, #F97A58, transparent 63.03%);
+  background-image: linear-gradient(303deg, #F97A58, transparent), linear-gradient(134deg, #F97A58, transparent 63.03%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.socials_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.socials_wrap a {
+  margin-left: 12px;
+  -webkit-filter: brightness(9999);
+          filter: brightness(9999);
+  opacity: 0.7;
+}
+.socials_wrap a:hover {
+  opacity: 1;
+}
+
+.wp-block-group.is-style-image {
+  background-size: cover;
+  background-color: #093238;
+  background-position: bottom;
+}
+.wp-block-group.is-style-image section .container .heading,
+.wp-block-group.is-style-image section .container .body {
+  color: #FFFFFF;
+}
+
+section {
+  overflow: hidden;
+  position: relative;
+}
+section .underline-decor {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 0;
+  border-bottom: 1.5px dashed;
+  left: 0;
+  bottom: 7px;
+  z-index: 11;
+  opacity: 0.5;
+}
+section .underline-decor.light {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+section .underline-decor.dark {
+  border-color: rgba(9, 50, 56, 0.4);
+}
+section .container .heading,
+section .container .body {
+  color: #093238;
+}
+
 .projects_masonry {
   padding: 64px 0 120px;
 }
@@ -8,6 +96,13 @@
   .projects_masonry {
     padding: 24px 0 48px;
   }
+}
+.projects_masonry__head .section_title,
+.projects_masonry__head .section_text {
+  text-align: center;
+  width: 100%;
+  max-width: 665px;
+  margin: auto auto 32px auto;
 }
 .projects_masonry__filter {
   overflow: auto;
@@ -57,7 +152,7 @@
 }
 .projects_masonry__grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 8px;
 }
 @media screen and (max-width: 980px) {
@@ -76,63 +171,15 @@
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .projects_masonry__grid .projects_masonry__card:nth-child(12n+1) {
-    grid-column: span 3/span 3;
-  }
-  .projects_masonry__grid .projects_masonry__card:nth-child(12n+2) {
-    grid-column: span 3/span 3;
-    grid-column-start: 4;
-  }
-  .projects_masonry__grid .projects_masonry__card:nth-child(12n+3) {
-    grid-column: span 6/span 6;
-    grid-column-start: 7;
-  }
-  .projects_masonry__grid .projects_masonry__card:nth-child(12n+4) {
-    grid-column: span 4/span 4;
-    grid-row-start: span 2;
-  }
-  .projects_masonry__grid .projects_masonry__card:nth-child(12n+5) {
-    grid-column: span 4/span 4;
-    grid-column-start: 5;
-    grid-row-start: span 2;
-  }
-  .projects_masonry__grid .projects_masonry__card:nth-child(12n+6) {
-    grid-column: span 4/span 4;
-    grid-column-start: 9;
-    grid-row-start: span 2;
-  }
-  .projects_masonry__grid .projects_masonry__card:nth-child(12n+7) {
-    grid-column: span 6/span 6;
-    grid-row-start: span 3;
-  }
-  .projects_masonry__grid .projects_masonry__card:nth-child(12n+8) {
-    grid-column: span 3/span 3;
-    grid-column-start: 7;
-    grid-row-start: span 3;
-  }
-  .projects_masonry__grid .projects_masonry__card:nth-child(12n+9) {
-    grid-column: span 3/span 3;
-    grid-column-start: 10;
-    grid-row-start: span 3;
-  }
-  .projects_masonry__grid .projects_masonry__card:nth-child(12n+10) {
-    grid-column: span 4/span 4;
-    grid-row-start: span 4;
-  }
-  .projects_masonry__grid .projects_masonry__card:nth-child(12n+11) {
-    grid-column: span 4/span 4;
-    grid-column-start: 5;
-    grid-row-start: span 4;
-  }
-  .projects_masonry__grid .projects_masonry__card:nth-child(12n+12) {
-    grid-column: span 4/span 4;
-    grid-column-start: 9;
-    grid-row-start: span 4;
-  }
 }
 .projects_masonry__grid .projects_masonry__card {
   border-radius: 8px;
   overflow: hidden;
+}
+@media screen and (max-width: 980px) {
+  .projects_masonry__grid .projects_masonry__card {
+    max-height: 220px;
+  }
 }
 .projects_masonry__grid .projects_masonry__card img {
   width: 100%;

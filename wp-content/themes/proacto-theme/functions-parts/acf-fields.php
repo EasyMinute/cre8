@@ -21,6 +21,10 @@ $block_files = [
 	'list_cards',
 	'full_image',
 	'project_foot',
+	'portfolio_sections',
+	'faq',
+	'video',
+
 ];
 
 foreach ( $block_files as $block ) {

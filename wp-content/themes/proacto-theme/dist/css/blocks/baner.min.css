@@ -12,14 +12,13 @@
 .baner .container .baner__texts {
   width: 100%;
   max-width: 523px;
-  position: relative;
   z-index: 5;
   padding: 141px 0;
   margin-left: calc(20% - 261.5px);
 }
 @media screen and (max-width: 980px) {
   .baner .container .baner__texts {
-    padding: 320px 16px 48px 16px;
+    padding: 320px 0 48px 0;
     margin: 0;
     max-width: 100%;
   }
@@ -28,10 +27,18 @@
   margin-bottom: 32px;
   text-transform: uppercase;
   color: #FFFFFF;
+  font-size: 110px;
+  font-weight: 700;
+  line-height: 92.52px;
+  letter-spacing: -0.02em;
 }
 @media screen and (max-width: 980px) {
   .baner .container .baner__texts .title {
-    margin-bottom: 28px;
+    margin-bottom: 20px;
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 57.19px;
+    letter-spacing: -0.02em;
   }
 }
 .baner .container .baner__texts .text {
@@ -40,7 +47,7 @@
 }
 @media screen and (max-width: 980px) {
   .baner .container .baner__texts .text {
-    margin-bottom: 28px;
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 980px) {
@@ -70,9 +77,9 @@
 }
 .baner__wrap .gradient-overlay {
   position: absolute;
-  height: 100%;
+  height: 175px;
   width: 100%;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: 1;
 }
@@ -103,6 +110,14 @@
   display: flex;
   width: 100%;
   padding: 16px 0;
+}
+@media screen and (max-width: 980px) {
+  .baner .baner_pagination {
+    position: static;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 .baner .baner_pagination .swiper-pagination-bullet-active,
 .baner .baner_pagination .swiper-pagination-bullet {

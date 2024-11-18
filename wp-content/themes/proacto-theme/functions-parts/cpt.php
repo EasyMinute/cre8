@@ -39,8 +39,8 @@ function register_projects_cpt() {
 
 	register_post_type( 'projects', $args );
 }
-
 add_action( 'init', 'register_projects_cpt' );
+
 
 function register_technology_taxonomy() {
 	$labels = array(
@@ -60,27 +60,29 @@ function register_technology_taxonomy() {
 
 	register_taxonomy( 'technology', 'projects', $args );
 }
-
 add_action( 'init', 'register_technology_taxonomy' );
 
-function register_availability_taxonomy() {
-	$labels = array(
-		'name'                       => _x( 'Availability', 'taxonomy general name', 'proacto' ),
-		'singular_name'              => _x( 'Availability', 'taxonomy singular name', 'proacto' ),
-	);
 
-	$args = array(
-		'hierarchical'          => true, // Set to false for "tag"-like behavior
-		'labels'                => $labels,
-		'show_ui'               => true,
-		'show_admin_column'     => true,
-		'query_var'             => true,
-		'rewrite'               => array( 'slug' => 'availability' ),
-		'show_in_rest'          => true, // Enables Gutenberg editor support
-	);
+//function register_availability_taxonomy() {
+//	$labels = array(
+//		'name'                       => _x( 'Availability', 'taxonomy general name', 'proacto' ),
+//		'singular_name'              => _x( 'Availability', 'taxonomy singular name', 'proacto' ),
+//	);
+//
+//	$args = array(
+//		'hierarchical'          => true, // Set to false for "tag"-like behavior
+//		'labels'                => $labels,
+//		'show_ui'               => true,
+//		'show_admin_column'     => true,
+//		'query_var'             => true,
+//		'rewrite'               => array( 'slug' => 'availability' ),
+//		'show_in_rest'          => true, // Enables Gutenberg editor support
+//	);
+//
+//	register_taxonomy( 'availability', 'projects', $args );
+//}
+//add_action( 'init', 'register_availability_taxonomy' );
 
-	register_taxonomy( 'availability', 'projects', $args );
-}
 
 function register_category_taxonomy() {
 	$labels = array(
@@ -100,8 +102,29 @@ function register_category_taxonomy() {
 
 	register_taxonomy( 'projects_category', 'projects', $args );
 }
-
 add_action( 'init', 'register_category_taxonomy' );
+
+
+function register_media_taxonomy() {
+	$labels = array(
+		'name'                       => _x( 'Category', 'taxonomy general name', 'proacto' ),
+		'singular_name'              => _x( 'Category', 'taxonomy singular name', 'proacto' ),
+	);
+
+	$args = array(
+		'hierarchical'          => true, // Set to false for "tag"-like behavior
+		'labels'                => $labels,
+		'show_ui'               => true,
+		'show_admin_column'     => true,
+		'query_var'             => true,
+		'rewrite'               => array( 'slug' => 'media_category' ),
+		'show_in_rest'          => true, // Enables Gutenberg editor support
+	);
+
+	register_taxonomy( 'media_category', 'attachment', $args );
+}
+add_action( 'init', 'register_media_taxonomy' );
+
 
 function register_availibility_taxonomy() {
 	$labels = array(
@@ -121,7 +144,6 @@ function register_availibility_taxonomy() {
 
 	register_taxonomy( 'availibility', 'projects', $args );
 }
-
 add_action( 'init', 'register_availibility_taxonomy' );
 
 

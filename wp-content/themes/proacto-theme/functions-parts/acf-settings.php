@@ -185,6 +185,30 @@ class Acf_Config {
 			    'description' => __('Form and recent projects', 'proacto'),
 			    'icon' => 'block-default'
 		    ),
+		    array(
+			    'name' => 'portfolio_sections',
+			    'title' => __('Portfolio sections', 'proacto'),
+			    'description' => __('Sections of portfolio categories', 'proacto'),
+			    'icon' => 'nametag'
+		    ),
+		    array(
+			    'name' => 'faq',
+			    'title' => __('FAQ', 'proacto'),
+			    'description' => __('Frequently asked questions', 'proacto'),
+			    'icon' => 'editor-help'
+		    ),
+		    array(
+			    'name' => 'icons_list',
+			    'title' => __('List with icons', 'proacto'),
+			    'description' => __('List with icons', 'proacto'),
+			    'icon' => 'editor-ul'
+		    ),
+		    array(
+			    'name' => 'video',
+			    'title' => __('Video section', 'proacto'),
+			    'description' => __('Title, text and video', 'proacto'),
+			    'icon' => 'format-video'
+		    ),
 
 	    );
 	    $acf_style_names = array(

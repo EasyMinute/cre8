@@ -120,4 +120,12 @@ if (!function_exists('add_em_words')) {
 add_filter('wpcf7_autop_or_not', '__return_false');
 
 
+function add_decorative_line($block_options) {
+
+    if (!empty($block_options['underline']) && $block_options['underline'] != 'none') {
+        echo '<div class="underline-decor '. $block_options['underline'] .'"></div>';
+    }
+}
+
+
 ?>

@@ -11,12 +11,15 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
+    @media screen and (max-width: 980px){
+      padding: 12px 0;
+    }
   }
 
   &__logo {
-    @media screen and (min-width: 980px) {
-      width: 20%;
-    }
+    //@media screen and (min-width: 980px) {
+    //  width: 20%;
+    //}
     img{
       width: 76px;
     }
@@ -44,7 +47,7 @@
     @media screen and (max-width: 980px){
       position: absolute;
       width: 100vw;
-      height: calc(100vh - 73px);
+      height: calc(100vh - 64px);
       left: 50%;
       top: 100%;
       background-color: $dark-green;
@@ -52,6 +55,8 @@
       max-height: 0;
       overflow: hidden;
       transition: all .5s;
+      display: flex;
+      flex-direction: column;
     }
 
     &.opened {
@@ -69,11 +74,12 @@
       }
 
       li {
-        padding: 8px 16px;
+        padding: 8px 12px;
         @media screen and (max-width: 1220px){
           width: 100%;
           padding: 16px 21px;
-          border-bottom: 1px solid $transparent;
+          border-bottom: 1px dashed #6C8588;
+
         }
 
         a {
@@ -81,6 +87,7 @@
           line-height: 20px;
           color: $white;
           transition: all .5s;
+          font-weight: 600;
           text-transform: uppercase;
           @media screen and (max-width: 980px){
             text-transform: uppercase;
@@ -120,11 +127,12 @@
         &.menu-item-has-children {
           display: flex;
           align-items: center;
-          position: relative;
           padding-right: 40px;
+          cursor: pointer;
           @media screen and (max-width: 980px){
             flex-direction: column;
             align-items: flex-start;
+            position: relative;
           }
 
           &:after {
@@ -137,7 +145,7 @@
             border-radius: 0 0 3px 0;
             left: 100%;
             top: 50%;
-            transform: translate(12px, 0) rotate(-45deg);
+            transform: translate(12px, 0) rotate(45deg);
             transition: all .5s;
 
             @media screen and (max-width: 980px){
@@ -151,15 +159,14 @@
 
           .sub-menu {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             //max-width: 0;
-            flex-direction: column;
+            flex-direction: row;
             position: absolute;
-            top: 100%;
+            top: calc(100% - 1.5px);
             left: 50%;
             transform: translateX(-50%);
-            border-radius: 8px;
-            width: max-content;
+            width: 100%;
             max-height: 0;
             background-color: $dark-green;
             overflow: hidden;
@@ -169,14 +176,32 @@
               width: 100%;
               transform: none;
               border: none;
-
               flex-direction: column;
               max-width: 100%;
               max-height: 0;
               align-items: flex-start;
             }
 
+            &:after {
+              content: '';
+              display: block;
+              position: absolute;
+              width: 100vw;
+              height: 100%;
+              left: 50%;
+              top: 0;
+              transform: translateX(-50%);
+              background-color: $dark-green;
+              transition: all .5s;
+              @media screen and (max-width: 980px){
+                display: none;
+              }
+            }
+
             li {
+              position: relative;
+              z-index: 1;
+
               @media screen and (min-width: 980px){
                 padding: 4px 12px;
               }
@@ -189,28 +214,28 @@
                 @media screen and (max-width: 980px){
                   display: block;
                   text-transform: unset;
-                  margin-top: 12px;
+                  margin-top: 16px;
                 }
               }
             }
           }
 
-          &:hover,
-          &.current-menu-ancestor {
+          &.opened {
             .sub-menu {
               //max-width: 100%;
-              padding: 8px 12px;
-              border: 1px solid $orange;
+              padding: 24px 0;
+              overflow: visible;
               max-height: 200px;
+              border-top: 1.5px dashed #FFFFFF66;
               @media screen and (max-width: 980px){
                 border: none;
-
                 max-height: 400px;
+                padding: 8px 0;
               }
             }
 
             &:after {
-              transform: translate(12px, 0) rotate(135deg);
+              transform: translate(12px, 0) rotate(-135deg);
               @media screen and (max-width: 980px){
                 transform: translate(-12px, 18px) rotate(-135deg);
               }
@@ -222,11 +247,32 @@
 
   }
 
+  .button {
+    padding: 10px 14px 10px 8px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+    display: flex;
+    border-radius: 6px;
+    align-items: center;
+    width: max-content;
+    @media screen and (max-width: 980px){
+      width: 100%;
+      margin: auto 0 56px 0;
+    }
+
+    svg {
+      margin-right: 8px;
+    }
+  }
+
   &__socials {
     display: flex;
 
     a {
-      margin-left: 6px;
+      margin-left: 18px;
+      width: 24px;
+
       filter: brightness(55) grayscale(1);
       opacity: .7;
 

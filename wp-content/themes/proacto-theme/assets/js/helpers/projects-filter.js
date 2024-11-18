@@ -37,6 +37,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
         });
     });
+
+    const filterTriggers = document.querySelectorAll('.filter-trigger')
+    filterTriggers.forEach(button => {
+        button.addEventListener('click', function (e) {
+            e.preventDefault();
+            let selectedTechnology = this.getAttribute('href').replace('#', '');
+
+            filterButtons.forEach(butt => {
+                if (butt.getAttribute('href') === button.getAttribute('href')){
+                    butt.classList.add('active')
+                } else {
+                    butt.classList.remove('active')
+                }
+            })
+
+            // Update URL hash
+            window.location.hash = selectedTechnology;
+
+            filterProjectsByTechnology(selectedTechnology)
+            const scrollToSection = document.querySelector('.projects_masonry');
+
+            if (scrollToSection) {
+                // Smooth scroll to the section
+                scrollToSection.scrollIntoView({
+                    behavior: 'smooth', // Smooth scrolling
+                    block: 'start',     // Align the top of the section to the top of the screen
+                });
+            }
+
+        });
+    });
+
 });
 
 

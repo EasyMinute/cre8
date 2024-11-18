@@ -9,9 +9,11 @@ $full_image = get_field('full_image');
 $img_url = esc_url($full_image['image']['url']);
 $img_alt = esc_url($full_image['image']['alt']);
 $color = $full_image['overlay'];
+$block_options = get_field('block_options');
 ?>
 
 <section class="<?= $className ?>">
+    <?php add_decorative_line($block_options) ?>
     <div class="container">
         <img src="<?= $img_url ?>" alt="<?= $img_alt?> ">
         <?php if ($full_image['add_button'] && !empty($full_image['button'])): ?>

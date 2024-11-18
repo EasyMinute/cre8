@@ -20,6 +20,8 @@
 
 	function proacto_style() {
         wp_enqueue_style( 'proacto-style', get_stylesheet_uri(), array(), _S_VERSION );
+		wp_enqueue_style( 'proacto-slick-style', '//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css', array(), 1.0, 'all' );
+		wp_enqueue_style( 'proacto-slick-theme', '//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css', array(), 1.0, 'all' );
         wp_enqueue_style( 'proacto-main', get_template_directory_uri() . '/dist/css/main.min.css', array(), 1.0, 'all' );
 
 	}
@@ -27,7 +29,7 @@
 //		wp_enqueue_script('jquery');
 
 
-		wp_enqueue_script( 'proacto-main', get_template_directory_uri() . '/dist/js/main.min.js', '', 1.0, true );
+		wp_enqueue_script( 'proacto-main', get_template_directory_uri() . '/dist/js/main.min.js', 'jquery', 1.0, true );
 		wp_localize_script('proacto-main', 'proacto_ajax', array(
 			'ajax_url' => admin_url('admin-ajax.php')
 		));

@@ -29,12 +29,14 @@ function proacto_load_more_projects() {
 add_action('wp_ajax_load_more_projects', 'proacto_load_more_projects'); // For logged in users
 add_action('wp_ajax_nopriv_load_more_projects', 'proacto_load_more_projects'); // For guests
 
-function load_more_projects() {
+function load_more_projects_masonry() {
 	$paged = isset($_POST['paged']) ? $_POST['paged'] : 1;
-	$term_slug = isset($_POST['term_slug']) ? sanitize_text_field($_POST['term_slug']) : '';
+	$term_slug = isset($_POST['term_slug']) ? sanitize_text_field($_POST['term_slug']) : 'all';
 
 	$args = [
-		'post_type' => 'projects',
+		'post_type'      => 'attachment',
+		'post_status'    => 'inherit',    // Attachments typically have 'inherit' status
+		'post_mime_type' => 'image',      // Fetch only image files
 		'posts_per_page' => 12,
 		'paged' => $paged,
 	];
@@ -42,7 +44,7 @@ function load_more_projects() {
 	if ($term_slug) {
 		$args['tax_query'] = [
 			[
-				'taxonomy' => 'technology',
+				'taxonomy' => 'media_category',
 				'field'    => 'slug',
 				'terms'    => $term_slug,
 			]
@@ -60,7 +62,7 @@ function load_more_projects() {
 			?>
 
 			<div class="projects_masonry__card">
-				<img src="<?= esc_url($thumb_url) ?>" alt="<?= esc_attr($thumb_alt) ?>">
+				<img src="<?= esc_url($link) ?>" alt="<?= esc_attr($thumb_alt) ?>">
 				<a href="<?= $link ?>" class="link-overlay"></a>
 			</div>
 		<?php endwhile;
@@ -79,7 +81,7 @@ function load_more_projects() {
 }
 
 // Register AJAX handlers
-add_action('wp_ajax_load_more_projects_masonry', 'load_more_projects');
-add_action('wp_ajax_nopriv_load_more_projects_masonry', 'load_more_projects');
+add_action('wp_ajax_load_more_projects_masonry', 'load_more_projects_masonry');
+add_action('wp_ajax_nopriv_load_more_projects_masonry', 'load_more_projects_masonry');
 
 ?>

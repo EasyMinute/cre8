@@ -2,11 +2,11 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./scss/blocks/benefits_grid.scss ***!
   \***********************************************************************************************************************************************************************************************/
 .benefits_grid {
-  padding: 80px 0;
+  padding: 68px 0;
 }
 @media screen and (max-width: 980px) {
   .benefits_grid {
-    padding: 40px 0;
+    padding: 34px 0;
   }
 }
 .benefits_grid .heading-h2 {
@@ -24,6 +24,12 @@
   .benefits_grid__wrap {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+.benefits_grid.light .benefits-card {
+  border: none !important;
+}
+.benefits_grid.light .benefits-card:after {
+  background-color: #F0F3F3;
 }
 
 .benefits-card {
@@ -48,7 +54,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #093238;
+  background-color: #133C42;
 }
 .benefits-card img {
   width: 32px;

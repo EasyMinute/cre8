@@ -98,7 +98,7 @@
 }
 .post-card__cats span:first-child {
   background-color: #F97A58;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 .post-card__title {
   margin-bottom: 20px;

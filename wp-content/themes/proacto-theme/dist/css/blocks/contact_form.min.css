@@ -9,6 +9,7 @@
 }
 @media screen and (max-width: 980px) {
   .contact_form {
+    background-image: url(../../images/pr-optimized-contact-bg-mob.png);
     padding: 40px 0;
   }
 }
@@ -103,6 +104,9 @@ form input:not([type=submit]), form textarea {
   letter-spacing: -0.02em;
   text-align: left;
   color: #FFFFFF;
+}
+form input:not([type=submit]):focus, form textarea:focus {
+  border-color: #FFFFFF;
 }
 
 .select2-container {

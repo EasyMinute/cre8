@@ -15,9 +15,13 @@
     @media screen and (max-width: 980px){
       justify-content: flex-start;
       flex-wrap: wrap;
+      margin-bottom: 20px;
     }
 
     button {
+      @media screen and (max-width: 980px){
+        width: calc(50% - 6px);
+      }
       &:first-of-type {
         margin: auto 24px 0 auto;
         @media screen and (max-width: 980px){
@@ -77,8 +81,14 @@
         left: calc(100% + 9px);
       }
 
+      &.center {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
       .card-empty {
-        border: 1px solid $grey;
+        //border: 1px solid $grey;
+        background-color: #F0F3F3;
         border-radius: 24px;
       }
     }
@@ -102,24 +112,21 @@
 }
 
 .projects_buy-card {
-  border: 1px solid $grey;
   border-radius: 24px;
-  padding: 0 0 24px 0;
   transition: all .5s;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
   position: relative;
-  @media screen and (max-width: 980px) {
-    display: none;
-  }
+  height: 306px;
 
   &:hover {
     //border-color: $grey;
-    -webkit-box-shadow: 2px 3px 15px 3px rgba(9,50,56,0.38);
-    -moz-box-shadow: 2px 3px 15px 3px rgba(9,50,56,0.38);
-    box-shadow: 2px 3px 15px 3px rgba(9,50,56,0.38);
+    //-webkit-box-shadow: 2px 3px 15px 3px rgba(9,50,56,0.38);
+    //-moz-box-shadow: 2px 3px 15px 3px rgba(9,50,56,0.38);
+    //box-shadow: 2px 3px 15px 3px rgba(9,50,56,0.38);
 
     .projects_buy-card__img img{
       transform: scale(1.1);
@@ -128,11 +135,11 @@
 
   &__img {
     position: relative;
-    padding-top: 58%;
+    //padding-top: 58%;
+    height: 100%;
     width: 100%;
-    border-radius: 24px 24px 0 0;
+    border-radius: 24px;
     overflow: hidden;
-    margin-bottom: 24px;
     background-color: $dark-green;
 
     img {
@@ -144,26 +151,40 @@
       object-fit: cover;
       transition: all .5s;
     }
-
-    span {
-      display: block;
-      padding: 12px 24px;
-      text-transform: uppercase;
-      color: $white;
-      background-color: $transparent;
-      border-radius: 8px;
-      position: absolute;
-      left: 8px;
-      bottom: 8px;
-      z-index: 1;
-    }
   }
 
   &__texts {
-    max-width: calc(100% - 82px);
-    margin-left: 24px;
+    height: 91px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 24px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #FFFFFFCC;
+    @media screen and (max-width: 980px){
+      height: 68px;
+    }
+
     .title {
       color: $dark-green;
+    }
+
+    .sold-label {
+      display: block;
+      padding: 8px 24px;
+      font-weight: 600;
+      line-height: 21.6px;
+      text-transform: uppercase;
+      color: $white !important;
+      background-color: $transparent;
+      border-radius: 4px;
+      position: absolute;
+      left: 8px;
+      bottom: calc(100% + 8px);
+      z-index: 1;
     }
   }
 
@@ -172,7 +193,10 @@
   }
 
   .arrow-button {
-    margin-right: 24px;
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &.sold {

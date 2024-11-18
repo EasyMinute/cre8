@@ -8,9 +8,11 @@ if ( ! empty( $block['className'] ) ) {
 $list_cards = get_field('list_cards');
 $title = !empty($list_cards['title']) ? $list_cards['title'] : __('Title', 'proacto');
 $title = add_em_words($title, array(0));
+$block_options = get_field('block_options');
 ?>
 
 <section class="<?php echo esc_attr($className)?>" >
+    <?php add_decorative_line($block_options) ?>
 	<div class="container">
 		<h2 class="heading heading-h2 section-title">
 			<?= $title ?>

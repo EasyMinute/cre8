@@ -38,9 +38,12 @@ if (!empty($projects_buy['sold_projects'])) {
 		),
 	));
 }
+
+$block_options = get_field('block_options');
 ?>
 
 <section class="<?php echo  esc_attr($className)?>">
+    <?php add_decorative_line($block_options) ?>
 	<div class="container">
 		<div class="projects_buy__head">
             <div class="projects_buy__texts">
@@ -63,6 +66,11 @@ if (!empty($projects_buy['sold_projects'])) {
                 <?php for ($i = 0; $i < count($available_projects); $i++): ?>
                     <div class="card-empty"></div>
                 <?php endfor; ?>
+            </div>
+            <div class="projects_buy__main__decor center">
+		        <?php for ($i = 0; $i < count($available_projects); $i++): ?>
+                    <div class="card-empty"></div>
+		        <?php endfor; ?>
             </div>
             <div class="projects_buy__grid active" id="available-projects">
                 <?php foreach ($available_projects as $post) : ?>
@@ -90,9 +98,9 @@ if (!empty($projects_buy['sold_projects'])) {
                             <span class="body technology">
                                 <?= $term_name ?>
                             </span>
+                            <a href="<?= $link ?>" class="arrow-button primary"></a>
                         </div>
                         <a href="<?= $link ?>" class="link-overlay"></a>
-                        <a href="<?= $link ?>" class="arrow-button tertiary"></a>
                     </div>
                 <?php endforeach ?>
 	            <?php wp_reset_postdata(); ?>
@@ -115,18 +123,18 @@ if (!empty($projects_buy['sold_projects'])) {
                     <div class="projects_buy-card sold">
                         <div class="projects_buy-card__img">
                             <img src="<?= $img_url ?>" alt="<?= $img_alt ?>">
-                            <span class="body"><?= __('Sold', 'proacto') ?></span>
                         </div>
                         <div class="projects_buy-card__texts">
+                            <span class="body sold-label"><?= __('Sold', 'proacto') ?></span>
                             <h3 class="heading heading-h3 title">
 						        <?= $title ?>
                             </h3>
                             <span class="body technology">
                                 <?= $term_name ?>
                             </span>
+                            <a href="<?= $link ?>" class="arrow-button tertiary"></a>
                         </div>
                         <a href="<?= $link ?>" class="link-overlay"></a>
-                        <a href="<?= $link ?>" class="arrow-button primary"></a>
                     </div>
 		        <?php endforeach ?>
 		        <?php wp_reset_postdata(); ?>

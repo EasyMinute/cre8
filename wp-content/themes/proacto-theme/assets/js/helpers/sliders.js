@@ -24,10 +24,10 @@ const initSwiperForMobile = () => {
             slidesPerView: 1,              // 1 slide per page
             spaceBetween: 8,              // Adjust spacing if needed
             grabCursor: true,               // Enable grab cursor
-            loop: true,                     // Enable looping
+            loop: false,                     // Enable looping
             pagination: {                   // Enable pagination
                 el: '.portfolio_pagination ',
-                // dynamicBullets: true,
+                dynamicBullets: true,
                 clickable: true,              // Make pagination dots clickable
             },
         });
@@ -104,24 +104,45 @@ const baner_swiper = new Swiper('.baner-slider', {
 import Splide from '@splidejs/splide';
 import '@splidejs/splide/css';
 
-document.addEventListener('DOMContentLoaded', function() {
-    var splides = document.querySelectorAll('.splide'); // Select all Splide sliders
+// document.addEventListener('DOMContentLoaded', function() {
+//     var splides = document.querySelectorAll('.splide'); // Select all Splide sliders
+//
+//     splides.forEach(function(splideElement) {
+//         new Splide(splideElement, {
+//             easing: "linear",
+//             type      : 'loop',        // Enable looping
+//             padding: 48,
+//             autoWidth: true,
+//             clones    : 6,
+//             perPage   : 6,             // Number of slides to show
+//             perMove   : 1,             // Number of slides to move per scroll
+//             autoplay  : true,          // Enable autoplay
+//             interval  : 0,             // Time between transitions
+//             pauseOnHover: false,       // Disable pause on hover
+//             speed     : 13000,         // Transition speed
+//             arrows    : false,         // Hide arrows
+//             pagination: false,         // Hide pagination
+//         }).mount();
+//     });
+// });
 
-    splides.forEach(function(splideElement) {
-        new Splide(splideElement, {
-            easing: "linear",
-            type      : 'loop',        // Enable looping
-            padding: 48,
-            autoWidth: true,
-            clones    : 6,
-            perPage   : 6,             // Number of slides to show
-            perMove   : 1,             // Number of slides to move per scroll
-            autoplay  : true,          // Enable autoplay
-            interval  : 0,             // Time between transitions
-            pauseOnHover: false,       // Disable pause on hover
-            speed     : 13000,         // Transition speed
-            arrows    : false,         // Hide arrows
-            pagination: false,         // Hide pagination
-        }).mount();
+import $ from 'jquery'
+import 'slick-carousel'
+
+window.jQuery = window.$ = $;
+
+$('.icons_slick').each(function () {
+    $(this).slick({
+        slidesToShow: 2,          // Number of logos to show at once
+        slidesToScroll: 1,        // Number of logos to scroll at a time
+        autoplay: true,           // Enable autoplay
+        autoplaySpeed: 0,         // Set to 0 for smooth continuous scrolling
+        speed: 3000,              // Speed of the scrolling animation
+        cssEase: 'linear',        // Use linear animation to create a smooth flow
+        infinite: true,           // Infinite loop
+        arrows: false,            // Disable navigation arrows
+        dots: false,              // Disable pagination dots
+        pauseOnHover: false,      // Do not pause on hover
+        variableWidth: true       // Allows logos of different widths to scroll smoothly
     });
 });

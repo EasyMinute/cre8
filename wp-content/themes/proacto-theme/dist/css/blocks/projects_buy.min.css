@@ -29,6 +29,12 @@
             justify-content: flex-start;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .projects_buy__head button {
+    width: calc(50% - 6px);
   }
 }
 .projects_buy__head button:first-of-type {
@@ -89,8 +95,14 @@
 .projects_buy__main__decor.right {
   left: calc(100% + 9px);
 }
+.projects_buy__main__decor.center {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
 .projects_buy__main__decor .card-empty {
-  border: 1px solid #6B8488;
+  background-color: #F0F3F3;
   border-radius: 24px;
 }
 
@@ -113,9 +125,7 @@
 }
 
 .projects_buy-card {
-  border: 1px solid #6B8488;
   border-radius: 24px;
-  padding: 0 0 24px 0;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
@@ -130,16 +140,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: hidden;
   position: relative;
-}
-@media screen and (max-width: 980px) {
-  .projects_buy-card {
-    display: none;
-  }
-}
-.projects_buy-card:hover {
-  -webkit-box-shadow: 2px 3px 15px 3px rgba(9, 50, 56, 0.38);
-  box-shadow: 2px 3px 15px 3px rgba(9, 50, 56, 0.38);
+  height: 306px;
 }
 .projects_buy-card:hover .projects_buy-card__img img {
   -webkit-transform: scale(1.1);
@@ -148,11 +151,10 @@
 }
 .projects_buy-card__img {
   position: relative;
-  padding-top: 58%;
+  height: 100%;
   width: 100%;
-  border-radius: 24px 24px 0 0;
+  border-radius: 24px;
   overflow: hidden;
-  margin-bottom: 24px;
   background-color: #093238;
 }
 .projects_buy-card__img img {
@@ -167,30 +169,57 @@
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-.projects_buy-card__img span {
-  display: block;
-  padding: 12px 24px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  position: absolute;
-  left: 8px;
-  bottom: 8px;
-  z-index: 1;
-}
 .projects_buy-card__texts {
-  max-width: calc(100% - 82px);
-  margin-left: 24px;
+  height: 91px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 24px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+@media screen and (max-width: 980px) {
+  .projects_buy-card__texts {
+    height: 68px;
+  }
 }
 .projects_buy-card__texts .title {
   color: #093238;
+}
+.projects_buy-card__texts .sold-label {
+  display: block;
+  padding: 8px 24px;
+  font-weight: 600;
+  line-height: 21.6px;
+  text-transform: uppercase;
+  color: #FFFFFF !important;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  position: absolute;
+  left: 8px;
+  bottom: calc(100% + 8px);
+  z-index: 1;
 }
 .projects_buy-card .button-pay {
   margin: auto 10px auto auto;
 }
 .projects_buy-card .arrow-button {
-  margin-right: 24px;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .projects_buy-card.sold .projects_buy-card__img img {
   opacity: 0.3;

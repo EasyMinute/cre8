@@ -65,8 +65,8 @@
     }
 
     &.active {
-      background-color: $dark-green;
-      border-color: $dark-green;
+      background-color: $green;
+      border-color: $green;
       color: $white;
 
       &:hover {
@@ -279,10 +279,11 @@
   display: flex;
   align-items: center;
   padding: 12px 8px;
-  border: 1px solid $transparent-green;
   border-radius: 6px;
   transition: all .5s;
-  color: $light-green;
+  border: 1px solid #DDE2E3;
+  color: $dark-green;
+  background-color: $white;
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
@@ -295,9 +296,14 @@
     margin-right: 8px;
   }
 
-  &.active,
+  &.active {
+    background-color: $orange;
+    border-color: $orange;
+    color: $white;
+  }
   &:hover {
-    background-color: $dark-green;
+    background-color: $light-orange;
+    border-color: $orange;
     color: $white;
   }
 }

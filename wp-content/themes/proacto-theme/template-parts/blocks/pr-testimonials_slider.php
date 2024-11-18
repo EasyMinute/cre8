@@ -9,9 +9,12 @@ $testimonials_slider = get_field('testimonials_slider');
 $title = !empty($testimonials_slider['title']) ? $testimonials_slider['title'] : __('Title', 'proacto');
 $title = add_em_words($title, array(2,3));
 $testimonials = $testimonials_slider['testimonials'];
+
+$block_options = get_field('block_options');
 ?>
 
 <section class="<?php echo  esc_attr($className)?>" >
+    <?php add_decorative_line($block_options) ?>
 	<div class="container">
 		<h2 class="heading heading-h2">
 			<?= $title ?>

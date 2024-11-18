@@ -1,0 +1,90 @@
+@import "../generals/colors";
+
+.portfolio_sections {
+  &__head {
+    padding: 68px;
+    @media screen and (max-width: 980px) {
+      padding: 34px 0;
+    }
+
+    .section_title {
+      margin-bottom: 32px;
+      @media screen and (max-width: 980px) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+
+}
+
+.portfolio_section {
+  position: relative;
+
+  img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    object-position: top left;
+    object-fit: cover;
+    @media screen and (max-width: 980px) {
+      object-position: top center;
+    }
+    @media screen and (min-width: 980px) {
+      width: auto;
+    }
+  }
+
+  &.right img {
+    object-position: top right;
+    left: 0;
+    @media screen and (max-width: 980px) {
+      object-position: top center;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 480px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    max-width: 522px;
+    margin: auto auto auto 0;
+    @media screen and (max-width: 980px) {
+      max-width: 100%;
+      margin: 0;
+      justify-content: flex-end;
+      padding-bottom: 42px;
+    }
+
+    &.right {
+      margin: auto 0 auto auto;
+      @media screen and (max-width: 980px) {
+        margin: 0;
+      }
+    }
+
+    .block_title,
+    .block_text{
+      color: $white !important;
+      margin-bottom: 32px;
+      @media screen and (max-width: 980px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .button {
+      @media screen and (max-width: 980px) {
+        width: 100%;
+      }
+    }
+
+  }
+
+}

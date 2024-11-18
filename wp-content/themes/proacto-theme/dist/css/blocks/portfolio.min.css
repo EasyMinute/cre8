@@ -83,8 +83,8 @@
 }
 @media screen and (max-width: 980px) {
   .portfolio-card img {
-    -o-object-position: top;
-       object-position: top;
+    -o-object-position: bottom;
+       object-position: bottom;
   }
 }
 .portfolio-card__texts {
@@ -98,12 +98,12 @@
 }
 .portfolio-card__texts .heading {
   text-transform: uppercase;
-  color: #FFFFFF !important;
+  color: #F97A58 !important;
   margin-bottom: 32px;
 }
 @media screen and (min-width: 980px) {
   .portfolio-card__texts .heading {
-    margin-bottom: 28px;
+    margin-bottom: 20px;
   }
 }
 .portfolio-card__texts .body {
@@ -119,6 +119,6 @@
   }
   .portfolio-card.main .portfolio-card__texts {
     max-width: 50%;
-    margin: auto 0 auto auto;
+    margin: auto auto auto 0;
   }
 }

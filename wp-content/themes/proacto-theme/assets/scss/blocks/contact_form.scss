@@ -6,6 +6,7 @@
   background-size: cover;
   background-position: top;
   @media screen and (max-width: 980px){
+    background-image: url(/img/static/contact-bg-mob.png);
     padding: 40px 0;
   }
 
@@ -97,7 +98,10 @@ form {
     letter-spacing: -0.02em;
     text-align: left;
     color: $white;
-
+    
+    &:focus {
+      border-color: $white;
+    }
   }
 }
 

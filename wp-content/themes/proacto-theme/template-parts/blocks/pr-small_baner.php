@@ -8,7 +8,12 @@ if ( ! empty( $block['className'] ) ) {
 $small_baner = get_field('small_baner');
 $title = !empty($small_baner['title']) ? $small_baner['title'] : __('Title', 'proacto');
 $title = add_em_words($title, array(1));
-$bg_url = $small_baner['background']['url'];
+
+$bg_url = esc_url($small_baner['background']['url']);
+$bg_alt = esc_attr($small_baner['background']['alt']);
+$bg_mob_url = !empty($small_baner['background_mob']['url']) ? esc_url($small_baner['background_mob']['url']) : esc_url($small_baner['background']['url']);
+$bg_mob_alt = !empty($small_baner['background_mob']['alt']) ? esc_url($small_baner['background_mob']['alt']) : esc_url($small_baner['background']['alt']);
+
 $color = $small_baner['color'];
 
 $footer = get_field('footer_options', 'options');
@@ -24,10 +29,13 @@ if (is_singular('projects')) {
 	    $icon_alt = esc_attr($options['icon']['alt']);
     }
 }
-
+$block_options = get_field('block_options');
 ?>
 
-<section class="<?= $className ?>" style="background-image: url(<?= $bg_url ?>); background-color: <?= $color ?>">
+<section class="<?= $className ?>" style="background-color: <?= $color ?>">
+    <?php add_decorative_line($block_options) ?>
+    <img src="<?= $bg_url ?>" alt="<?= $bg_alt ?>" class="small_baner-bg desktop">
+    <img src="<?= $bg_mob_url ?>" alt="<?= $bg_mob_alt ?>" class="small_baner-bg mobile">
     <div class="gradient-overlay desktop" style="background: linear-gradient(90deg, <?= $color ?> 15.07%, <?= $color ?>00 83.41%);"></div>
     <div class="gradient-overlay mobile" style="background: linear-gradient(360deg, <?= $color ?> 30.82%, <?= $color ?>00 80%);"></div>
 	<div class="container">
@@ -35,7 +43,6 @@ if (is_singular('projects')) {
             <?php if(isset($term) && $term): ?>
                 <p class="body project-term">
                     <?php if(isset($icon_url)): ?>
-                        <img src="<?= $icon_url ?>" alt="<?= $icon_alt ?>">
                         <?= $term->name ?>
                     <?php endif; ?>
                 </p>

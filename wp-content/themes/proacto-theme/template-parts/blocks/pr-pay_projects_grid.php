@@ -34,9 +34,11 @@ if ($availibility) {
 }
 
 $projects_query = new WP_Query($args);
+$block_options = get_field('block_options');
 ?>
 
 <section class="<?= $className ?>">
+    <?php add_decorative_line($block_options) ?>
 	<div class="container">
 		<h2 class="heading heading-h2 section_title">
 			<?= $title ?>
@@ -69,28 +71,28 @@ $projects_query = new WP_Query($args);
 									<?= $title ?>
 								</h3>
 								<span class="body technology">
-		                                <?= $term_name ?>
-		                            </span>
-							</div>
+                                    <?= $term_name ?>
+                                </span>
+                                <a href="<?= $link ?>" class="arrow-button primary"></a>
+                            </div>
                             <a href="<?= $link ?>" class="link-overlay"></a>
-							<a href="<?= $link ?>" class="arrow-button primary"></a>
 						</div>
 					<?php elseif ($availibility->slug == 'sold'): ?>
 						<div class="projects_buy-card sold">
 							<div class="projects_buy-card__img">
 								<img src="<?= $img_url ?>" alt="<?= $img_alt ?>">
-								<span class="body"><?= __('Sold', 'proacto') ?></span>
 							</div>
 							<div class="projects_buy-card__texts">
+                                <span class="body sold-label"><?= __('Sold', 'proacto') ?></span>
 								<h3 class="heading heading-h3 title">
 									<?= $title ?>
 								</h3>
 								<span class="body technology">
-                                <?= $term_name ?>
-                            </span>
-							</div>
+                                    <?= $term_name ?>
+                                </span>
+                                <a href="<?= $link ?>" class="arrow-button tertiary"></a>
+                            </div>
                             <a href="<?= $link ?>" class="link-overlay"></a>
-							<a href="<?= $link ?>" class="arrow-button tertiary"></a>
 						</div>
 					<?php endif; ?>
 

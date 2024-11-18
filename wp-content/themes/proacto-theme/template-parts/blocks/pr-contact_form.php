@@ -12,10 +12,12 @@ $text = !empty($contact_form['text']) ? $contact_form['text'] : __('Text', 'proa
 $image_url = esc_url($contact_form['image']['url']);
 $image_alt = esc_url($contact_form['image']['alt']);
 //$form_id = $contact_form['form']['id'];
+$block_options = get_field('block_options');
 ?>
 
 <div class="is-style-image">
 <section class="<?php echo esc_attr($className)?>" >
+    <?php add_decorative_line($block_options) ?>
     <div class="container">
         <div class="contact_form__wrap">
             <img src="<?= $image_url ?>" alt="<?= $image_alt ?>" class="contact_form__wrap-image">

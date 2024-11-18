@@ -2,7 +2,7 @@
 
 .services_projects {
   background-color: $dark-green;
-  background-image: url(/img/static/grid_layer.svg);
+
   background-repeat: no-repeat;
   padding: 45px 0 61px;
   @media screen and (max-width: 980px) {
@@ -10,9 +10,22 @@
   }
 
   .services {
-    margin-bottom: 140px;
+    padding-bottom: 108px;
+    position: relative;
     @media screen and (max-width: 980px) {
-      margin-bottom: 64px;
+      padding-bottom: 51px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100vw;
+      height: 0;
+      border-bottom: 1.5px dashed #FFFFFF66;
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .title {
@@ -43,6 +56,11 @@
   }
 
   .projects {
+    padding-top: 64px;
+    @media screen and (max-width: 980px) {
+      padding-top: 34px;
+    }
+
     &__head {
       display: flex;
       align-items: center;
@@ -136,13 +154,17 @@
   border-radius: 12px;
   padding-top: 70%;
   overflow: hidden;
+  @media screen and (max-width: 980px) {
+    padding-top: 78%;
+  }
 
   &:hover {
     .project_card__img {
       transform: scale(1.1);
     }
     .project_card__link {
-      max-height: 0;
+      max-height: 25%;
+      //background: linear-gradient(360deg, #133C42 -23.01%, rgba(9, 50, 56, 0) 75.97%);
     }
   }
 
@@ -163,7 +185,9 @@
     bottom: 0;
     left: 0;
     max-height: 70%;
-    background: linear-gradient(360deg, #062226 15.07%, rgba(9, 50, 56, 0) 83.41%);
+    background: linear-gradient(360deg, #133C42 15.07%, rgba(9, 50, 56, 0) 83.41%);
+
+    //background: linear-gradient(360deg, #062226 15.07%, rgba(9, 50, 56, 0) 83.41%);
     display: flex;
     padding: 24px;
     align-items: flex-end;

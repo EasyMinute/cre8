@@ -42,9 +42,12 @@ if ($projects['choose']) {
 $footer = get_field('footer_options', 'options');
 $socials = $projects['socials'];
 
+
+$block_options = get_field('block_options');
 ?>
 
 <section class="services_projects">
+    <?php add_decorative_line($block_options) ?>
 	<div class="container">
 		<div class="services">
 			<h2 class="title heading heading-h2">

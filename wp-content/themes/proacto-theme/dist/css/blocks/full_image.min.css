@@ -11,6 +11,7 @@
 @media screen and (max-width: 1440px) {
   .full_image .container {
     padding: 0;
+    max-width: 100%;
   }
 }
 .full_image img {

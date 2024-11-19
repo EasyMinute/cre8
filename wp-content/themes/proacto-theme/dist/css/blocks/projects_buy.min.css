@@ -32,13 +32,16 @@
     margin-bottom: 20px;
   }
 }
+.projects_buy__head button {
+  min-width: 114px;
+}
 @media screen and (max-width: 980px) {
   .projects_buy__head button {
     width: calc(50% - 6px);
   }
 }
 .projects_buy__head button:first-of-type {
-  margin: auto 24px 0 auto;
+  margin: auto 10px 0 auto;
 }
 @media screen and (max-width: 980px) {
   .projects_buy__head button:first-of-type {

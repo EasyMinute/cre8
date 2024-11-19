@@ -16,6 +16,8 @@
   &__text {
     padding: 98px 0;
     position: relative;
+    display: flex;
+    flex-direction: column;
     z-index: 1;
     @media screen and (max-width: 980px) {
       padding: 354px 0 32px;
@@ -56,6 +58,16 @@
       margin-bottom: 32px;
       max-width: 600px;
       color: $white !important;
+    }
+
+    .post_link {
+      margin-bottom: 32px;
+      @media screen and (max-width: 980px) {
+        margin-bottom: 0;
+        margin-top: 20px;
+        width: 100%;
+        order: 1;
+      }
     }
 
     &__meta {

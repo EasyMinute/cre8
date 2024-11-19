@@ -127,8 +127,8 @@ $footer = get_field('footer_options', 'options');
                                      alt="<?= esc_attr( $options['icon']['alt'] ) ?>">
                                 <?php endif; ?>
                                 <span>
-                                <?= $cat->name ?>
-                            </span>
+                                    <?= $cat->name ?>
+                                </span>
                             </a>
                         </li>
                     <?php endforeach; ?>

@@ -194,6 +194,14 @@ section .container .body {
   }
 }
 
+.lg-backdrop {
+  background-color: rgba(9, 50, 56, 0.95) !important;
+}
+
+.lg-outer .lg-thumb-outer {
+  background: none !important;
+}
+
 .projects_masonry__card {
   position: relative;
 }

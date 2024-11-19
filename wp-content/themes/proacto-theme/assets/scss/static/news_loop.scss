@@ -1,7 +1,7 @@
 @import "../generals/colors";
 
 .news_loop {
-  background-image: url(/img/static/grid_layer.svg);
+  //background-image: url(/img/static/grid_layer.svg);
   padding: 62px 0 120px;
   @media screen and (max-width: 980px){
     padding: 48px 0;
@@ -72,6 +72,9 @@
             border-radius: 6px;
             padding: 12px 18px 12px 14px;
             background-color: #F5F7F7;
+            font-weight: 600;
+            text-transform: uppercase;
+
             color: $dark-green;
             @media screen and (max-width: 980px){
               width: max-content;
@@ -88,6 +91,7 @@
             }
 
             img {
+              display: none;
               margin-right: 8px;
               width: 24px;
               height: 24px;

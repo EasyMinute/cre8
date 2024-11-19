@@ -19,11 +19,12 @@
     }
 
     button {
+      min-width: 114px;
       @media screen and (max-width: 980px){
         width: calc(50% - 6px);
       }
       &:first-of-type {
-        margin: auto 24px 0 auto;
+        margin: auto 10px 0 auto;
         @media screen and (max-width: 980px){
           margin: 0 12px 0 0;
         }

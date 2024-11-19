@@ -24,6 +24,7 @@ $block_files = [
 	'portfolio_sections',
 	'faq',
 	'video',
+	'icons_list',
 
 ];
 

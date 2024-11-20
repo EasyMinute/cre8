@@ -125,35 +125,7 @@ function register_media_taxonomy() {
 }
 add_action( 'init', 'register_media_taxonomy' );
 
-function update_media_category_counts($terms, $taxonomy) {
-	// Check if this is the media_category taxonomy
-	if ($taxonomy !== 'media_category') {
-		return $terms;
-	}
 
-	foreach ($terms as $term) {
-		// Query attachments for this term
-		$attachments = get_posts([
-			'post_type' => 'attachment',
-			'post_status' => 'inherit',
-			'tax_query' => [
-				[
-					'taxonomy' => 'media_category',
-					'field' => 'term_id',
-					'terms' => $term->term_id,
-				],
-			],
-			'posts_per_page' => -1,
-			'fields' => 'ids',
-		]);
-
-		// Update the count property
-		$term->count = count($attachments);
-	}
-
-	return $terms;
-}
-add_filter('get_terms', 'update_media_category_counts', 10, 2);
 
 
 function register_availibility_taxonomy() {

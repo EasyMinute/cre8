@@ -13,7 +13,7 @@ $text = $projects_masonry['text'] ?? '';
 // Get the taxonomy terms (technology)
 $terms = get_terms([
     'taxonomy' => 'media_category',
-    'hide_empty' => true,
+    'hide_empty' => false,
     'orderby' => 'slug',
     'order' => 'ASC',
 ]);

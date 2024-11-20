@@ -6,13 +6,14 @@ if ( ! empty( $block['className'] ) ) {
 }
 
 $contact_form = get_field('contact_form');
-$title = !empty($contact_form['title']) ? $contact_form['title'] : __('Title', 'proacto');
+$title = !empty($contact_form['title']) ? $contact_form['title'] : __('READY TO START A NEW PROJECT?', 'proacto');
 $title = add_em_words($title, array(3,4,5,6));
-$text = !empty($contact_form['text']) ? $contact_form['text'] : __('Text', 'proacto');
-$image_url = esc_url($contact_form['image']['url']);
-$image_alt = esc_url($contact_form['image']['alt']);
+$text = !empty($contact_form['text']) ? $contact_form['text'] : __('Contact us now to find out more about our capabilities and realize your game art idea.', 'proacto');
+$image_url = !empty($contact_form['image']['url']) ? esc_url($contact_form['image']['url']) : get_stylesheet_directory_uri() . '/assets/img/static/frog.png';
+$image_alt = !empty($contact_form['image']['url']) ? esc_attr($contact_form['image']['alt']) : 'Frog';
 //$form_id = $contact_form['form']['id'];
 $block_options = get_field('block_options');
+$shortcode = !empty($contact_form['form']) ? $contact_form['form'] : '[contact-form-7 id="888415d" title="Contact form 1"]';
 ?>
 
 <div class="is-style-image">
@@ -28,7 +29,7 @@ $block_options = get_field('block_options');
                 <p class="body text">
 	                <?= $text ?>
                 </p>
-                <?= do_shortcode($contact_form['form']) ?>
+                <?= do_shortcode($shortcode) ?>
             </div>
         </div>
     </div>

@@ -8,6 +8,7 @@ if ( ! empty( $block['className'] ) ) {
 $video = get_field('video');
 $title = !empty($video['title']) ? $video['title'] : __('Title', 'proacto');
 $title = add_em_words($title, array(0));
+$show_video = $video['show_video'];
 $block_options = get_field('block_options');
 ?>
 
@@ -23,9 +24,12 @@ $block_options = get_field('block_options');
 					<?= $video['text'] ?>
 				</p>
 			<?php endif; ?>
-            <div class="video__wrap__embed">
-			    <?= $video['embed'] ?>
-            </div>
+
+            <?php if ($show_video && !empty($video['embed'])): ?>
+                <div class="video__wrap__embed">
+                    <?= $video['embed'] ?>
+                </div>
+            <?php endif; ?>
 		</div>
 	</div>
 </section>

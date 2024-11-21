@@ -21,6 +21,14 @@
 .portfolio_section {
   position: relative;
 
+  .gradient-overlay {
+    position: absolute;
+    height: 100%;
+    width: 1450px;
+    top: 0;
+    left: calc(100vw - 1450px);
+  }
+
   img {
     position: absolute;
     height: 100%;
@@ -37,11 +45,18 @@
     }
   }
 
-  &.right img {
-    object-position: top right;
-    left: 0;
-    @media screen and (max-width: 980px) {
-      object-position: top center;
+  &.right {
+    img {
+      object-position: top right;
+      left: 0;
+      @media screen and (max-width: 980px) {
+        object-position: top center;
+      }
+    }
+
+    .gradient-overlay {
+      left: unset;
+      right: calc(100vw - 1450px);
     }
   }
 

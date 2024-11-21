@@ -1,6 +1,7 @@
 /*!**************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./scss/blocks/projects_masonry.scss ***!
   \**************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
 a {
   text-decoration: none;
   font-family: BarlowCondensed, sans-serif;
@@ -87,6 +88,34 @@ section .underline-decor.dark {
 section .container .heading,
 section .container .body {
   color: #093238;
+}
+
+.post_content__wrap__main strong, .post_content__wrap__main b,
+.block-text strong,
+.block-text b {
+  font-weight: 600;
+}
+.post_content__wrap__main em, .post_content__wrap__main i,
+.block-text em,
+.block-text i {
+  font-style: italic;
+}
+.post_content__wrap__main a,
+.block-text a {
+  color: #F97A58;
+}
+.post_content__wrap__main ul li,
+.block-text ul li {
+  padding-left: 12px;
+}
+.post_content__wrap__main ul li:before,
+.block-text ul li:before {
+  content: "• ";
+}
+
+.post_content__wrap__main li {
+  line-height: 1.5;
+  font-size: 18px;
 }
 
 .projects_masonry {

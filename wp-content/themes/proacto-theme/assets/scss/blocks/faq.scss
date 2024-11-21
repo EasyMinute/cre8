@@ -99,6 +99,8 @@
             top: 14px;
             left: 14px;
             transition: all .5s;
+            transform: rotate(180deg);
+            opacity: .7;
           }
 
           &.opened {
@@ -111,11 +113,13 @@
             .block-text {
               max-height: 300px;
               margin-top: 32px;
+              overflow: auto;
             }
 
             svg {
-              transform: rotate(180deg);
-              opacity: .7;
+              transform: rotate(0);
+              opacity: 1;
+
             }
           }
         }

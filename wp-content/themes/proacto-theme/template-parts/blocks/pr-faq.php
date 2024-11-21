@@ -35,9 +35,9 @@ $image_alt = esc_attr($faq['image']['alt']);
                         <h3 class="heading heading-h3 block-title">
                             <?= $item['question'] ?>
                         </h3>
-                        <p class="body block-text">
+                        <div class="body block-text">
                             <?= $item['answer'] ?>
-                        </p>
+                        </div>
                     </li>
                 <?php endforeach; ?>
             </ul>

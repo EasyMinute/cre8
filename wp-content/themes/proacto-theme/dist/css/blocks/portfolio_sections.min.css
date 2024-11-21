@@ -21,6 +21,13 @@
 .portfolio_section {
   position: relative;
 }
+.portfolio_section .gradient-overlay {
+  position: absolute;
+  height: 100%;
+  width: 1450px;
+  top: 0;
+  left: calc(100vw - 1450px);
+}
 .portfolio_section img {
   position: absolute;
   height: 100%;
@@ -53,6 +60,10 @@
     -o-object-position: top center;
        object-position: top center;
   }
+}
+.portfolio_section.right .gradient-overlay {
+  left: unset;
+  right: calc(100vw - 1450px);
 }
 .portfolio_section__wrap {
   display: -webkit-box;

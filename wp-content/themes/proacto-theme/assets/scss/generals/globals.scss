@@ -97,3 +97,33 @@ section {
     }
   }
 }
+
+.post_content__wrap__main,
+.block-text {
+
+  strong, b{
+    font-weight: 600;
+  }
+
+  em, i {
+    font-style: italic;
+  }
+
+  a {
+    color: $orange;
+  }
+
+  ul {
+    li {
+      padding-left: 12px;
+      &:before {
+        content: '• ';
+      }
+    }
+  }
+}
+
+.post_content__wrap__main li {
+  line-height: 1.5;
+  font-size: 18px;
+}

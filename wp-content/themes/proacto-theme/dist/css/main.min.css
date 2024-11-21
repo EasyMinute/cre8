@@ -1,6 +1,7 @@
 /*!*******************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js!./scss/main.scss ***!
   \*******************************************************************************************************************************************************************************/
+@charset "UTF-8";
 @font-face {
   font-family: "BarlowCondensed";
   font-weight: 100;
@@ -292,6 +293,34 @@ section .underline-decor.dark {
 section .container .heading,
 section .container .body {
   color: #093238;
+}
+
+.post_content__wrap__main strong, .post_content__wrap__main b,
+.block-text strong,
+.block-text b {
+  font-weight: 600;
+}
+.post_content__wrap__main em, .post_content__wrap__main i,
+.block-text em,
+.block-text i {
+  font-style: italic;
+}
+.post_content__wrap__main a,
+.block-text a {
+  color: #F97A58;
+}
+.post_content__wrap__main ul li,
+.block-text ul li {
+  padding-left: 12px;
+}
+.post_content__wrap__main ul li:before,
+.block-text ul li:before {
+  content: "• ";
+}
+
+.post_content__wrap__main li {
+  line-height: 1.5;
+  font-size: 18px;
 }
 
 .button {
@@ -2573,6 +2602,11 @@ form input:not([type=submit]):focus, form textarea:focus {
   top: 0;
   left: 0;
 }
+@media screen and (min-width: 1440px) {
+  .small_baner .gradient-overlay {
+    left: calc(100vw - 2050px);
+  }
+}
 .small_baner__wrap {
   position: relative;
   max-width: 523px;
@@ -3054,6 +3088,34 @@ section .container .body {
   color: #093238;
 }
 
+.post_content__wrap__main strong, .post_content__wrap__main b,
+.block-text strong,
+.block-text b {
+  font-weight: 600;
+}
+.post_content__wrap__main em, .post_content__wrap__main i,
+.block-text em,
+.block-text i {
+  font-style: italic;
+}
+.post_content__wrap__main a,
+.block-text a {
+  color: #F97A58;
+}
+.post_content__wrap__main ul li,
+.block-text ul li {
+  padding-left: 12px;
+}
+.post_content__wrap__main ul li:before,
+.block-text ul li:before {
+  content: "• ";
+}
+
+.post_content__wrap__main li {
+  line-height: 1.5;
+  font-size: 18px;
+}
+
 .projects_masonry {
   padding: 64px 0 120px;
 }
@@ -3478,6 +3540,13 @@ section .container .body {
 .portfolio_section {
   position: relative;
 }
+.portfolio_section .gradient-overlay {
+  position: absolute;
+  height: 100%;
+  width: 1450px;
+  top: 0;
+  left: calc(100vw - 1450px);
+}
 .portfolio_section img {
   position: absolute;
   height: 100%;
@@ -3510,6 +3579,10 @@ section .container .body {
     -o-object-position: top center;
        object-position: top center;
   }
+}
+.portfolio_section.right .gradient-overlay {
+  left: unset;
+  right: calc(100vw - 1450px);
 }
 .portfolio_section__wrap {
   display: -webkit-box;
@@ -3681,6 +3754,10 @@ section .container .body {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  opacity: 0.7;
 }
 .faq__wrap__list li.faq_item.opened {
   border-radius: 24px;
@@ -3691,12 +3768,13 @@ section .container .body {
 .faq__wrap__list li.faq_item.opened .block-text {
   max-height: 300px;
   margin-top: 32px;
+  overflow: auto;
 }
 .faq__wrap__list li.faq_item.opened svg {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-  opacity: 0.7;
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+  opacity: 1;
 }
 
 .icons_list {

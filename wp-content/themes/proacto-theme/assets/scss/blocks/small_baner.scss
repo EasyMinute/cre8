@@ -46,6 +46,9 @@
     width: 100%;
     top: 0;
     left: 0;
+    @media screen and (min-width: 1440px){
+      left: calc(100vw - 2050px);
+    }
   }
 
   &__wrap {

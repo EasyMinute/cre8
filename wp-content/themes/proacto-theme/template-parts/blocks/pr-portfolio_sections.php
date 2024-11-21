@@ -39,6 +39,11 @@ $text = $portfolio_sections['text']
 	        <?php add_decorative_line(array('underline'=>'light')) ?>
             <img src="<?= $img_url ?> " alt="<?= $img_alt ?>" class="desktop">
             <img src="<?= $img_mob_url ?> " alt="<?= $img_mob_alt ?>" class="mobile">
+            <?php if($section['direction'] == 'right'): ?>
+                <div class="gradient-overlay desktop" style="background: linear-gradient(270deg, <?= $color ?> 0%, <?= $color ?>00 21.43%);"></div>
+            <?php else: ?>
+                <div class="gradient-overlay desktop" style="background: linear-gradient(90deg, <?= $color ?> 0%, <?= $color ?>00 21.43%);"></div>
+            <?php endif; ?>
             <div class="container">
                 <div class="portfolio_section__wrap <?= $section['direction'] ?>">
                     <h3 class="heading heading-h2 block_title">

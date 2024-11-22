@@ -13,7 +13,7 @@ $availibility = !empty($pay_projects_grid['availibilty']) ? $pay_projects_grid['
 
 
 
-$number_posts = !empty($pay_projects_grid['projects_per_page']) ? $pay_projects_grid['projects_per_page'] : 12;
+$number_posts = !empty($pay_projects_grid['posts_per_page']) ? $pay_projects_grid['posts_per_page'] : 12;
 
 $args = array(
 	'post_type'      => 'projects',

@@ -119,6 +119,6 @@
   }
   .portfolio-card.main .portfolio-card__texts {
     max-width: 50%;
-    margin: auto auto auto 0;
+    margin: auto 0 auto auto;
   }
 }

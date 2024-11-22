@@ -95,7 +95,7 @@ add_action( 'acf/include_fields', function() {
 						'name' => 'background_mob',
 						'aria-label' => '',
 						'type' => 'image',
-						'instructions' => '1440x420',
+						'instructions' => '360x482',
 						'required' => 0,
 						'conditional_logic' => 0,
 						'wrapper' => array(

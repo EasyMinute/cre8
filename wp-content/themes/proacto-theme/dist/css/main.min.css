@@ -3582,7 +3582,7 @@ section .container .body {
 }
 .portfolio_section.right .gradient-overlay {
   left: unset;
-  right: calc(100vw - 1450px);
+  right: calc(100vw - 1440px);
 }
 .portfolio_section__wrap {
   display: -webkit-box;

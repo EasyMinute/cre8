@@ -28,8 +28,8 @@ $args = [
 	'post_status'    => 'inherit',    // Attachments typically have 'inherit' status
 	'post_mime_type' => 'image',      // Fetch only image files
 	'paged'          => 1,
-//	'order'          => 'DESC',
-//	'orderby'        => 'date'
+	'orderby'        => 'title',     // Order by title
+	'order'          => 'ASC',
 ];
 // If a filter is applied, modify the query to filter by the selected term
 if ($technology_filter) {

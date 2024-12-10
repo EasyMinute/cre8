@@ -30,7 +30,9 @@
 
       .footer_logo {
         margin-bottom: 20px;
+        width: 125px;
         @media screen and (max-width: 980px) {
+          width: 80px;
           margin-bottom: 0;
         }
       }
@@ -97,6 +99,10 @@
     }
 
     &__copyright {
+
+      a {
+        color: $dark-green;
+      }
       @media screen and (max-width: 980px) {
         width: 100%;
         margin-top: 20px;

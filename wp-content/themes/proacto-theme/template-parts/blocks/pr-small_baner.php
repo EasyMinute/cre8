@@ -64,6 +64,11 @@ $block_options = get_field('block_options');
 					<?php endforeach; ?>
                 </div>
 			<?php endif; ?>
+			<?php if (!empty($small_baner['button'])): ?>
+                <a href="<?= $small_baner['button']['url'] ?>" class="button button-m primary arrowed">
+					<?= $small_baner['button']['title'] ?>
+                </a>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>

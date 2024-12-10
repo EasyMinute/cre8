@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 window.requestAnimationFrame(step);
             } else {
                 // After the animation ends, attach the decimals and suffix
-                element.textContent += decimalPart + suffix;
+                element.textContent += decimalPart.trim() + suffix.trim();
             }
         };
         window.requestAnimationFrame(step);

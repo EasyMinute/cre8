@@ -118,6 +118,15 @@ section .container .body {
   font-size: 18px;
 }
 
+main {
+  margin-top: 68px;
+}
+@media screen and (max-width: 980px) {
+  main {
+    margin-top: 62px;
+  }
+}
+
 .projects_masonry {
   padding: 64px 0 120px;
 }

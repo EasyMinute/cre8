@@ -323,6 +323,15 @@ section .container .body {
   font-size: 18px;
 }
 
+main {
+  margin-top: 68px;
+}
+@media screen and (max-width: 980px) {
+  main {
+    margin-top: 62px;
+  }
+}
+
 .button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -642,8 +651,11 @@ section .container .body {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #093238;
-  position: relative;
   z-index: 100;
 }
 .header__wrap {
@@ -3119,6 +3131,15 @@ section .container .body {
 .post_content__wrap__main li {
   line-height: 1.5;
   font-size: 18px;
+}
+
+main {
+  margin-top: 68px;
+}
+@media screen and (max-width: 980px) {
+  main {
+    margin-top: 62px;
+  }
 }
 
 .projects_masonry {

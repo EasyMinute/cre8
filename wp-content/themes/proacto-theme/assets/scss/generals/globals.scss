@@ -127,3 +127,10 @@ section {
   line-height: 1.5;
   font-size: 18px;
 }
+
+main {
+  margin-top: 68px;
+  @media screen and (max-width: 980px){
+    margin-top: 62px;
+  }
+}

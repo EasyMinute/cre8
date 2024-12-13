@@ -69,6 +69,8 @@ function load_more_projects_masonry() {
 		// Check if there are more pages
 		if ($paged >= $query->max_num_pages) {
 			$response['status'] = 'no_more';
+		} else {
+			$response['status'] = 'more';
 		}
 
 	} else {

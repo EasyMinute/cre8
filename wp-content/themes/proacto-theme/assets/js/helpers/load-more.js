@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
         loadMoreMasonryButton.addEventListener('click', function () {
 
             let paged = parseInt(loadMoreMasonryButton.getAttribute('data-current-page')) + 1;
+            console.log('paged', paged)
             let term = loadMoreMasonryButton.getAttribute('data-term');
 
             // Create a new AJAX request
@@ -60,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
             xhr.onload = function () {
                 if (xhr.status >= 200 && xhr.status < 400) {
                     let response = xhr.responseText;
+                    console.log('response', response)
                     // let response = JSON.parse(xhr.responseText);
                     let jsonStartIndex = response.lastIndexOf('{');
                     let front = response.substring(0, jsonStartIndex).trim(); // The HTML part

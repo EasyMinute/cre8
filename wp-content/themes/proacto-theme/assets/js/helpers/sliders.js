@@ -131,18 +131,35 @@ import 'slick-carousel'
 
 window.jQuery = window.$ = $;
 
-$('.icons_slick').each(function () {
-    $(this).slick({
-        slidesToShow: 2,          // Number of logos to show at once
-        slidesToScroll: 1,        // Number of logos to scroll at a time
-        autoplay: true,           // Enable autoplay
-        autoplaySpeed: 0,         // Set to 0 for smooth continuous scrolling
-        speed: 3000,              // Speed of the scrolling animation
-        cssEase: 'linear',        // Use linear animation to create a smooth flow
-        infinite: true,           // Infinite loop
-        arrows: false,            // Disable navigation arrows
-        dots: false,              // Disable pagination dots
-        pauseOnHover: false,      // Do not pause on hover
-        variableWidth: true       // Allows logos of different widths to scroll smoothly
-    });
+// $('.icons_slick').each(function () {
+//     $(this).slick({
+//         slidesToShow: 2,          // Number of logos to show at once
+//         slidesToScroll: 1,        // Number of logos to scroll at a time
+//         autoplay: true,           // Enable autoplay
+//         autoplaySpeed: 0,         // Set to 0 for smooth continuous scrolling
+//         speed: 3000,              // Speed of the scrolling animation
+//         cssEase: 'linear',        // Use linear animation to create a smooth flow
+//         infinite: true,           // Infinite loop
+//         arrows: false,            // Disable navigation arrows
+//         dots: false,              // Disable pagination dots
+//         pauseOnHover: false,      // Do not pause on hover
+//         variableWidth: true       // Allows logos of different widths to scroll smoothly
+//     });
+// });
+document.addEventListener('DOMContentLoaded', function () {
+    window.setTimeout(function () {
+        const marqueeswiper = new Swiper('.marqueeswiper', {
+            modules: [Navigation, Pagination, Autoplay, EffectFade, FreeMode],
+            spaceBetween: 0,
+            centeredSlides: true,
+            speed: 3000, // Speed of the scrolling animation
+            autoplay: {
+                delay: 0, // Continuous scrolling
+                disableOnInteraction: false, // Autoplay continues after interaction
+            },
+            loop: true, // Infinite loop for smooth marquee
+            slidesPerView: 'auto', // Display multiple slides at once
+            allowTouchMove: false, // Disable user swiping
+        });
+    }, 1000);
 });

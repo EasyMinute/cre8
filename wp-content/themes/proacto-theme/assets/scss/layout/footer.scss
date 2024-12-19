@@ -64,6 +64,7 @@
         width: fit-content;
         column-gap: 80px;
         row-gap: 20px;
+        direction: rtl;
         @media screen and (max-width: 980px) {
           grid-template-columns: repeat(1, 1fr);
           column-gap: 0;
@@ -72,10 +73,17 @@
         }
 
         li {
+          text-align: left;
           @media screen and (max-width: 980px) {
             padding: 16px;
             border-bottom: 1px solid $light-grey;
           }
+
+          //&:nth-child(7) {
+          //  @media screen and (min-width: 980px) {
+          //    grid-column: 3;
+          //  }
+          //}
 
           a {
             color: $dark-green;

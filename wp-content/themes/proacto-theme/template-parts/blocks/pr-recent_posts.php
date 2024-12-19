@@ -38,10 +38,12 @@ $block_options = get_field('block_options');
                     $image_url = esc_url(get_the_post_thumbnail_url($post));
                     $image_alt = esc_attr(get_the_post_thumbnail_caption($post));
                     $excerpt = get_the_excerpt($post);
-					$author_id = get_the_author_meta('ID');
-                    $author = get_the_author_meta('display_name', $author_id);
-					$author_options = get_field('user_options', 'user_' . $author_id);
-                    $author_image = esc_url($author_options['user_photo']['url']);
+					$post_options = get_field('post_options', $post->ID);
+                    if ($post_options) {
+	                    $author = $post_options['author'];
+                    } else {
+	                    $author['name'] = 'Admin';
+                    }
 					$date = get_the_date('d M Y', $post);
                     $cats = get_the_category($post);
 					?>
@@ -65,9 +67,11 @@ $block_options = get_field('block_options');
                             <?= $excerpt ?>
                         </p>
                         <div class="post-card__meta">
-                            <img src="<?= $author_image ?>" alt="" class="author-photo">
+                            <?php if(isset($author['photo']) && !empty($author['photo'])) : ?>
+                                <img src="<?= esc_url($author['photo']['url']) ?>" alt="<?= esc_attr($author['photo']['alt']) ?>" class="author-photo">
+                            <?php endif; ?>
                             <p class="body body-14 author_date">
-                                <?= $author ?>
+	                            <?= $author['name'] ?>
 
                                 <span class="date">
                                     <?= $date ?>

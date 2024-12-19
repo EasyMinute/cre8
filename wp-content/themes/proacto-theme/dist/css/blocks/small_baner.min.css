@@ -20,6 +20,7 @@
 .small_baner-bg {
   position: absolute;
   width: 100%;
+  max-width: 1920px;
   height: 100%;
   top: 0;
   right: 0;

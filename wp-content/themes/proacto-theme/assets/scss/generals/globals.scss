@@ -1,5 +1,31 @@
 @import "colors";
 
+/* For most modern browsers */
+::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+  height: 6px; /* Height of the scrollbar for horizontal scrolling */
+}
+
+::-webkit-scrollbar-thumb {
+  background: $dark-green; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $green; /* Color when hovered */
+}
+
+::-webkit-scrollbar-track {
+  background: $grey; /* Background of the scrollbar track */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: $dark-green $grey; /* Thumb and track colors */
+}
+
 body {
 
 }

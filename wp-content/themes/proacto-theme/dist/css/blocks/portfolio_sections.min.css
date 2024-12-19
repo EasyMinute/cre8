@@ -26,7 +26,7 @@
   height: 100%;
   width: 1450px;
   top: 0;
-  left: calc(100vw - 1450px);
+  left: calc(100vw - 1456px);
 }
 .portfolio_section img {
   position: absolute;
@@ -63,7 +63,7 @@
 }
 .portfolio_section.right .gradient-overlay {
   left: unset;
-  right: calc(100vw - 1440px);
+  right: calc(100vw - 1456px);
 }
 .portfolio_section__wrap {
   display: -webkit-box;

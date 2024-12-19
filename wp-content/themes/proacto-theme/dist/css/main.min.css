@@ -207,6 +207,32 @@
   font-weight: 600;
 }
 
+/* For most modern browsers */
+::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+  height: 6px; /* Height of the scrollbar for horizontal scrolling */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #093238; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #29545B; /* Color when hovered */
+}
+
+::-webkit-scrollbar-track {
+  background: #6B8488; /* Background of the scrollbar track */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #093238 #6B8488; /* Thumb and track colors */
+}
+
 a {
   text-decoration: none;
   font-family: BarlowCondensed, sans-serif;
@@ -2585,6 +2611,7 @@ form input:not([type=submit]):focus, form textarea:focus {
 .small_baner-bg {
   position: absolute;
   width: 100%;
+  max-width: 1920px;
   height: 100%;
   top: 0;
   right: 0;
@@ -3015,6 +3042,32 @@ section .container .value_card .block-text {
   margin-bottom: 14px;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+/* For most modern browsers */
+::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+  height: 6px; /* Height of the scrollbar for horizontal scrolling */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #093238; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #29545B; /* Color when hovered */
+}
+
+::-webkit-scrollbar-track {
+  background: #6B8488; /* Background of the scrollbar track */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #093238 #6B8488; /* Thumb and track colors */
 }
 
 a {
@@ -3571,7 +3624,7 @@ main {
   height: 100%;
   width: 1450px;
   top: 0;
-  left: calc(100vw - 1450px);
+  left: calc(100vw - 1456px);
 }
 .portfolio_section img {
   position: absolute;
@@ -3608,7 +3661,7 @@ main {
 }
 .portfolio_section.right .gradient-overlay {
   left: unset;
-  right: calc(100vw - 1440px);
+  right: calc(100vw - 1456px);
 }
 .portfolio_section__wrap {
   display: -webkit-box;

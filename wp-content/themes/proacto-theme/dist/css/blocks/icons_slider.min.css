@@ -42,7 +42,6 @@
 }
 .icons_slider .marqueeswiper .swiper-slide {
   text-align: center;
-  font-size: 33px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,10 +55,18 @@
   position: relative;
   overflow: hidden;
   padding: 0 50px;
+  height: 40px;
+}
+.icons_slider .marqueeswiper .swiper-slide img {
+  height: 100%;
 }
 
-.wp-block-group.is-style-image .icons_slick {
+.wp-block-group.is-style-image .icons_slick,
+.wp-block-group.is-style-image .marqueeswiper {
   background-color: #002E33;
+}
+.wp-block-group.is-style-image .marqueeswiper {
+  padding: 32px 0;
 }
 
 @-webkit-keyframes line-slide {

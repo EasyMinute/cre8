@@ -2105,7 +2105,7 @@ main {
 }
 @media screen and (min-width: 980px) {
   .portfolio-card.main {
-    padding: 140px 110px;
+    padding: 120px 110px;
   }
   .portfolio-card.main img {
     -o-object-position: left;
@@ -2672,7 +2672,7 @@ form input:not([type=submit]):focus, form textarea:focus {
 }
 @media screen and (min-width: 980px) {
   .small_baner-bg {
-    width: auto;
+    width: 100%;
   }
 }
 @media screen and (min-width: 980px) {
@@ -4204,7 +4204,7 @@ main {
           align-items: center;
   margin-bottom: 16px;
 }
-.post_highlight__text__cats span {
+.post_highlight__text__cats a span {
   display: block;
   padding: 8px 16px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -4212,7 +4212,7 @@ main {
   border-radius: 6px;
   margin-right: 6px;
 }
-.post_highlight__text__cats span:first-child {
+.post_highlight__text__cats a:first-child span {
   background-color: #F97A58;
 }
 .post_highlight__text .section-title {
@@ -4297,6 +4297,9 @@ main {
   line-height: 26px;
   margin-bottom: 32px;
   color: #093238;
+}
+.post_content__wrap__main ul, .post_content__wrap__main ol {
+  margin-bottom: 32px;
 }
 .post_content__wrap__main img {
   width: 100%;

@@ -30,9 +30,16 @@ $blog_url = get_permalink( get_option( 'page_for_posts' ));
 			<?php if ($categories): ?>
 				<div class="post_highlight__text__cats">
 					<?php foreach ($categories as $cat): ?>
-						<span class="body body-14">
-							<?= $cat->name ?>
-						</span>
+						<?php
+						$options = get_field('technology_options', 'category_' . $cat->term_id);
+						$posts_page_id = get_option('page_for_posts');
+						$category_link = esc_url( add_query_arg( 'category', $cat->slug, get_permalink($posts_page_id) ) );
+						?>
+                        <a href="<?= esc_url( $category_link ); ?>">
+                            <span class="body body-14">
+                                <?= $cat->name ?>
+                            </span>
+                        </a>
 					<?php endforeach; ?>
 				</div>
 			<?php endif; ?>

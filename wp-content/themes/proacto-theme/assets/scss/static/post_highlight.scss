@@ -40,15 +40,17 @@
       align-items: center;
       margin-bottom: 16px;
 
-      span {
-        display: block;
-        padding: 8px 16px;
-        background-color: $transparent;
-        color: $white !important;
-        border-radius: 6px;
-        margin-right: 6px;
+      a {
+        span {
+          display: block;
+          padding: 8px 16px;
+          background-color: $transparent;
+          color: $white !important;
+          border-radius: 6px;
+          margin-right: 6px;
 
-        &:first-child {
+        }
+        &:first-child span {
           background-color: $orange;
         }
       }

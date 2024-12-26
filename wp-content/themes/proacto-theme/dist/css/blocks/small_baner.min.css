@@ -89,7 +89,7 @@
 }
 @media screen and (max-width: 980px) {
   .small_baner__wrap .body {
-    margin-bottom: 0;
+    margin-bottom: 24px;
   }
 }
 .small_baner__wrap .socials_wrap {

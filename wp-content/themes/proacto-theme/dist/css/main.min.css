@@ -738,7 +738,8 @@ main {
   .header__nav {
     position: absolute;
     width: 100vw;
-    height: calc(100vh - 64px);
+    height: calc(100dvh - 64px);
+    height: -webkit-fill-available;
     left: 50%;
     top: 100%;
     background-color: #093238;
@@ -1018,7 +1019,7 @@ main {
 @media screen and (max-width: 980px) {
   .header .button {
     width: 100%;
-    margin: auto 0 56px 0;
+    margin: auto 0 80px 0;
   }
 }
 .header .button svg {
@@ -2729,7 +2730,7 @@ form input:not([type=submit]):focus, form textarea:focus {
 }
 @media screen and (max-width: 980px) {
   .small_baner__wrap .body {
-    margin-bottom: 0;
+    margin-bottom: 24px;
   }
 }
 .small_baner__wrap .socials_wrap {
@@ -3265,6 +3266,7 @@ main {
 @media screen and (max-width: 980px) {
   .projects_masonry__filter {
     width: calc(100% + 16px);
+    margin-bottom: 20px;
   }
 }
 .projects_masonry__filter__wrap {
@@ -3283,7 +3285,7 @@ main {
 }
 @media screen and (max-width: 980px) {
   .projects_masonry__filter__wrap {
-    margin-bottom: 24px;
+    margin-bottom: 4px;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     -webkit-box-pack: start;

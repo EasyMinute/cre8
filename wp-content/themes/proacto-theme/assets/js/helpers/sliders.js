@@ -27,7 +27,7 @@ const initSwiperForMobile = () => {
             loop: false,                     // Enable looping
             pagination: {                   // Enable pagination
                 el: '.portfolio_pagination ',
-                dynamicBullets: true,
+                dynamicBullets: false,
                 clickable: true,              // Make pagination dots clickable
             },
         });

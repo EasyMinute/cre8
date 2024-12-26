@@ -49,7 +49,7 @@ $block_options = get_field('block_options');
 					<?php endforeach ?>
 				</div>
 			</div>
-            <div class="portfolio_pagination swiper-pagination"></div>
+            <div class="portfolio_pagination"></div>
 		<?php endif; ?>
 	</div>
 </section>

@@ -122,3 +122,21 @@
     margin: auto 0 auto auto;
   }
 }
+
+.portfolio_pagination {
+  position: relative !important;
+  top: 0 !important;
+  margin-top: 16px !important;
+}
+.portfolio_pagination .swiper-pagination-bullet {
+  max-width: 8px;
+  width: 32px !important;
+  border-radius: 8px !important;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.portfolio_pagination .swiper-pagination-bullet-active {
+  max-width: 32px;
+  background-color: #093238;
+}

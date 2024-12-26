@@ -113,3 +113,20 @@
     }
   }
 }
+
+.portfolio_pagination {
+  position: relative !important;
+  top: 0 !important;
+  margin-top: 16px !important;
+
+  .swiper-pagination-bullet {
+    max-width: 8px;
+    width: 32px !important;
+    border-radius: 8px !important;
+    transition: all .5s;
+  }
+  .swiper-pagination-bullet-active {
+    max-width: 32px;
+    background-color: $dark-green;
+  }
+}

@@ -20,15 +20,14 @@ const initSwiperForMobile = () => {
     // Initialize the swiper if screen width is less than 980px
     if (screenWidth < 980 && !portfolio_swiper) {
         const portfolio_swiper = new Swiper('.portfolio_swiper', {
-            modules: [Pagination],
+            modules: [Navigation, Pagination],
             slidesPerView: 1,              // 1 slide per page
             spaceBetween: 8,              // Adjust spacing if needed
             grabCursor: true,               // Enable grab cursor
             loop: false,                     // Enable looping
             pagination: {                   // Enable pagination
                 el: '.portfolio_pagination ',
-                dynamicBullets: false,
-                clickable: true,              // Make pagination dots clickable
+                clickable: false,              // Make pagination dots clickable
             },
         });
     }

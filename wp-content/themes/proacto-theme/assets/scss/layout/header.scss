@@ -52,7 +52,7 @@
       position: absolute;
       width: 100vw;
       height: calc(100dvh - 64px);
-      height: -webkit-fill-available;
+      height: calc(100vh - 64px);
       left: 50%;
       top: 100%;
       background-color: $dark-green;

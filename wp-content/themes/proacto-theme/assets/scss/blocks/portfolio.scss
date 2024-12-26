@@ -117,7 +117,9 @@
 .portfolio_pagination {
   position: relative !important;
   top: 0 !important;
+  margin: auto !important;
   margin-top: 16px !important;
+  width: fit-content !important;
 
   .swiper-pagination-bullet {
     max-width: 8px;

@@ -61,10 +61,10 @@ function load_more_projects_masonry() {
 			$link = get_the_permalink();
 			?>
 
-			<div class="projects_masonry__card">
-				<img src="<?= esc_url($link) ?>" alt="<?= esc_attr($thumb_alt) ?>">
-				<a href="<?= $link ?>" class="link-overlay"></a>
-			</div>
+            <a class="projects_masonry__card" href="<?= esc_url($link) ?>">
+                <img src="<?= esc_url($link) ?>" alt="<?= esc_attr($thumb_alt) ?>">
+            </a>
+
 		<?php endwhile;
 		// Check if there are more pages
 		if ($paged >= $query->max_num_pages) {

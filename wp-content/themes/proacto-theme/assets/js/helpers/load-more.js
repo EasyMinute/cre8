@@ -70,11 +70,11 @@ document.addEventListener("DOMContentLoaded", function() {
                     // Parse the JSON part
                     let resp = JSON.parse(jsonString);
 
-                    const event = new CustomEvent('projectsLoaded');
-                    document.dispatchEvent(event);
-
                     // Append the new projects to the grid
                     document.querySelector('.projects_masonry__grid').insertAdjacentHTML('beforeend', front);
+
+                    const event = new CustomEvent('projectsLoaded');
+                    document.dispatchEvent(event);
 
                     // Update the current page number
                     loadMoreMasonryButton.setAttribute('data-current-page', paged);

@@ -76,6 +76,24 @@ $block_options = get_field('block_options');
                 <?php foreach ($available_projects as $post) : ?>
 	                <?php
 	                setup_postdata($post);
+
+	                $availability_terms = get_the_terms($post->ID, 'availability');
+	                $is_available = false;
+
+	                if ($availability_terms) {
+		                foreach ($availability_terms as $term) {
+			                if ($term->slug === 'available') {
+				                $is_available = true;
+				                break;
+			                }
+		                }
+	                }
+
+	                // Skip this post if it's not available
+	                if (!$is_available) {
+		                continue;
+	                }
+
 	                $title = get_the_title($post);
 	                $img_url = get_the_post_thumbnail_url($post);
 	                $img_alt = get_the_post_thumbnail_caption($post);
@@ -109,6 +127,24 @@ $block_options = get_field('block_options');
 		        <?php foreach ($sold_projects as $post) : ?>
 			        <?php
 			        setup_postdata($post);
+
+			        $availability_terms = get_the_terms($post->ID, 'sold');
+			        $is_available = false;
+
+			        if ($availability_terms) {
+				        foreach ($availability_terms as $term) {
+					        if ($term->slug === 'available') {
+						        $is_available = true;
+						        break;
+					        }
+				        }
+			        }
+
+			        // Skip this post if it's not available
+			        if (!$is_available) {
+				        continue;
+			        }
+
 			        $title = get_the_title($post);
 			        $img_url = get_the_post_thumbnail_url($post);
 			        $img_alt = get_the_post_thumbnail_caption($post);

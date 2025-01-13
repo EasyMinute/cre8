@@ -77,19 +77,20 @@ $block_options = get_field('block_options');
 	                <?php
 	                setup_postdata($post);
 
-	                $availability_terms = get_the_terms($post->ID, 'availability');
+	                // Check if the post has the 'available' term in the 'availability' taxonomy
+	                $availability_terms = get_the_terms($post->ID, 'availibility');
 	                $is_available = false;
 
-	                if ($availability_terms) {
-		                foreach ($availability_terms as $term) {
-			                if ($term->slug === 'available') {
+	                if (is_array($availability_terms)) {
+		                foreach ($availability_terms as $availability_term) {
+			                if ($availability_term->slug === 'available') {
 				                $is_available = true;
 				                break;
 			                }
 		                }
 	                }
 
-	                // Skip this post if it's not available
+	                // Skip the post if it does not have the 'available' term
 	                if (!$is_available) {
 		                continue;
 	                }

@@ -129,12 +129,12 @@ $block_options = get_field('block_options');
 			        <?php
 			        setup_postdata($post);
 
-			        $availability_terms = get_the_terms($post->ID, 'sold');
+			        $availability_terms = get_the_terms($post->ID, 'availibility');
 			        $is_available = false;
 
 			        if ($availability_terms) {
 				        foreach ($availability_terms as $term) {
-					        if ($term->slug === 'available') {
+					        if ($term->slug === 'sold') {
 						        $is_available = true;
 						        break;
 					        }

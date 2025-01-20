@@ -153,6 +153,10 @@ main {
   }
 }
 
+.grecaptcha-badge {
+  visibility: hidden !important;
+}
+
 .projects_masonry {
   padding: 64px 0 120px;
 }

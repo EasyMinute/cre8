@@ -358,6 +358,10 @@ main {
   }
 }
 
+.grecaptcha-badge {
+  visibility: hidden !important;
+}
+
 .button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -3265,6 +3269,10 @@ main {
   main {
     margin-top: 62px;
   }
+}
+
+.grecaptcha-badge {
+  visibility: hidden !important;
 }
 
 .projects_masonry {

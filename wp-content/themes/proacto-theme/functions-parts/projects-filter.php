@@ -15,6 +15,10 @@ function filter_projects_ajax() {
 		'orderby'        => 'date'
 	];
 
+    if ($technology == 'all') {
+        $args['orderby'] = 'rand';
+    }
+
 	if ($technology) {
 		$args['tax_query'] = [
 			[
